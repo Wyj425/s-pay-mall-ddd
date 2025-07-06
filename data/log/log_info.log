@@ -1,0 +1,12 @@
+25-07-06.22:39:03.413 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 40480 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-06.22:39:03.414 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-06.22:39:03.737 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[online.noqiokweb]' package. Please check your configuration.
+25-07-06.22:39:03.930 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-06.22:39:03.935 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-06.22:39:03.935 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-06.22:39:03.935 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-06.22:39:04.020 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-06.22:39:04.021 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 583 ms
+25-07-06.22:39:04.317 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-06.22:39:04.326 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-06.22:39:04.332 [main            ] INFO  Application            - Started Application in 1.203 seconds (JVM running for 1.783)
