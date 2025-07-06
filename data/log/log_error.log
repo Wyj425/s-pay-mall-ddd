@@ -1,1 +1,3 @@
 25-07-06.22:39:03.737 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[online.noqiokweb]' package. Please check your configuration.
+25-07-06.23:18:34.257 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[online.noqiokweb]' package. Please check your configuration.
+25-07-06.23:22:02.028 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[online.noqiokweb]' package. Please check your configuration.

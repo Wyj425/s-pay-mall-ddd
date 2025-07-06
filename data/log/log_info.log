@@ -10,3 +10,39 @@
 25-07-06.22:39:04.317 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
 25-07-06.22:39:04.326 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
 25-07-06.22:39:04.332 [main            ] INFO  Application            - Started Application in 1.203 seconds (JVM running for 1.783)
+25-07-06.23:18:33.941 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 43900 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-06.23:18:33.943 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-06.23:18:34.257 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[online.noqiokweb]' package. Please check your configuration.
+25-07-06.23:18:34.437 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-06.23:18:34.442 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-06.23:18:34.442 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-06.23:18:34.442 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-06.23:18:34.522 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-06.23:18:34.522 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 556 ms
+25-07-06.23:18:34.802 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-06.23:18:34.811 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-06.23:18:34.816 [main            ] INFO  Application            - Started Application in 1.116 seconds (JVM running for 1.695)
+25-07-06.23:22:01.720 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 5156 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-06.23:22:01.721 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-06.23:22:02.028 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[online.noqiokweb]' package. Please check your configuration.
+25-07-06.23:22:02.206 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-06.23:22:02.211 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-06.23:22:02.211 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-06.23:22:02.211 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-06.23:22:02.290 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-06.23:22:02.291 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 547 ms
+25-07-06.23:22:02.574 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-06.23:22:02.583 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-06.23:22:02.588 [main            ] INFO  Application            - Started Application in 1.104 seconds (JVM running for 1.634)
+25-07-06.23:22:08.473 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-06.23:22:08.473 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-06.23:22:08.473 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-07-06.23:22:08.488 [http-nio-8080-exec-1] INFO  WeixinPortalController - 微信公众号验签信息开始 [b37ac8c59c0551d2012d6509698517f2003e43ac, 1751815328, 1424635603, 2929584760532238068]
+25-07-06.23:22:08.491 [http-nio-8080-exec-1] INFO  WeixinPortalController - 微信公众号验签信息完成 check：true
+25-07-06.23:45:57.393 [http-nio-8080-exec-3] INFO  WeixinPortalController - 接收微信公众号信息请求oK8L37H4HmFwOswxZovoID5fhldo开始 <xml><ToUserName><![CDATA[gh_e7d4b764df16]]></ToUserName>
+<FromUserName><![CDATA[oK8L37H4HmFwOswxZovoID5fhldo]]></FromUserName>
+<CreateTime>1751816756</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[为什么]]></Content>
+<MsgId>25079987208193001</MsgId>
+</xml>
