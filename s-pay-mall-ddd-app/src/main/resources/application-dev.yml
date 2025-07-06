@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8080
 
 # 线程池配置
 thread:
@@ -34,6 +34,15 @@ spring:
 #mybatis:
 #  mapper-locations: classpath:/mybatis/mapper/*.xml
 #  config-location:  classpath:/mybatis/config/mybatis-config.xml
+
+# 微信公众号对接
+weixin:
+  config:
+    originalid: gh_e7d4b764df16
+    token: b8b6
+    app-id: wx776ccc4e8aff7c3e
+    app-secret: d0926cd72dc1915903088cddefcabb7a
+    template_id: bPs9mMvPoreEGxmJfK9EZx3EyubmW0NifQX-03VKTxk
 
 # 日志
 logging:
