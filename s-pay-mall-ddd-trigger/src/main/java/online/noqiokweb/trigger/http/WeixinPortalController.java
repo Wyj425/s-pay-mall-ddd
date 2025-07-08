@@ -2,6 +2,7 @@ package online.noqiokweb.trigger.http;
 
 
 import lombok.extern.slf4j.Slf4j;
+import online.noqiokweb.domain.auth.service.ILoginService;
 import online.noqiokweb.types.sdk.weixin.MessageTextEntity;
 import online.noqiokweb.types.sdk.weixin.SignatureUtil;
 import online.noqiokweb.types.sdk.weixin.XmlUtil;
@@ -27,7 +28,8 @@ public class WeixinPortalController {
     private String originalid;
     @Value("${weixin.config.token}")
     private String token;
-
+    @Resource
+    private ILoginService loginService;
 
     @GetMapping(value = "receive", produces = "text/plain;charset=utf-8")
     public String validate(@RequestParam(value = "signature", required = false) String signature,
@@ -64,6 +66,10 @@ public class WeixinPortalController {
             // 消息转换
             MessageTextEntity message = XmlUtil.xmlToBean(requestBody, MessageTextEntity.class);
 
+            if("event".equals(message.getMsgType())&&"SCAN".equals(message.getEvent())) {
+                loginService.saveLoginState(message.getTicket(), openid);
+                return buildMessageTextEntity(openid,"登录成功");
+            }
 
             return buildMessageTextEntity(openid, "你好，" + message.getContent());
         } catch (Exception e) {
