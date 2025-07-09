@@ -1,8 +1,9 @@
 # 基础镜像
-FROM openjdk:8-jre-slim
+FROM openjdk:8-jdk-alpine
+
 
 # 作者
-MAINTAINER xiaofuge
+MAINTAINER wyj
 
 # 配置
 ENV PARAMS=""
