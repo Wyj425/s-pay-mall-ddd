@@ -235,3 +235,114 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x04
 </form>
 <script>document.forms[0].submit();</script>
 25-07-09.16:23:54.993 [http-nio-8080-exec-9] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:guoxushiwoer productId:88888 orderId:7543041485136770
+25-07-09.17:41:04.256 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m8s268ms77µs900ns).
+25-07-09.17:58:11.100 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-09.17:58:11.105 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-09.17:58:20.872 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 29776 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-09.17:58:20.874 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-09.17:58:21.468 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-09.17:58:21.472 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-09.17:58:21.473 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-09.17:58:21.473 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-09.17:58:21.581 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-09.17:58:21.582 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 682 ms
+25-07-09.17:58:21.620 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aliPayController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService' defined in file [E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-domain\target\classes\online\noqiokweb\domain\order\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'online.noqiokweb.domain.order.adapter.event.PaySuccessMessageEvent' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+25-07-09.17:58:21.621 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-07-09.17:58:21.629 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-07-09.17:58:21.641 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in online.noqiokweb.domain.order.service.OrderService required a bean of type 'online.noqiokweb.domain.order.adapter.event.PaySuccessMessageEvent' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'online.noqiokweb.domain.order.adapter.event.PaySuccessMessageEvent' in your configuration.
+
+25-07-09.17:59:09.330 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 17768 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-09.17:59:09.332 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-09.17:59:09.926 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-09.17:59:09.931 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-09.17:59:09.931 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-09.17:59:09.931 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-09.17:59:10.041 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-09.17:59:10.041 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 688 ms
+25-07-09.17:59:10.823 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-09.17:59:10.832 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-09.17:59:10.840 [main            ] INFO  Application            - Started Application in 1.763 seconds (JVM running for 2.396)
+25-07-09.17:59:19.056 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-09.17:59:19.056 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-09.17:59:19.057 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-09.18:00:00.014 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-09.18:00:00.029 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-09.18:00:00.150 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-09.18:00:00.171 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-09.18:00:00.172 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-09.18:00:19.950 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:guoxushiwoer productId:guoxushiwoer
+25-07-09.18:00:20.043 [http-nio-8080-exec-6] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: guoxushiwoer orderId: 9677045941392570 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=Y120dqlClvMhoZQgKU6a9xiMvlAezDSObbe2fPaJtuHRdHwSVYjDwT4adKk5W%2Bc1TToXbWYKeWtxaFZqfATZkUsKEq1TR48jZPdr1kPeNrapqowpH1J%2FWaBMkgE5Ob0NLV6aaIsqF5Z8SwwpeBi8QP04qlxKojvnyOV7QUAKQfaj2vVz7WUXkv3DBVZI9I9EL4S1dKDsl6ewIauhzLm7dUKByZzgrQ5aaDwnY2u5RnmFeWAz9CcBIysqbvgU7NvmHoVdu54htb0Md9Jf0W2vTXX%2FN%2BnhGwegh6JAgihjIqEVBpUdwkrObkaJaBsVZRFpcmSqMh21E0MjbWX1S4vzEA%3D%3D&return_url=https%3A%2F%2Fgaga.plus&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-09+18%3A00%3A20&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;9677045941392570&quot;,&quot;total_amount&quot;:&quot;1.68&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-07-09.18:00:20.044 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:guoxushiwoer productId:88888 orderId:9677045941392570
+25-07-09.18:01:51.486 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，消息接收 TRADE_SUCCESS
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，交易名称: 测试商品
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，交易状态: TRADE_SUCCESS
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，支付宝交易凭证号: 2025070922001451460507057310
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，商户订单号: 9677045941392570
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，交易金额: 1.68
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，买家在支付宝唯一id: 2088722071851463
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，买家付款时间: 2025-07-09 18:01:46
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，买家付款金额: 1.68
+25-07-09.18:01:51.488 [http-nio-8080-exec-8] INFO  AliPayController       - 支付回调，支付回调，更新订单 9677045941392570
+25-07-09.18:02:37.281 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-09.18:02:37.290 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-09.19:49:27.515 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 10936 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-09.19:49:27.516 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-09.19:49:28.351 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-09.19:49:28.357 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-09.19:49:28.357 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-09.19:49:28.357 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-09.19:49:28.533 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-09.19:49:28.533 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
+25-07-09.19:49:29.473 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-09.19:49:29.485 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-09.19:49:29.493 [main            ] INFO  Application            - Started Application in 2.321 seconds (JVM running for 3.044)
+25-07-09.19:49:36.175 [http-nio-8080-exec-7] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-09.19:49:36.176 [http-nio-8080-exec-7] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-09.19:49:36.176 [http-nio-8080-exec-7] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-07-09.19:49:36.227 [http-nio-8080-exec-7] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:guoxushiwoer productId:guoxushiwoer
+25-07-09.19:49:36.243 [http-nio-8080-exec-7] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-09.19:49:36.409 [http-nio-8080-exec-7] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-09.19:49:36.540 [http-nio-8080-exec-7] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: guoxushiwoer orderId: 2736672968529756 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=CXlS9T7S0EeH5%2BOOlqeAj0vLGriX8VXyWuesxoAWgVNT0NEdwfTgUZTFyok4EsK02w7DIy4Wc55TNFnyFRYJQ3%2BvNdzTCxzdOxNI%2F4Cltl9HOGJO1VJ5dLr5sZ4nY0bU%2FfhtGcrTMEfipgNw%2FlQ9KbKihnCpaMZW2HveHbIAPHrmbltPnh8dsdDZDFxkdqkFMSj6khGrzWnDntiHYAmJ5AT6NZneQHaCANhnCvlGLNL7T0sZxfjaEJEyvAFnNFBY9wfDjH1bZRt6sDmiDXcf31maKMDlijKVpHcUvPxVEL7hxF%2BMQzChbvK2TnTpJ9ZLNJ6Dy%2FavS1pVM%2BFWkjw3%2BQ%3D%3D&return_url=https%3A%2F%2Fgaga.plus&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-09+19%3A49%3A36&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;2736672968529756&quot;,&quot;total_amount&quot;:&quot;1.68&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-07-09.19:49:36.541 [http-nio-8080-exec-7] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:guoxushiwoer productId:88888 orderId:2736672968529756
+25-07-09.19:50:00.012 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-09.19:50:00.015 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-09.19:51:00.009 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-09.19:51:01.078 [scheduling-1    ] INFO  info                   - Summary^_^10000^_^null^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=LJn988cOoJKUqWBLac6d7lzDZIOc6hGhZeQyLjb/IRRrCO3tQ1JYpfCDsD2lCE60n565Fq2BtK1ethJIFmb63ttwwaJjnpJmIWVPXG2O2jkHRPIDUL+6UmPGg+PAFiY9vDrl0AI4/d15UToORKTihLZ/VV58lJyyHY/Wbf5C0onzPP0kgwBzJOgMoVVzmiFmPuH+9HVwtNzp9Ql9kMFBK5+IiiEq3h8LFT2VvEfuZ8yxgSwoJKiwGwCS2VFgKYDT+XWIpijBD/Kh3/K3MxpBOUmNIfKB9Ik3Edd0LVqsMyFM0LJdh46RAiyFWVwzrLGcCu9w72v8lNaXpHxfIxNUCg==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-09 19:51:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:biz_content={"out_trade_no":"2736672968529756"}^_^12ms,1029ms,21ms^_^trace_id:0601d58b1752061860538355016565
+25-07-09.19:51:01.097 [scheduling-1    ] INFO  OrderPaySuccessListener - 支付成功消息 PaySuccessMessageEvent.PaySuccessMessage(orderId=null, tradeNo=2736672968529756),可以做接下来的事情，如：发货，充值，开会员，返利
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，消息接收 TRADE_SUCCESS
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，交易名称: 测试商品
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，交易状态: TRADE_SUCCESS
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，支付宝交易凭证号: 2025070922001451460507059580
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，商户订单号: 2736672968529756
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，交易金额: 1.68
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，买家在支付宝唯一id: 2088722071851463
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，买家付款时间: 2025-07-09 19:51:08
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，买家付款金额: 1.68
+25-07-09.19:51:13.069 [http-nio-8080-exec-4] INFO  AliPayController       - 支付回调，支付回调，更新订单 2736672968529756
+25-07-09.19:51:13.085 [http-nio-8080-exec-4] INFO  OrderPaySuccessListener - 支付成功消息 PaySuccessMessageEvent.PaySuccessMessage(orderId=null, tradeNo=2736672968529756),可以做接下来的事情，如：发货，充值，开会员，返利
+25-07-09.19:54:00.008 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-09.19:55:31.819 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-09.19:55:31.827 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

@@ -6,6 +6,8 @@ import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 
 public interface IOrderRepository {
     void doSaveOrder(CreateOrderAggregate orderAggregate);
@@ -13,4 +15,12 @@ public interface IOrderRepository {
     OrderEntity queryUnpayOrder(ShopCartEntity shopCartEntity);
 
     void updateOrderPayInfo(PayOrderEntity payOrder);
+
+    void changeOrderPaySuccess(String orderId);
+
+    List<String> queryNoPayNotifyOrder();
+
+    List<String> queryTimeoutCloseOrderList();
+
+    boolean changeOrderClose(String orderId);
 }

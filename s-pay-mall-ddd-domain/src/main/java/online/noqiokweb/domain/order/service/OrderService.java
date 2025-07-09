@@ -1,6 +1,7 @@
 package online.noqiokweb.domain.order.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSON;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.request.AlipayTradePagePayRequest;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.websocket.server.ServerEndpoint;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @author TheLastSavior noqiokweb.site @wyj
@@ -63,5 +65,28 @@ public class OrderService extends AbstractOrderService{
         repository.updateOrderPayInfo(payOrder);
 
         return payOrder;
+    }
+    @Override
+    public void changeOrderPaySuccess(String orderId) {
+
+        repository.changeOrderPaySuccess(orderId);
+
+        //mq一般发送json格式
+        //eventBus.post(JSON.toJSONString(payOrderReq));
+    }
+
+    @Override
+    public List<String> queryNoPayNotifyOrder() {
+        return repository.queryNoPayNotifyOrder();
+    }
+
+    @Override
+    public List<String> queryTimeoutCloseOrderList() {
+        return repository.queryTimeoutCloseOrderList();
+    }
+
+    @Override
+    public boolean changeOrderClose(String orderId) {
+        return repository.changeOrderClose(orderId);
     }
 }
