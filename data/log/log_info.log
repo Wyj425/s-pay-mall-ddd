@@ -346,3 +346,61 @@ Consider defining a bean of type 'online.noqiokweb.domain.order.adapter.event.Pa
 25-07-09.19:54:00.008 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
 25-07-09.19:55:31.819 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-07-09.19:55:31.827 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-09.20:04:54.930 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 49164 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-09.20:04:54.931 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-09.20:04:55.511 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-09.20:04:55.519 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-09.20:04:55.519 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-09.20:04:55.519 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-09.20:04:55.630 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-09.20:04:55.630 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 679 ms
+25-07-09.20:04:56.499 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-09.20:04:56.509 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-09.20:04:56.511 [main            ] INFO  Application            - Started Application in 1.843 seconds (JVM running for 2.482)
+25-07-09.20:06:00.010 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-09.20:06:00.023 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-09.20:06:00.122 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-09.20:06:17.195 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-09.20:06:17.195 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-09.20:06:17.196 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-07-09.20:06:21.434 [http-nio-8080-exec-2] INFO  LoginController        - 生成微信扫码登录,ticket:gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA
+25-07-09.20:06:24.446 [http-nio-8080-exec-3] INFO  LoginController        - 扫码检测登录结果,ticket:gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA,openid:null
+25-07-09.20:06:27.446 [http-nio-8080-exec-5] INFO  LoginController        - 扫码检测登录结果,ticket:gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA,openid:null
+25-07-09.20:06:30.449 [http-nio-8080-exec-6] INFO  LoginController        - 扫码检测登录结果,ticket:gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA,openid:null
+25-07-09.20:06:33.444 [http-nio-8080-exec-7] INFO  LoginController        - 扫码检测登录结果,ticket:gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA,openid:null
+25-07-09.20:06:33.508 [http-nio-8080-exec-8] INFO  WeixinPortalController - 接收微信公众号信息请求oK8L37H4HmFwOswxZovoID5fhldo开始 <xml><ToUserName><![CDATA[gh_e7d4b764df16]]></ToUserName>
+<FromUserName><![CDATA[oK8L37H4HmFwOswxZovoID5fhldo]]></FromUserName>
+<CreateTime>1752062793</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[100601]]></EventKey>
+<Ticket><![CDATA[gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA]]></Ticket>
+</xml>
+25-07-09.20:06:34.786 [http-nio-8080-exec-9] INFO  WeixinPortalController - 接收微信公众号信息请求oK8L37H4HmFwOswxZovoID5fhldo开始 <xml><ToUserName><![CDATA[gh_e7d4b764df16]]></ToUserName>
+<FromUserName><![CDATA[oK8L37H4HmFwOswxZovoID5fhldo]]></FromUserName>
+<CreateTime>1752062794</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[TEMPLATESENDJOBFINISH]]></Event>
+<MsgID>4067980336292904965</MsgID>
+<Status><![CDATA[success]]></Status>
+</xml>
+25-07-09.20:06:36.448 [http-nio-8080-exec-2] INFO  LoginController        - 扫码检测登录结果,ticket:gQFR7zwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYXh2dk1tSDJmVEkxSVpFbGhFMVcAAgQ9W25oAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo
+25-07-09.20:06:41.250 [http-nio-8080-exec-4] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:oK8L37H4HmFwOswxZovoID5fhldo productId:oK8L37H4HmFwOswxZovoID5fhldo
+25-07-09.20:06:41.338 [http-nio-8080-exec-4] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: oK8L37H4HmFwOswxZovoID5fhldo orderId: 6486666317580237 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=bTC62qWYX7QRc5CjwbZIXGzaxlRX2o8B656qXr5oQIhl7iiydTMYBouaavLwnusWMD85E5EqbX2NoJaf%2FxTlRikUrBu2k9VA7mgjXZ4pOlbCQOtawBV2Idv7EZIO4TAK136h1tEwdskPpyNrn2oneZVpMQ6bNgW%2B8MM6QBCHLGNZWxK6%2F2RCy05Pap9GVVMc3q2Diiej%2FHsc4hx%2B5PKU7kx4U%2B%2FC8P0F5SCkAzpgv6McUGc556uAXesjYIgfwsQVlvQSeozuz%2Ba76BW1Y1svNdw%2BjXj2A3bR9Ui0%2Bpu%2FTvz%2FmyHkwOX9FnLajK%2BDEwTWB20HrzdKOgL1N50IkBLmAg%3D%3D&return_url=https%3A%2F%2Fgaga.plus&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-09+20%3A06%3A41&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;6486666317580237&quot;,&quot;total_amount&quot;:&quot;1.68&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-07-09.20:06:41.340 [http-nio-8080-exec-4] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:oK8L37H4HmFwOswxZovoID5fhldo productId:1000100900910524 orderId:6486666317580237
+25-07-09.20:07:16.073 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，消息接收 TRADE_SUCCESS
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，交易名称: 测试商品
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，交易状态: TRADE_SUCCESS
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，支付宝交易凭证号: 2025070922001451460507062397
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，商户订单号: 6486666317580237
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，交易金额: 1.68
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，买家在支付宝唯一id: 2088722071851463
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，买家付款时间: 2025-07-09 20:07:11
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，买家付款金额: 1.68
+25-07-09.20:07:16.074 [http-nio-8080-exec-5] INFO  AliPayController       - 支付回调，支付回调，更新订单 6486666317580237
+25-07-09.20:07:16.092 [http-nio-8080-exec-5] INFO  OrderPaySuccessListener - 支付成功消息 PaySuccessMessageEvent.PaySuccessMessage(orderId=null, tradeNo=6486666317580237),可以做接下来的事情，如：发货，充值，开会员，返利
+25-07-09.20:09:00.006 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
