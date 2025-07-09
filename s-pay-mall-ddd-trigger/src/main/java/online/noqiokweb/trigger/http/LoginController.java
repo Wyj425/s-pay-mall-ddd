@@ -1,4 +1,4 @@
-package online.noqiokweb.trigger;
+package online.noqiokweb.trigger.http;
 
 import lombok.extern.slf4j.Slf4j;
 import online.noqiokweb.api.IAuthService;

@@ -8,7 +8,7 @@ import online.noqiokweb.domain.order.model.valobj.OrderStatusVO;
 
 /**
  * @author TheLastSavior noqiokweb.site @wyj
- * @description 返回给前端的实体对象
+ * @description 返回给前端的实体对象:支付单的实体对象
  * @create 7/8/2025 5:25 PM
  */
 @Data

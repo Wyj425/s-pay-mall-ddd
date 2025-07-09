@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * @author TheLastSavior noqiokweb.site @wyj
- * @description 聚合器聚合出的order实体
+ * @description 聚合器聚合出的order实体,查询未支付的订单实体，其实就是订单实体
  * @create 7/8/2025 5:38 PM
  */
 @Data

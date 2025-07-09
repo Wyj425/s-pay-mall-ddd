@@ -1,5 +1,6 @@
 package online.noqiokweb.domain.order.service;
 
+import com.alipay.api.AlipayApiException;
 import lombok.extern.slf4j.Slf4j;
 import online.noqiokweb.domain.order.adapter.port.IProductPort;
 import online.noqiokweb.domain.order.adapter.repository.IOrderRepository;
@@ -11,6 +12,8 @@ import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
 import online.noqiokweb.domain.order.model.valobj.OrderStatusVO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
 
 /**
  * @author TheLastSavior noqiokweb.site @wyj
@@ -40,7 +43,12 @@ public abstract class AbstractOrderService implements IOrderService{
                     .payUrl(unpaidOrderEntity.getPayUrl())
                     .build();
         }else if(null!=unpaidOrderEntity&&unpaidOrderEntity.getOrderStatusVO().equals(OrderStatusVO.CREATE)){
-            //todo 掉单
+            log.info("创建订单-存在，存在未创建支付单订单，创建支付单开始。userId:{} productId:{} orderId:{}",shopCartEntity.getUserId(),shopCartEntity.getProductId(),unpaidOrderEntity.getOrderId());
+            PayOrderEntity payOrderEntity=doPrePayOrder(shopCartEntity.getUserId(),shopCartEntity.getProductId(),unpaidOrderEntity.getProductName(),unpaidOrderEntity.getOrderId(),unpaidOrderEntity.getTotalAmount());
+            return PayOrderEntity.builder()
+                    .orderId(payOrderEntity.getOrderId())
+                    .payUrl(payOrderEntity.getPayUrl())
+                    .build();
         }
 
         //2.查询商品&创建订单
@@ -52,12 +60,15 @@ public abstract class AbstractOrderService implements IOrderService{
                 .orderEntity(orderEntity)
                 .build();
         this.doSaveOrder(createOrderAggregate);
-
+        PayOrderEntity payOrderEntity=doPrePayOrder(shopCartEntity.getUserId(),productEntity.getProductId(),productEntity.getProductName(),orderEntity.getOrderId(),productEntity.getPrice());
+        log.info("创建订单-完成，生成支付单。userId: {} orderId: {} payUrl: {}", shopCartEntity.getUserId(), orderEntity.getOrderId(), payOrderEntity.getPayUrl());
         return PayOrderEntity.builder()
                 .orderId(orderEntity.getOrderId())
-                .payUrl("暂无")
+                .payUrl(payOrderEntity.getPayUrl())
                 .build();
     }
+
+    protected abstract PayOrderEntity doPrePayOrder(String userId, String productId, String productName, String orderId, BigDecimal totalAmount) throws AlipayApiException;
 
     protected abstract void doSaveOrder(CreateOrderAggregate createOrderAggregate);
 }

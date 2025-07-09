@@ -3,6 +3,7 @@ package online.noqiokweb.infrastructure.adapter.repository;
 import online.noqiokweb.domain.order.adapter.repository.IOrderRepository;
 import online.noqiokweb.domain.order.model.aggregate.CreateOrderAggregate;
 import online.noqiokweb.domain.order.model.entity.OrderEntity;
+import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ProductEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
 import online.noqiokweb.domain.order.model.valobj.OrderStatusVO;
@@ -61,4 +62,15 @@ public class OrderRepository implements IOrderRepository {
                 .build();
     }
 
+    @Override
+    public void updateOrderPayInfo(PayOrderEntity payOrder) {
+        //就算这里没更新成功，我们后续有任务补偿，即通过job不断去扫描
+        PayOrder payOrderReq=PayOrder.builder()
+                .userId(payOrder.getUserId())
+                .orderId(payOrder.getOrderId())
+                .payUrl(payOrder.getPayUrl())
+                .status(payOrder.getOrderStatus().getCode())
+                .build();
+        orderDao.updateOrderPayInfo(payOrderReq);
+    }
 }
