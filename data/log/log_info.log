@@ -415,3 +415,25 @@ Consider defining a bean of type 'online.noqiokweb.domain.order.adapter.event.Pa
 25-07-09.20:24:00.003 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
 25-07-09.20:24:51.259 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-07-09.20:24:51.268 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.15:57:41.763 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 20824 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-25.15:57:41.764 [main            ] INFO  Application            - The following 1 profile is active: "prod"
+25-07-25.15:57:42.459 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-25.15:57:42.465 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-25.15:57:42.466 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.15:57:42.466 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.15:57:42.593 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.15:57:42.593 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 800 ms
+25-07-25.15:57:43.271 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-25.15:57:43.281 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-25.15:57:43.289 [main            ] INFO  Application            - Started Application in 1.803 seconds (JVM running for 2.358)
+25-07-25.15:57:54.177 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 30144 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-25.15:57:54.179 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.15:57:54.763 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-25.15:57:54.767 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-25.15:57:54.768 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.15:57:54.768 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.15:57:54.874 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.15:57:54.874 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 672 ms
+25-07-25.15:57:55.535 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-25.15:57:55.546 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-25.15:57:55.552 [main            ] INFO  Application            - Started Application in 1.622 seconds (JVM running for 2.187)

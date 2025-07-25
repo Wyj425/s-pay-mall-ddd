@@ -23,8 +23,11 @@ public class MessageTextEntity {
     @XStreamAlias("EventKey")
     private String eventKey;
 
+    @XStreamAlias("MsgId")
+    private String msgId;  // 文本消息的字段名
+
     @XStreamAlias("MsgID")
-    private String msgId;
+    private String msgID;  // 事件消息的字段名
 
     @XStreamAlias("Status")
     private String status;
@@ -79,10 +82,18 @@ public class MessageTextEntity {
     public String getMsgId() {
         return msgId;
     }
+    public String getMsgID() {
+        return msgID;
+    }
 
     public void setMsgId(String msgId) {
         this.msgId = msgId;
     }
+
+    public void setMsgID(String msgID) {
+        this.msgID = msgID;
+    }
+
 
     public String getStatus() {
         return status;

@@ -147,5 +147,14 @@ public class XmlUtil {
         stream.alias("xml", clazz);
         return (T) stream.fromXML(resultXml);
     }
+//    public static <T> T xmlToBean(String resultXml, Class clazz) {
+//        XStream stream = new XStream(new DomDriver());
+//        // 清除默认的安全限制
+//        stream.addPermission(AnyTypePermission.ANY);
+//        // 显式指定要处理的类
+//        stream.processAnnotations(clazz);
+//        stream.alias("xml", clazz);
+//        return (T) stream.fromXML(resultXml);
+//    }
 
 }
