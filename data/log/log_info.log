@@ -437,3 +437,59 @@ Consider defining a bean of type 'online.noqiokweb.domain.order.adapter.event.Pa
 25-07-25.15:57:55.535 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
 25-07-25.15:57:55.546 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
 25-07-25.15:57:55.552 [main            ] INFO  Application            - Started Application in 1.622 seconds (JVM running for 2.187)
+25-07-25.16:00:00.013 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:00:00.025 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-25.16:00:00.125 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-25.16:00:00.141 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.16:00:00.142 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.16:03:00.006 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:06:00.001 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:09:00.006 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:10:00.001 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.16:10:00.003 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.16:12:00.001 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:15:00.015 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:18:00.010 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:20:00.002 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.16:20:00.004 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.16:21:00.010 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:24:00.007 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:27:00.004 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:30:00.006 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.16:30:00.008 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.16:30:00.008 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:33:00.013 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:36:00.002 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:39:00.012 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:40:00.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.16:40:00.008 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.16:42:00.007 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:45:00.002 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:48:00.012 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:50:00.016 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.16:50:00.017 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.16:51:00.009 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:54:00.003 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.16:57:00.005 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.17:00:00.014 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.17:00:00.015 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.17:00:00.015 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.17:03:00.002 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.17:06:00.010 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.17:09:00.003 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.17:10:00.009 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-25.17:10:00.010 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-25.17:12:00.009 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-25.17:12:40.999 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-25.17:12:41.004 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-25.17:12:49.893 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 17396 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-25.17:12:49.894 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-25.17:12:50.501 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-25.17:12:50.506 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-25.17:12:50.506 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-25.17:12:50.506 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-25.17:12:50.618 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-25.17:12:50.618 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 700 ms
+25-07-25.17:12:51.292 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-25.17:12:51.301 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-25.17:12:51.309 [main            ] INFO  Application            - Started Application in 1.682 seconds (JVM running for 2.272)

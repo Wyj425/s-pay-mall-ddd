@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
+import online.noqiokweb.domain.order.model.valobj.MarketTypeVO;
 import online.noqiokweb.domain.order.service.IOrderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,9 +25,14 @@ public class OrderServiceTest {
     @Test
     public void test_createOrder() throws Exception {
         ShopCartEntity shopCartEntity = new ShopCartEntity();
-        shopCartEntity.setUserId("xiaofuge222");
-        shopCartEntity.setProductId("10001111");
+        shopCartEntity.setUserId("xiaofuge05");
+        shopCartEntity.setProductId("9890001");
+        shopCartEntity.setTeamId(null);
+        shopCartEntity.setActivityId(100123L);
+        shopCartEntity.setMarketTypeVO(MarketTypeVO.GROUP_BUY_MARKET);
+
         PayOrderEntity payOrderEntity = orderService.createPayOrder(shopCartEntity);
+
         log.info("请求参数:{}", JSON.toJSONString(shopCartEntity));
         log.info("测试结果:{}", JSON.toJSONString(payOrderEntity));
     }
