@@ -10,6 +10,7 @@ import online.noqiokweb.domain.order.adapter.port.IProductPort;
 import online.noqiokweb.domain.order.adapter.repository.IOrderRepository;
 import online.noqiokweb.domain.order.model.aggregate.CreateOrderAggregate;
 import online.noqiokweb.domain.order.model.entity.MarketPayDiscountEntity;
+import online.noqiokweb.domain.order.model.entity.OrderEntity;
 import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.valobj.MarketTypeVO;
 import online.noqiokweb.domain.order.model.valobj.OrderStatusVO;
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.websocket.server.ServerEndpoint;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -86,9 +88,17 @@ public class OrderService extends AbstractOrderService{
         return doPrePayOrder(userId, productId, productName, orderId, totalAmount, null);
     }
     @Override
-    public void changeOrderPaySuccess(String orderId) {
+    public void changeOrderPaySuccess(String orderId, Date payTime) {
+        OrderEntity orderEntity=repository.queryOrderByOrderId(orderId);
+        if(null==orderEntity) return;
 
-        repository.changeOrderPaySuccess(orderId);
+        if(MarketTypeVO.GROUP_BUY_MARKET.getCode().equals(orderEntity.getMarketType())){
+            repository.changeMarketOrderPaySuccess(orderId);
+            port.settlementMarketPayOrder(orderEntity.getUserId(), orderId, payTime);
+        }else{
+            repository.changeOrderPaySuccess(orderId, payTime);
+        }
+
 
         //mq一般发送json格式
         //eventBus.post(JSON.toJSONString(payOrderReq));
@@ -107,5 +117,10 @@ public class OrderService extends AbstractOrderService{
     @Override
     public boolean changeOrderClose(String orderId) {
         return repository.changeOrderClose(orderId);
+    }
+
+    @Override
+    public void changeOrderMarketSettlement(List<String> outTradeNoList) {
+        repository.changeOrderMarketSettlement(outTradeNoList);
     }
 }

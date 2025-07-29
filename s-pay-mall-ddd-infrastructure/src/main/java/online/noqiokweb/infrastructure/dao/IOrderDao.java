@@ -2,6 +2,7 @@ package online.noqiokweb.infrastructure.dao;
 
 import online.noqiokweb.infrastructure.dao.po.PayOrder;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 
 import java.util.List;
@@ -23,4 +24,10 @@ public interface IOrderDao {
     List<String> queryTimeoutCloseOrderList();
 
     boolean changeOrderClose(String orderId);
+
+    PayOrder queryOrderByOrderId(String orderId);
+
+    void changeOrderMarketSettlement(@Param("outTradeNoList") List<String> outTradeNoList);
+
+    void changeOrderDealDone(String orderId);
 }

@@ -6,6 +6,7 @@ import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -16,11 +17,17 @@ public interface IOrderRepository {
 
     void updateOrderPayInfo(PayOrderEntity payOrder);
 
-    void changeOrderPaySuccess(String orderId);
+    void changeOrderPaySuccess(String orderId, Date orderTime);
 
     List<String> queryNoPayNotifyOrder();
 
     List<String> queryTimeoutCloseOrderList();
 
     boolean changeOrderClose(String orderId);
+
+    OrderEntity queryOrderByOrderId(String orderId);
+
+    void changeMarketOrderPaySuccess(String orderId);
+
+    void changeOrderMarketSettlement(List<String> outTradeNoList);
 }

@@ -1,13 +1,16 @@
 package online.noqiokweb.trigger.http;
 
+import com.alibaba.fastjson.JSON;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.internal.util.AlipaySignature;
 import lombok.extern.slf4j.Slf4j;
 import online.noqiokweb.api.IPayService;
 import online.noqiokweb.api.dto.CreatePayRequestDTO;
+import online.noqiokweb.api.dto.NotifyRequestDTO;
 import online.noqiokweb.api.response.Response;
 import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
+import online.noqiokweb.domain.order.model.valobj.MarketTypeVO;
 import online.noqiokweb.domain.order.model.valobj.OrderStatusVO;
 import online.noqiokweb.domain.order.service.IOrderService;
 import online.noqiokweb.types.common.Constants;
@@ -17,6 +20,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,10 +45,15 @@ public class AliPayController implements IPayService {
             log.info("商品下单，根据商品ID创建支付单开始 userId:{} productId:{}", createPayRequestDTO.getUserId(), createPayRequestDTO.getUserId());
             String userId = createPayRequestDTO.getUserId();
             String productId = createPayRequestDTO.getProductId();
+            String teamId = createPayRequestDTO.getTeamId();
+            Integer marketType = createPayRequestDTO.getMarketType();
             // 下单
             PayOrderEntity payOrderRes = orderService.createPayOrder(ShopCartEntity .builder()
                     .userId(userId)
                     .productId(productId)
+                    .teamId(teamId)
+                            .activityId(createPayRequestDTO.getActivityId())
+                    .marketTypeVO(MarketTypeVO.valueOf(marketType))
                     .build());
 
             log.info("商品下单，根据商品ID创建支付单完成 userId:{} productId:{} orderId:{}", userId, productId, payOrderRes.getOrderId());
@@ -60,8 +70,20 @@ public class AliPayController implements IPayService {
                     .build();
         }
     }
+    @PostMapping("group_buy_notify")
+    @Override
+    public String groupBuyNotify(@RequestBody  NotifyRequestDTO requestDTO) {
+        log.info("拼团回调，组队完成且都已支付：{}", JSON.toJSONString(requestDTO));
+        try{
+            orderService.changeOrderMarketSettlement(requestDTO.getOutTradeNoList());
+            return "success";
+        }catch (Exception e){
+            return "error";
+        }
+    }
+
     @RequestMapping(value = "alipay_notify_url", method = RequestMethod.POST)
-    public String payNotify(HttpServletRequest request) throws AlipayApiException {
+    public String payNotify(HttpServletRequest request) throws AlipayApiException, ParseException {
         log.info("支付回调，消息接收 {}", request.getParameter("trade_status"));
 
         if (!request.getParameter("trade_status").equals("TRADE_SUCCESS")) {
@@ -97,7 +119,7 @@ public class AliPayController implements IPayService {
         log.info("支付回调，买家付款金额: {}", params.get("buyer_pay_amount"));
         log.info("支付回调，支付回调，更新订单 {}", tradeNo);
 
-        orderService.changeOrderPaySuccess(tradeNo);
+        orderService.changeOrderPaySuccess(tradeNo,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(params.get("gmt_payment")));
         return "success";
     }
 }
