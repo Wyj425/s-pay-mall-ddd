@@ -3,6 +3,7 @@ package online.noqiokweb.domain.auth.service;
 import com.google.common.cache.Cache;
 import lombok.extern.slf4j.Slf4j;
 import online.noqiokweb.domain.auth.adapter.port.ILoginPort;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -26,9 +27,29 @@ public class WeixinLoginService implements ILoginService{
     }
 
     @Override
+    public String createQrCodeTicket(String sceneStr) throws Exception {
+        String ticket=loginPort.createQrCodeTicket(sceneStr);
+        //保存浏览器指纹信息和ticket映射关系
+        openidToken.put(sceneStr,ticket);
+        return ticket;
+    }
+
+
+    @Override
     public String checkLogin(String ticket) {
         log.info("checkLogin ticket: [{}], length: {}, hashCode: {}", ticket, ticket.length(), ticket.hashCode());
         return openidToken.getIfPresent(ticket);
+    }
+
+    @Override
+    public String checkLogin(String ticket, String sceneStr) {
+        log.info("checkLogin ticket: [{}], length: {}, hashCode: {},sfceneStr:{}", ticket, ticket.length(), ticket.hashCode(), sceneStr);
+        //先根据指纹拿到ticket
+        String cacheTicket=openidToken.getIfPresent(sceneStr);
+        //校验上传的ticket是否和保存的ticket一致
+        if(StringUtils.isBlank(cacheTicket)||!cacheTicket.equals(ticket)) return null;
+        //再校验ticket是否绑定openid
+        return checkLogin( ticket);
     }
 
     @Override

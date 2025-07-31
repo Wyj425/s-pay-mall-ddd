@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import retrofit2.Call;
+import cn.hutool.core.util.IdUtil;
 
 import javax.annotation.Resource;
 import java.io.IOException;
@@ -37,6 +38,13 @@ public class LoginPort implements ILoginPort {
     private IWeixinApiService weixinApiService;
     @Override
     public String createQrCodeTicket() throws IOException {
+        String sceneStr=IdUtil.getSnowflake().nextIdStr();
+        return createQrCodeTicket(sceneStr);
+
+    }
+
+    @Override
+    public String createQrCodeTicket(String sceneStr) throws IOException {
         //1.获取accessToken
         String accessToken = weixinAccessToken.getIfPresent(appid);
         if(accessToken == null){
@@ -49,10 +57,10 @@ public class LoginPort implements ILoginPort {
         //2.生成ticket
         WeixinQrCodeRequestDTO weixinQrCodeReq=WeixinQrCodeRequestDTO.builder()
                 .expire_seconds(2592000)
-                .action_name(WeixinQrCodeRequestDTO.ActionNameTypeVO.QR_SCENE.getCode())
+                .action_name(WeixinQrCodeRequestDTO.ActionNameTypeVO.QR_STR_SCENE.getCode()) //换成临时字符串
                 .action_info(WeixinQrCodeRequestDTO.ActionInfo.builder()
                         .scene(WeixinQrCodeRequestDTO.ActionInfo.Scene.builder()
-                                .scene_id(100601)
+                                .scene_str(sceneStr)
                                 .build())
                         .build())
                 .build();
@@ -62,7 +70,6 @@ public class LoginPort implements ILoginPort {
         assert weixinQrCodeRes != null;
 
         return weixinQrCodeRes.getTicket();
-
     }
 
     @Override

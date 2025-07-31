@@ -1,92 +1,136 @@
-25-07-30.22:47:25.031 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 33388 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
-25-07-30.22:47:25.034 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-30.22:47:25.948 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
-25-07-30.22:47:25.958 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
-25-07-30.22:47:25.958 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-30.22:47:25.958 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-30.22:47:26.129 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-30.22:47:26.129 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1052 ms
-25-07-30.22:47:27.422 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
-25-07-30.22:47:27.446 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
-25-07-30.22:47:27.456 [main            ] INFO  Application            - Started Application in 2.809 seconds (JVM running for 3.731)
-25-07-30.22:49:33.140 [http-nio-8080-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-30.22:49:33.140 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-30.22:49:33.141 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-30.22:49:33.246 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:111 productId:111
-25-07-30.22:49:44.497 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-30.22:49:45.360 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-30.22:49:53.029 [http-nio-8080-exec-2] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
-25-07-30.22:50:04.776 [http-nio-8080-exec-2] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: 111 orderId: 425921376411 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=DACzNCTyYVIrNrOEIQVwtQF%2B2h%2BczvBc2GoPgExp%2BrhkGb3yAiaACNTtbZALhcwGvSjjvR72cpYaiWMg3Mqb3WcaglN0v5KmNMex56HysyMagS8tT9ijpWD99gQjOfVaxQOxMg5GcIetLRVeMlRagAO5rK9PyLe8ACc0VZS7yF84rpz2PWk9Z5bd9MfdBgt3gMk%2BTVGjzy66Wqc2Uxee6brIEkONm9TY%2Fol8emMxHpDXSLNx8%2B30tAi9LHj9o8pgAIOVeVeHd1Bj3P2Una9LyO77BWUbT4u1jZQ8uz7obJRl9Ue%2F8mKoaqKRRGxg2Kh%2Bf6qFDj7V7Yq3HI8DmWrPQg%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30+22%3A50%3A04&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
-<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;425921376411&quot;,&quot;total_amount&quot;:&quot;90.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
-<input type="submit" value="立即支付" style="display:none" >
-</form>
-<script>document.forms[0].submit();</script>
-25-07-30.22:50:14.017 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:111 productId:9890001 orderId:425921376411
-25-07-30.22:52:31.148 [http-nio-8080-exec-7] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:qqq productId:qqq
-25-07-30.22:52:43.844 [http-nio-8080-exec-7] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
-25-07-30.22:53:28.436 [http-nio-8080-exec-7] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: qqq orderId: 431684780856 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=XOoBb9lKzL9f4qs8OPaQ0ZL1RVuIYAJElmXTFu%2BChofQyS5LcI1%2FupLAE%2F7lFKCQNjPD%2FNoDCgjWt0QuaBv2h3i9ESJSR%2FKibAGcGmyv%2BLxcilVAschJGXN%2FWjHbiIN4GadcDnze4LNyotl49uR6u4Rl3g5NeNug0NRAaUz0VhPeoza2GwJkSqFK%2F%2BKaC6YZwjES0eBK3R1z9%2B2w1PVp6x0%2BoV8mRS1yjIb95hpwRKL1DamXTSUp3aGI8%2FHCmLzlpk5z9Dhy0w6wMyHpmfC5qLX8hHe3jLWt8GcPeVx9TkEGCHE6Prd4IMSE3fO9e91HdxhIugD2ewUzNuRssuDnSQ%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30+22%3A53%3A21&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
-<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;431684780856&quot;,&quot;total_amount&quot;:&quot;90.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
-<input type="submit" value="立即支付" style="display:none" >
-</form>
-<script>document.forms[0].submit();</script>
-25-07-30.22:53:32.218 [http-nio-8080-exec-7] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:qqq productId:9890001 orderId:431684780856
-25-07-30.22:54:28.369 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s933ms974µs400ns).
-25-07-30.23:00:00.005 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
-25-07-30.23:00:01.051 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-30 23:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=WxjvfhSX3x6Dv+wOIHzfQNfys4T4hZklvGytlKDlbU78f8SGaIwIcX+Hwr3S9VRx24mavfEIwUJ0tXwMF5fUbWSCEZD4mvbb3gjFjcZ1y0EsNn1AjrSuSkB376Kjp+cfG03eNbDixOwQHlB2SHCSF2g2kcOXoccoUtaioEqEAa5zPGWv7JmLOJ1dQEFq9ikNwbPnMY1akao4anubaAeC8+WhlViFljYGIVCMjM255SkZmE9dyo1nFtSEOL9g2yFJzzDvcwFNFaMkPzgne9+DPzK034WtPW6jDoU1xUgyFfzS3xAmKn0WMrUya44wolB9HyJxkBodnB1jy8Tl+iCMaQ==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30 23:00:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175388760088955504924&biz_content={"out_trade_no":"425921376411"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"425921376411","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"oUUBwKM7Y1Hyz0IiVxtDwQ5ECpMeqv3wRQy53CTIM+ZF/Y5eDH8NwDdRajQ+yQaXPZ3PdOaA6BGx0X5hOr+3k3OwyEQAQE7anKNT/jX//TtI9lHNgIHjoKRvIVs3goXMsJLg+qy7sb9v0AzIohoEfPPofZDCyk4TyDpZDCNLYkpqikv8cRzvtDabZ5MDtuFfznD0vKmrILQfrVygpLvff7XmKwUh8zUSmQnuJ6WQWzpRNe3czAnNVJtvuOOPE9aQJ3QlJrZjIkILnm7ZVKe38O9CdZQm1GBNMGm5xDaUitm9nkZcjIy42SHp1hTNyf9yi1cI563sABcNtI/sqQd4RA=="}^_^16ms,988ms,33ms^_^trace_id:0601ac3e175388760088955504924
-25-07-30.23:00:01.350 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-30 23:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=I/NCzeFqx6AFtsc9dMp1AEtcAopsm1LB31dreNt/X1uOjxmPCfwZ5HhrjwI7j4DuB4j5mi6nILVxNdmCY72dYO2bPodULW8on5XHxQjH6w7JUhRQqJrVllJxRzk+T7al8xVGSuGZggEu/5QMdxhvqVpX08a1MQuuiAWZjl7Ku+vFi9sbV+/WzLs32AG3rwHR2QjFDKG4T5nnxY4HK3+vKEAJf881BraQHgg5aYwQeBpizGa+9G7YRcRdKGFBjPTQGRZTEZFGuV2QanGwTG6p2ESuvfDvLNgerEoJhSLtYnB2rK7qGAnOiYfUbdGm5GqzK2CqawKsLMuLmFtoP0TaRg==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30 23:00:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175388760155455524924&biz_content={"out_trade_no":"431684780856"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"431684780856","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"jy2iq1aDWKM7bif0yPodIRbGHnvR6+6Ye+EkEhu4mlsSsfBiFOmc08DrzwXs/e/e24o9zvZu1tan7kLH7qsUHgE/ofqmmcP17Kx/X5+yToJAeDR2BmJUD4wf9DkOmpSyhUzDetEGWeliH/O/cVPvCvzB9fZsVJ8JUnkrW/G96jN5NYgKD5Pv7eWP19vangRplH3SjUw8hNqboKboi1dItnE0/Ofjwa7pGoM2pxxJcN96vGHDln+qFTmmNAFykdmCiVEKcBiyQdUklTrNacpdpolm17tSSuawOTJoUQs8BXNZnyPC7oYW8On3ZKCTEeIQsJQziJvfUgGVCRjKgwRCIw=="}^_^6ms,286ms,7ms^_^trace_id:0601ac3e175388760155455524924
-25-07-30.23:00:01.351 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
-25-07-30.23:00:01.353 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
-25-07-30.23:08:34.964 [http-nio-8080-exec-8] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:wwww productId:wwww
-25-07-30.23:08:45.415 [http-nio-8080-exec-8] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
-25-07-30.23:09:49.976 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s394ms291µs400ns).
-25-07-30.23:15:32.538 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s562ms368µs).
-25-07-30.23:15:32.554 [http-nio-8080-exec-1] ERROR [localhost]            - Exception Processing ErrorPage[errorCode=0, location=/error]
-org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
-	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:271)
-	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
-	at java.io.FilterOutputStream.flush(FilterOutputStream.java:140)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
-	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:427)
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:373)
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:237)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:166)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+25-07-31.16:43:19.163 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 27916 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-31.16:43:19.166 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-31.16:43:20.119 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-31.16:43:20.127 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-31.16:43:20.127 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-31.16:43:20.127 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-31.16:43:20.291 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-31.16:43:20.291 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1079 ms
+25-07-31.16:43:21.523 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-31.16:43:21.544 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-31.16:43:21.556 [main            ] INFO  Application            - Started Application in 2.834 seconds (JVM running for 4.017)
+25-07-31.16:43:27.889 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-31.16:43:27.889 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-31.16:43:27.890 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-31.16:43:28.806 [http-nio-8080-exec-1] INFO  LoginController        - 生成微信扫码登录,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA
+25-07-31.16:43:31.836 [http-nio-8080-exec-4] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-6] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-3] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-6] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179
+25-07-31.16:47:54.320 [http-nio-8080-exec-2] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-4] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179
+25-07-31.16:47:54.320 [http-nio-8080-exec-6] INFO  LoginController        - 扫码检测登录结果,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-3] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179
+25-07-31.16:47:54.320 [http-nio-8080-exec-4] INFO  LoginController        - 扫码检测登录结果,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-3] INFO  LoginController        - 扫码检测登录结果,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.320 [http-nio-8080-exec-2] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179
+25-07-31.16:47:54.320 [http-nio-8080-exec-2] INFO  LoginController        - 扫码检测登录结果,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.321 [http-nio-8080-exec-5] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.321 [http-nio-8080-exec-5] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179
+25-07-31.16:47:54.321 [http-nio-8080-exec-7] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.321 [http-nio-8080-exec-7] INFO  WeixinLoginService     - checkLogin ticket: [gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA], length: 96, hashCode: -1960612179
+25-07-31.16:47:54.321 [http-nio-8080-exec-7] INFO  LoginController        - 扫码检测登录结果,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:54.321 [http-nio-8080-exec-5] INFO  LoginController        - 扫码检测登录结果,ticket:gQHh8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyUnZXd01wSDJmVEkxR09WT2hFY3cAAgSyLItoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:47:57.371 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 22508 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-31.16:47:57.374 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-31.16:47:58.166 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-31.16:47:58.173 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-31.16:47:58.173 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-31.16:47:58.173 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-31.16:47:58.324 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-31.16:47:58.324 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 910 ms
+25-07-31.16:47:59.408 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-31.16:47:59.429 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-31.16:47:59.439 [main            ] INFO  Application            - Started Application in 2.417 seconds (JVM running for 3.127)
+25-07-31.16:48:00.342 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-31.16:48:00.342 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-31.16:48:00.343 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-31.16:48:07.715 [http-nio-8080-exec-2] INFO  WeixinPortalController - 微信公众号验签信息开始 [5c11a5bb4ced10f0524993bf0ab28e6bc1f69915, 1753951689, 1633309238, 5330820337879465417]
+25-07-31.16:48:07.730 [http-nio-8080-exec-2] INFO  WeixinPortalController - 微信公众号验签信息完成 check：true
+25-07-31.16:48:17.071 [http-nio-8080-exec-3] INFO  LoginController        - 生成微信扫码登录,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA
+25-07-31.16:48:20.085 [http-nio-8080-exec-4] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:30.861 [http-nio-8080-exec-4] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:30.861 [http-nio-8080-exec-4] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:30.865 [http-nio-8080-exec-5] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:31.626 [http-nio-8080-exec-5] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:31.626 [http-nio-8080-exec-5] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:31.628 [http-nio-8080-exec-7] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:32.365 [http-nio-8080-exec-7] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:32.365 [http-nio-8080-exec-7] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:32.367 [http-nio-8080-exec-8] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:33.116 [http-nio-8080-exec-8] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:33.116 [http-nio-8080-exec-8] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:33.118 [http-nio-8080-exec-10] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:33.520 [http-nio-8080-exec-10] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:33.521 [http-nio-8080-exec-10] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:35.092 [http-nio-8080-exec-6] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:37.962 [http-nio-8080-exec-6] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:37.962 [http-nio-8080-exec-6] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:37.971 [http-nio-8080-exec-9] INFO  WeixinPortalController - 接收微信公众号信息请求oK8L37H4HmFwOswxZovoID5fhldo开始 <xml><ToUserName><![CDATA[gh_e7d4b764df16]]></ToUserName>
+<FromUserName><![CDATA[oK8L37H4HmFwOswxZovoID5fhldo]]></FromUserName>
+<CreateTime>1753951717</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[2CF5ACAEB71633A72C9CFF630B276226]]></EventKey>
+<Ticket><![CDATA[gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA]]></Ticket>
+</xml>
+25-07-31.16:48:38.087 [http-nio-8080-exec-1] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:38.970 [http-nio-8080-exec-1] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:38.970 [http-nio-8080-exec-1] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:null,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:48:39.008 [http-nio-8080-exec-9] INFO  WeixinLoginService     - saveLoginState ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:48:40.056 [http-nio-8080-exec-3] INFO  WeixinPortalController - 接收微信公众号信息请求oK8L37H4HmFwOswxZovoID5fhldo开始 <xml><ToUserName><![CDATA[gh_e7d4b764df16]]></ToUserName>
+<FromUserName><![CDATA[oK8L37H4HmFwOswxZovoID5fhldo]]></FromUserName>
+<CreateTime>1753951721</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[TEMPLATESENDJOBFINISH]]></Event>
+<MsgID>4099671275314823180</MsgID>
+<Status><![CDATA[success]]></Status>
+</xml>
+25-07-31.16:48:41.088 [http-nio-8080-exec-5] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:00.689 [http-nio-8080-exec-5] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:02.083 [http-nio-8080-exec-5] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:21.268 [http-nio-8080-exec-8] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:21.268 [http-nio-8080-exec-10] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:21.268 [http-nio-8080-exec-1] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:21.269 [http-nio-8080-exec-6] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:21.269 [http-nio-8080-exec-9] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.609 [http-nio-8080-exec-6] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:22.609 [http-nio-8080-exec-10] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:22.609 [http-nio-8080-exec-8] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:22.610 [http-nio-8080-exec-6] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.609 [http-nio-8080-exec-9] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:22.609 [http-nio-8080-exec-1] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:22.610 [http-nio-8080-exec-10] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.610 [http-nio-8080-exec-1] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.610 [http-nio-8080-exec-9] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.610 [http-nio-8080-exec-8] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.611 [http-nio-8080-exec-3] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:22.611 [http-nio-8080-exec-2] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727,sfceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:25.259 [http-nio-8080-exec-3] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:25.259 [http-nio-8080-exec-2] INFO  WeixinLoginService     - checkLogin ticket: [gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA], length: 96, hashCode: -631760727
+25-07-31.16:49:25.260 [http-nio-8080-exec-2] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:49:25.260 [http-nio-8080-exec-3] INFO  LoginController        - 扫码检测登录结果,ticket:gQEp8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2RKMk51SDJmVEkxSGlXT05FY0UAAgTSLYtoAwQAjScA,openid:oK8L37H4HmFwOswxZovoID5fhldo,sceneStr:2CF5ACAEB71633A72C9CFF630B276226
+25-07-31.16:50:15.569 [http-nio-8080-exec-4] INFO  LoginController        - 生成微信扫码登录,ticket:gQG18DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQXFKek1nSDJmVEkxRjlYT2hFY0gAAgRJLotoAwQAjScA
+25-07-31.17:00:00.009 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-31.17:00:00.039 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-31.17:00:00.203 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-31.17:00:01.477 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-31 17:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=UrDRu27aGtuH6vvmIxQgb363KbsZZj4Jq40y/EJmt97dQRqYSuK5SzKXxUF+NFxn+6wuWSsrWWwfHKaqdWN8+K64BrpPKMu6EMKWSV5PSdjSUel6vQMWjD1HTgJONWlYUBfI5ExQoR5/xLUEW6rTedJhgbM49ntvdMvsUKxFuvPz71StHBmzgBmUDC/oEs5FOVMo2oXM00hrWiIXAp+v8pg7vuHFV3hPqNvIRcOB50HDg8xAOYrM9U7ehW6LLJObNc7s7nTJQlNKjl4Q8aFZ8yN0CsT2S30TZPpVe9QLjbbZ77YeZMr16/0bdupgvPyySHpHbvpYgSQHDjaC9KM0hQ==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-31 17:00:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175395240245449444924&biz_content={"out_trade_no":"425921376411"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"425921376411","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"oUUBwKM7Y1Hyz0IiVxtDwQ5ECpMeqv3wRQy53CTIM+ZF/Y5eDH8NwDdRajQ+yQaXPZ3PdOaA6BGx0X5hOr+3k3OwyEQAQE7anKNT/jX//TtI9lHNgIHjoKRvIVs3goXMsJLg+qy7sb9v0AzIohoEfPPofZDCyk4TyDpZDCNLYkpqikv8cRzvtDabZ5MDtuFfznD0vKmrILQfrVygpLvff7XmKwUh8zUSmQnuJ6WQWzpRNe3czAnNVJtvuOOPE9aQJ3QlJrZjIkILnm7ZVKe38O9CdZQm1GBNMGm5xDaUitm9nkZcjIy42SHp1hTNyf9yi1cI563sABcNtI/sqQd4RA=="}^_^27ms,1139ms,28ms^_^trace_id:0601ac3e175395240245449444924
+25-07-31.17:00:02.003 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-31 17:00:02^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=ISOfxLuot0YGhvc9Z3Vejmm/yASyzke9bLSl+to2x3XglH4cdvEexBda9treuwbq3iN4WWTWi4MtPDCzF00oL2xaWsMSpwRR/bEEBRiQqwaUVL8XowQnulnLSQLnnAU+DzZHG82T+S1ij8ZHovGEeeBV6MFakLhdgUxP1HkQexdsntUUEmFeXbNehUot93o/Yz9/SjAVlmWn/CeRXHfMJ2dsP4XqCljdpjk6irihPiCf1AwhJW/e6TY8VVqTogRWuHYAX/Q1j3acyKbfcPbrEFzR4XP8Gx/GCgFcyJyqxqlMrXKdvm4P3zeO4Iz6fqR/yslAW86oD0Jz7y+hyWgFhw==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-31 17:00:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=060389ba175395240330258378656&biz_content={"out_trade_no":"431684780856"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"431684780856","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"jy2iq1aDWKM7bif0yPodIRbGHnvR6+6Ye+EkEhu4mlsSsfBiFOmc08DrzwXs/e/e24o9zvZu1tan7kLH7qsUHgE/ofqmmcP17Kx/X5+yToJAeDR2BmJUD4wf9DkOmpSyhUzDetEGWeliH/O/cVPvCvzB9fZsVJ8JUnkrW/G96jN5NYgKD5Pv7eWP19vangRplH3SjUw8hNqboKboi1dItnE0/Ofjwa7pGoM2pxxJcN96vGHDln+qFTmmNAFykdmCiVEKcBiyQdUklTrNacpdpolm17tSSuawOTJoUQs8BXNZnyPC7oYW8On3ZKCTEeIQsJQziJvfUgGVCRjKgwRCIw=="}^_^6ms,513ms,7ms^_^trace_id:060389ba175395240330258378656
+25-07-31.17:00:02.269 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-31 17:00:02^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=hcdp+oqKUjVP4WrOhkl3q3MZTOxaSoKivbFvFomFTVf5dBG1I3UhNIhpWynqOnhwy62L/DtBtTiUFdwq94GKoSRYqmDZKQHxcrr8hRDG4hZ1j4gbw0AFnalcDy0BqGB/eBjoUemKXGuszsv+fpRGmS9mabzmM6Tac2kuvpDO9bOYlGD/nk+GL1fRGOq/tIFNBDDRbAW2cQDHDF5plw9bS2sIzC3g5ESbNReVYZ3KTXvdMRoJyG+2z6yYyDq2CHbngEREZHiKi82HR2k/RZ5/3Cof0kMBz8LODq7e5ag5XQ66PRR/GVpu0wko4bbo0mytk5/AaOQu0Hemqq8jeKFz/w==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-31 17:00:02^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175395240382949574924&biz_content={"out_trade_no":"314702874014"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"314702874014","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"jiDYghXERsyL5Hac4hlUbdCpkhA4YWVKWXwb5C32q5vbMN5/8szK//k5m7gjeDJL32awsMYtSicJnZL6fHpsF56qFx3NSJ60FbxyAvduU9ULxKHoT/zJQMiNb9UDqgPMEyi/+krRUPDj0towZrB6nU69a+4gtYY7K/TNoCbdG+iF3FCJRC9TQenGRekR7VUyJHplCyCbrr0Zq34JyrR90jMo9eKD9Bk7fgZh+qRGZ0jmPmPTWGXHFuv+zMOAV7ikgesZEizArGurZxhaxxQWNDl3crZ/3vQ6FxD4rL9r6uzVZQlM95BngAzzNqB82uKd8eTd08ZWfTQfYig0Za7pew=="}^_^7ms,251ms,8ms^_^trace_id:0601ac3e175395240382949574924
+25-07-31.17:00:02.813 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-31 17:00:02^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=ce2YkWvObrlbOa8wg8Nv3zljgtZISXkVAVcXXUw+nvtCFWYcFI0NjgtFSk6Y8q/WnP/9rbxdWedj2Nvna5oEPhKLYSShuwSh+osvWhiG8tLuTwi7BfawxBq903QyMIULt/IwDx3VToqNyu2A6soH3JSOjJePuDY4jjuyzHLjhmX1YuF2PDDszgShfHcjVRqjZgAO7uJZdsjyVkkxumQSUOJe0E2Yk37tfXztBNW5tt4EY/x1iVg5cjYPw3/V0pzcwS4xo8SIT+vSDJGjVjP13U0YGmmv4ww20s55koLOrBaTRlwKckWQeAKXawuoJkoRU3CewRjDId1zAsi33rbGjA==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-31 17:00:02^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=060d2b35175395240411439925993&biz_content={"out_trade_no":"795206301509"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"795206301509","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"H9Cw+0U5+a2WseEWAJgf6vYAIWW5+jdYJiiuXM4ElBWJKwjahYA0ju2TFX8VaXtuJeZc56hwwz14MqkQcHpoeBjK088/eH27zPMbRfcC6vcrPea3L8KSP1NYx1vH1zmAzGwqgJ01yRdtY6mynaJBXZOWBC3rbPCxkXqLXURnVx/S525bezzLp4KRWpLdg4+HClqN292ES4E6p9P4aBkDYrH8Rz/nK5Me3keQ/8kBnLsTn8k/WfRyEdapFf+irLpd8kRQo0H2mCiEZucAwIYBCFfn3eX6YpbqhAGOVChQNDnGX+pkFkCDQLghC2mioe0MjldjS5U5hlHNkp5046nncQ=="}^_^6ms,530ms,8ms^_^trace_id:060d2b35175395240411439925993
+25-07-31.17:00:02.813 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-31.17:00:02.832 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：425921376411 关闭状态：true
+25-07-31.17:00:02.838 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：431684780856 关闭状态：true
+25-07-31.17:00:02.844 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：314702874014 关闭状态：true
+25-07-31.17:00:02.848 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：795206301509 关闭状态：true
+25-07-31.17:30:00.007 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-31.17:30:00.009 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-31.17:30:00.009 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-31.17:37:23.215 [http-nio-8080-exec-8] INFO  Http11Processor        - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x050x010x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
@@ -95,58 +139,3 @@ org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的�
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
-	at sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
-	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
-	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
-	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:469)
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:136)
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1431)
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:775)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:739)
-	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:723)
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:566)
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
-	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:220)
-	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1246)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:398)
-	at org.apache.coyote.Response.action(Response.java:207)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
-	... 52 common frames omitted
-25-07-30.23:15:32.563 [http-nio-8080-exec-8] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: wwww orderId: 314702874014 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=CBevBOg2bfAn%2FGf5LbEdG%2FbYtarQ2e8reFkpB6oN%2FfGVe8B1rRUW9I57nSm0RBEf4Lkj549JprQSh3mbcRVPeaq7OrTU88xDVBYCfqV8anU2QGT3xUWBBknPrmZD0CkMstCp3y3G9Vm2ySHHtMh3N2ja5hTddgCU2j4xibXSj2panbEIBqa0avPOmgWBAteiE03ZE%2Fe53JCT3HIzlAN3FY537F44YDKbOy1bTtXX5hn3Ie4a73iGG%2B%2F%2BhkDJ%2FtlKXw6or%2Bs0O9ofcHfK5NuzEzRxvTxkLK1HgLqMDLrYWgB4Ek5xkEEWKnHm3l7ShtypPzKqoIC0Y282246%2BAGxqBw%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30+23%3A15%3A32&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
-<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;314702874014&quot;,&quot;total_amount&quot;:&quot;90.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
-<input type="submit" value="立即支付" style="display:none" >
-</form>
-<script>document.forms[0].submit();</script>
-25-07-30.23:15:35.057 [http-nio-8080-exec-8] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:wwww productId:9890001 orderId:314702874014
-25-07-30.23:18:02.698 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-30.23:18:02.707 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-07-30.23:18:09.805 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 22004 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
-25-07-30.23:18:09.807 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-07-30.23:18:10.604 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
-25-07-30.23:18:10.612 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
-25-07-30.23:18:10.612 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-07-30.23:18:10.612 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-07-30.23:18:10.763 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-07-30.23:18:10.763 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 916 ms
-25-07-30.23:18:11.892 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
-25-07-30.23:18:11.913 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
-25-07-30.23:18:11.923 [main            ] INFO  Application            - Started Application in 2.473 seconds (JVM running for 3.185)
-25-07-30.23:18:17.937 [http-nio-8080-exec-5] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-07-30.23:18:17.937 [http-nio-8080-exec-5] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-07-30.23:18:17.938 [http-nio-8080-exec-5] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-07-30.23:18:18.059 [http-nio-8080-exec-5] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:1234 productId:1234
-25-07-30.23:18:22.616 [http-nio-8080-exec-5] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-30.23:18:23.436 [http-nio-8080-exec-5] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-30.23:18:24.612 [http-nio-8080-exec-5] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
-25-07-30.23:18:25.279 [http-nio-8080-exec-5] INFO  AbstractOrderService   - 判断进入了拼团逻辑
-25-07-30.23:19:25.232 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s680ms127µs600ns).
-25-07-30.23:19:25.380 [http-nio-8080-exec-5] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: 1234 orderId: 795206301509 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=CP3vmyQK%2Fit%2FCq018z%2FGzJvK0mvUD71%2F5920s9LZwfyu6XtHLDC1SKfSaJIVD66tPrdI%2BRLZ3eKm3nGY3IbvvLFVpmSq02Qfhm9719cLdCJRl52r%2B7qWZQ9SIZxbxUOFEFLnZVFdKHYM7BiMiH4qA6cuZTYjtFa%2BASCBCiDyF0zDaWTcjG9GGnoIDUkUQRzVYTDYL6AVrP2wt5APmJgnNkwy0ZIRnW1KTJ9UCBmzgr27aMa%2BnQZmIeJQ1VgRr1FEF7ecXgu9rkaLyePhE1JIviY1YIsEB7B45J6iHd0dwucZ77Uw0bG%2FmSJF5nJZkXeVYDyW1%2FkzZ2wYvAgvEEH85w%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30+23%3A19%3A25&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
-<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;795206301509&quot;,&quot;total_amount&quot;:&quot;90.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
-<input type="submit" value="立即支付" style="display:none" >
-</form>
-<script>document.forms[0].submit();</script>
-25-07-30.23:19:31.664 [http-nio-8080-exec-5] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:1234 productId:9890001 orderId:795206301509 MarketType:1
-25-07-30.23:21:37.641 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-30.23:21:37.653 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
