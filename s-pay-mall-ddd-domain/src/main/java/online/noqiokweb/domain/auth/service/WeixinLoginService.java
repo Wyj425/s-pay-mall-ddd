@@ -27,11 +27,13 @@ public class WeixinLoginService implements ILoginService{
 
     @Override
     public String checkLogin(String ticket) {
+        log.info("checkLogin ticket: [{}], length: {}, hashCode: {}", ticket, ticket.length(), ticket.hashCode());
         return openidToken.getIfPresent(ticket);
     }
 
     @Override
     public void saveLoginState(String ticket, String openId) throws IOException {
+        log.info("saveLoginState ticket: [{}], length: {}, hashCode: {}", ticket, ticket.length(), ticket.hashCode());
         //保存登录信息
         openidToken.put(ticket, openId);
         //发送模版消息

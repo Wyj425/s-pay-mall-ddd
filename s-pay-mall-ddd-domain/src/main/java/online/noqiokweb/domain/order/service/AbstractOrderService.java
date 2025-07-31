@@ -67,29 +67,33 @@ public abstract class AbstractOrderService implements IOrderService{
             return PayOrderEntity.builder()
                     .orderId(payOrderEntity.getOrderId())
                     .payUrl(payOrderEntity.getPayUrl())
+                    .marketType(payOrderEntity.getMarketType())
                     .build();
         }
 
         //2.查询商品&创建订单
         ProductEntity productEntity = port.queryProductByProductId(shopCartEntity.getProductId());
-        OrderEntity orderEntity = CreateOrderAggregate.buildOrderEntity(productEntity.getProductId(),productEntity.getProductName());
+        OrderEntity orderEntity = CreateOrderAggregate.buildOrderEntity(productEntity.getProductId(),productEntity.getProductName(),shopCartEntity.getMarketTypeVO().getCode());
         CreateOrderAggregate createOrderAggregate = CreateOrderAggregate.builder()
                 .userId(shopCartEntity.getUserId())
                 .productEntity(productEntity)
                 .orderEntity(orderEntity)
                 .build();
-
-        this.doSaveOrder(createOrderAggregate);
-
+        log.info("是否走拼团营销：{}",shopCartEntity.getMarketTypeVO());
         MarketPayDiscountEntity marketPayDiscountEntity=null;
         //营销锁单
         if(MarketTypeVO.GROUP_BUY_MARKET.equals(shopCartEntity.getMarketTypeVO())){
+            log.info("判断进入了拼团逻辑");
             marketPayDiscountEntity=this.lockMarketPayOrder(shopCartEntity.getUserId(),
                     shopCartEntity.getTeamId(),
                     shopCartEntity.getActivityId(),
                     shopCartEntity.getProductId(),
                     orderEntity.getOrderId());
         }
+
+        this.doSaveOrder(createOrderAggregate);
+
+
         PayOrderEntity payOrderEntity=doPrePayOrder(shopCartEntity.getUserId(),
                 productEntity.getProductId(),
                 productEntity.getProductName(),
@@ -100,6 +104,7 @@ public abstract class AbstractOrderService implements IOrderService{
         return PayOrderEntity.builder()
                 .orderId(orderEntity.getOrderId())
                 .payUrl(payOrderEntity.getPayUrl())
+                .marketType(payOrderEntity.getMarketType())
                 .build();
     }
 

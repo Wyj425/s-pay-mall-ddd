@@ -18,8 +18,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 
+
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -54,9 +57,10 @@ public class AliPayController implements IPayService {
                     .teamId(teamId)
                             .activityId(createPayRequestDTO.getActivityId())
                     .marketTypeVO(MarketTypeVO.valueOf(marketType))
+                            .activityId(createPayRequestDTO.getActivityId())
                     .build());
 
-            log.info("商品下单，根据商品ID创建支付单完成 userId:{} productId:{} orderId:{}", userId, productId, payOrderRes.getOrderId());
+            log.info("商品下单，根据商品ID创建支付单完成 userId:{} productId:{} orderId:{} MarketType:{}", userId, productId, payOrderRes.getOrderId(),payOrderRes.getMarketType());
             return Response.<String>builder()
                     .code(Constants.ResponseCode.SUCCESS.getCode())
                     .info(Constants.ResponseCode.SUCCESS.getInfo())
@@ -64,12 +68,28 @@ public class AliPayController implements IPayService {
                     .build();
         } catch (Exception e) {
             log.error("商品下单，根据商品ID创建支付单失败 userId:{} productId:{}", createPayRequestDTO.getUserId(), createPayRequestDTO.getUserId(), e);
+            try {
+                Field codeField = e.getClass().getDeclaredField("code");
+                Field infoField = e.getClass().getDeclaredField("info");
+                codeField.setAccessible(true);
+                infoField.setAccessible(true);
+                String code = (String) codeField.get(e);
+                String info = (String) infoField.get(e);
+                log.error("创建支付失败 code:{} info:{}", code, info);
+                return Response.<String>builder()
+                        .code(code)
+                        .info(info)
+                        .build();
+            } catch (Exception ex) {
+                log.error("无法获取code/info", ex);
+            }
+
             return Response.<String>builder()
                     .code(Constants.ResponseCode.UN_ERROR.getCode())
                     .info(Constants.ResponseCode.UN_ERROR.getInfo())
                     .build();
-        }
     }
+        }
     @PostMapping("group_buy_notify")
     @Override
     public String groupBuyNotify(@RequestBody  NotifyRequestDTO requestDTO) {

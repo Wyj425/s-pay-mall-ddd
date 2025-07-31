@@ -1,31 +1,22 @@
-25-07-09.15:45:41.878 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aliPayController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.alipay.api.AlipayClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-25-07-09.15:45:41.927 [main            ] ERROR LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'com.alipay.api.AlipayClient' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.alipay.api.AlipayClient' in your configuration.
-
-25-07-09.15:52:17.555 [http-nio-8080-exec-2] ERROR AliPayController       - 商品下单，根据商品ID创建支付单失败 userId:guoxushiwoer productId:guoxushiwoer
-java.lang.NullPointerException: null
-	at online.noqiokweb.domain.order.service.OrderService.doPrePayOrder(OrderService.java:50)
-	at online.noqiokweb.domain.order.service.AbstractOrderService.createPayOrder(AbstractOrderService.java:63)
-	at online.noqiokweb.trigger.http.AliPayController.createPayOrder(AliPayController.java:43)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+25-07-30.22:54:28.369 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s933ms974µs400ns).
+25-07-30.23:00:01.051 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-30 23:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=WxjvfhSX3x6Dv+wOIHzfQNfys4T4hZklvGytlKDlbU78f8SGaIwIcX+Hwr3S9VRx24mavfEIwUJ0tXwMF5fUbWSCEZD4mvbb3gjFjcZ1y0EsNn1AjrSuSkB376Kjp+cfG03eNbDixOwQHlB2SHCSF2g2kcOXoccoUtaioEqEAa5zPGWv7JmLOJ1dQEFq9ikNwbPnMY1akao4anubaAeC8+WhlViFljYGIVCMjM255SkZmE9dyo1nFtSEOL9g2yFJzzDvcwFNFaMkPzgne9+DPzK034WtPW6jDoU1xUgyFfzS3xAmKn0WMrUya44wolB9HyJxkBodnB1jy8Tl+iCMaQ==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30 23:00:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175388760088955504924&biz_content={"out_trade_no":"425921376411"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"425921376411","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"oUUBwKM7Y1Hyz0IiVxtDwQ5ECpMeqv3wRQy53CTIM+ZF/Y5eDH8NwDdRajQ+yQaXPZ3PdOaA6BGx0X5hOr+3k3OwyEQAQE7anKNT/jX//TtI9lHNgIHjoKRvIVs3goXMsJLg+qy7sb9v0AzIohoEfPPofZDCyk4TyDpZDCNLYkpqikv8cRzvtDabZ5MDtuFfznD0vKmrILQfrVygpLvff7XmKwUh8zUSmQnuJ6WQWzpRNe3czAnNVJtvuOOPE9aQJ3QlJrZjIkILnm7ZVKe38O9CdZQm1GBNMGm5xDaUitm9nkZcjIy42SHp1hTNyf9yi1cI563sABcNtI/sqQd4RA=="}^_^16ms,988ms,33ms^_^trace_id:0601ac3e175388760088955504924
+25-07-30.23:00:01.350 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-07-30 23:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=I/NCzeFqx6AFtsc9dMp1AEtcAopsm1LB31dreNt/X1uOjxmPCfwZ5HhrjwI7j4DuB4j5mi6nILVxNdmCY72dYO2bPodULW8on5XHxQjH6w7JUhRQqJrVllJxRzk+T7al8xVGSuGZggEu/5QMdxhvqVpX08a1MQuuiAWZjl7Ku+vFi9sbV+/WzLs32AG3rwHR2QjFDKG4T5nnxY4HK3+vKEAJf881BraQHgg5aYwQeBpizGa+9G7YRcRdKGFBjPTQGRZTEZFGuV2QanGwTG6p2ESuvfDvLNgerEoJhSLtYnB2rK7qGAnOiYfUbdGm5GqzK2CqawKsLMuLmFtoP0TaRg==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-30 23:00:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175388760155455524924&biz_content={"out_trade_no":"431684780856"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"431684780856","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"jy2iq1aDWKM7bif0yPodIRbGHnvR6+6Ye+EkEhu4mlsSsfBiFOmc08DrzwXs/e/e24o9zvZu1tan7kLH7qsUHgE/ofqmmcP17Kx/X5+yToJAeDR2BmJUD4wf9DkOmpSyhUzDetEGWeliH/O/cVPvCvzB9fZsVJ8JUnkrW/G96jN5NYgKD5Pv7eWP19vangRplH3SjUw8hNqboKboi1dItnE0/Ofjwa7pGoM2pxxJcN96vGHDln+qFTmmNAFykdmCiVEKcBiyQdUklTrNacpdpolm17tSSuawOTJoUQs8BXNZnyPC7oYW8On3ZKCTEeIQsJQziJvfUgGVCRjKgwRCIw=="}^_^6ms,286ms,7ms^_^trace_id:0601ac3e175388760155455524924
+25-07-30.23:09:49.976 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s394ms291µs400ns).
+25-07-30.23:15:32.538 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m42s562ms368µs).
+25-07-30.23:15:32.554 [http-nio-8080-exec-1] ERROR [localhost]            - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:271)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at java.io.FilterOutputStream.flush(FilterOutputStream.java:140)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
@@ -38,25 +29,23 @@ java.lang.NullPointerException: null
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:427)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:373)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:237)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:166)
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
@@ -69,171 +58,23 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-25-07-09.16:07:02.343 [http-nio-8080-exec-5] ERROR AliPayController       - 商品下单，根据商品ID创建支付单失败 userId:guoxushiwoer productId:guoxushiwoer
-java.lang.NullPointerException: null
-	at online.noqiokweb.domain.order.service.OrderService.doPrePayOrder(OrderService.java:50)
-	at online.noqiokweb.domain.order.service.AbstractOrderService.createPayOrder(AbstractOrderService.java:63)
-	at online.noqiokweb.trigger.http.AliPayController.createPayOrder(AliPayController.java:43)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:750)
-25-07-09.17:41:04.256 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m8s268ms77µs900ns).
-25-07-09.17:58:21.620 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aliPayController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService' defined in file [E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-domain\target\classes\online\noqiokweb\domain\order\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'online.noqiokweb.domain.order.adapter.event.PaySuccessMessageEvent' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-25-07-09.17:58:21.641 [main            ] ERROR LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in online.noqiokweb.domain.order.service.OrderService required a bean of type 'online.noqiokweb.domain.order.adapter.event.PaySuccessMessageEvent' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'online.noqiokweb.domain.order.adapter.event.PaySuccessMessageEvent' in your configuration.
-
-25-07-25.21:03:15.280 [scheduling-1    ] ERROR err                    - 2025-07-25 21:03:15^_^alipay.trade.query^_^null^_^10.180.21.186^_^Windows 11^_^alipay-sdk-java-4.38.157.ALL^_^https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.query&sign=WNWpjVoI1utEdXrt58vb81I61RVErHR%2FEOO39E0OdL4SyNBWSqU%2FDf9gaZBx8RQVhwHtAAFW9INHEBnNMtuXF31Lh3CnWXAAC7jVPk5YgrmL3QKUALr0%2BXc1b8arGu0g3UQMLBlL1B5o0%2BXi%2F4YQlrdg7K%2BTGMWB6QN1m9WRMynjQBOJZI%2BPJ0V21H632ukeBMIWF%2BLPCVY3RTytHL6dOoHxJI4iZ8dSqK1%2ByWyUolymDpl5W1qbSp1oA7nQVXtp0op3K0muWdfjyN%2FnQBKBd4Bs1plb%2B2CyDz9FsjsG0bBaaG0mlVbwib0S%2Fj6k%2F0i1A3CTgipkIDX3WOBMaO0I9A%3D%3D&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-07-25+21%3A03%3A00&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^^_^Read timed out
-25-07-25.21:03:15.282 [scheduling-1    ] ERROR NoPayNotifyOrderJob    - 检测未接收到或未正确处理的支付回调通知失败
-com.alipay.api.AlipayApiException: java.net.SocketTimeoutException: Read timed out
-	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1015)
-	at com.alipay.api.AbstractAlipayClient._execute(AbstractAlipayClient.java:921)
-	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:395)
-	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:377)
-	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:372)
-	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:366)
-	at online.noqiokweb.trigger.job.NoPayNotifyOrderJob.exec(NoPayNotifyOrderJob.java:42)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1964)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1959)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1958)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1528)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268)
-	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:514)
-	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:181)
-	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:142)
-	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1003)
-	... 20 common frames omitted
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
-	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
-	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
-	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1271)
-	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:76)
-	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:948)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:779)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:714)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1607)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
-	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:3095)
-	at java.net.URLConnection.getContentType(URLConnection.java:511)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:420)
-	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:506)
-	... 23 common frames omitted
-25-07-25.21:10:26.934 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m18s225ms173µs100ns).
-25-07-25.21:13:15.682 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s816ms949µs200ns).
-25-07-25.21:16:16.875 [scheduling-1    ] ERROR NoPayNotifyOrderJob    - 检测未接收到或未正确处理的支付回调通知失败
-java.lang.NullPointerException: null
-	at online.noqiokweb.infrastructure.adapter.repository.OrderRepository.queryOrderByOrderId(OrderRepository.java:136)
-	at online.noqiokweb.infrastructure.adapter.repository.OrderRepository$$FastClassBySpringCGLIB$$7a8b5b54.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at online.noqiokweb.infrastructure.adapter.repository.OrderRepository$$EnhancerBySpringCGLIB$$7f22b9a2.queryOrderByOrderId(<generated>)
-	at online.noqiokweb.domain.order.service.OrderService.changeOrderPaySuccess(OrderService.java:92)
-	at online.noqiokweb.trigger.job.NoPayNotifyOrderJob.exec(NoPayNotifyOrderJob.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
-	at java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:469)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:136)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1431)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:775)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:739)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:723)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:566)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:220)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1246)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:398)
+	at org.apache.coyote.Response.action(Response.java:207)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 52 common frames omitted
+25-07-30.23:19:25.232 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s680ms127µs600ns).

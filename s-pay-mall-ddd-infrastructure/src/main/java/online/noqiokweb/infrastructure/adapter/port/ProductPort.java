@@ -51,6 +51,7 @@ public class ProductPort implements IProductPort {
 
     @Override
     public MarketPayDiscountEntity lockMarketPayOrder(String userId, String teamId, Long activityId, String productId, String orderId) {
+        log.info("进入了调用拼团接口流程");
         LockMarketPayOrderRequestDTO requestDTO = LockMarketPayOrderRequestDTO.builder()
                 .userId(userId)
                 .teamId(teamId)
@@ -61,24 +62,39 @@ public class ProductPort implements IProductPort {
                 .outTradeNo(orderId)
                 .notifyUrl(notifyUrl)
                 .build();
-        try{
-            Call<Response<LockMarketPayOrderResponseDTO>> call= groupBuyMarketService.lockMarketPayOrder(requestDTO);
+        try {
+            Call<Response<LockMarketPayOrderResponseDTO>> call = groupBuyMarketService.lockMarketPayOrder(requestDTO);
+            // .execute() 会抛出 IOException，所以把它放在 try 块里
             Response<LockMarketPayOrderResponseDTO> response = call.execute().body();
-            if(response== null) return null;
 
-            if(!"0000".equals(response.getCode())){
-                throw new AppException(response.getCode(),response.getInfo());
+            if (response == null) {
+                // response 为 null 可能是网络层问题或者反序列化失败，可以视为一种严重错误
+                throw new AppException("REMOTE_SERVICE_ERROR", "调用拼团服务返回为空");
             }
 
-            LockMarketPayOrderResponseDTO responseDTO= response.getData();
+            if (!"0000".equals(response.getCode())) {
+                log.warn("调用拼团服务业务失败，Code: {}, Info: {}", response.getCode(), response.getInfo());
+                throw new AppException(response.getCode(), response.getInfo());
+            }
+
+            LockMarketPayOrderResponseDTO responseDTO = response.getData();
+
+            // 可选：检查 responseDTO 或其内部字段是否为 null
+            if (responseDTO == null) {
+                throw new AppException("REMOTE_DATA_ERROR", "调用拼团服务成功但返回数据体为空");
+            }
 
             return MarketPayDiscountEntity.builder()
                     .originalPrice(responseDTO.getOriginalPrice())
                     .deductionPrice(responseDTO.getDeductionPrice())
                     .payPrice(responseDTO.getPayPrice())
                     .build();
+
         } catch (IOException e) {
-            return null;
+            // 捕获IO异常，记录详细日志，并包装成自定义异常抛出
+            log.error("调用拼团商城接口发生网络异常！请求: {}", requestDTO, e);
+            // 将原始异常 e 作为 cause 传入，不丢失任何信息
+            throw new AppException("NETWORK_IO_ERROR", "调用拼团服务网络异常", e);
         }
 
     }

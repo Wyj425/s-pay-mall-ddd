@@ -28,4 +28,5 @@ public class PayOrderEntity {
     private BigDecimal marketDeductionAmount;
     // 支付金额
     private BigDecimal payAmount;
+
 }
