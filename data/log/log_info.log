@@ -139,3 +139,34 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x05
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
+25-07-31.20:19:22.713 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 5456 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-07-31.20:19:22.714 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-31.20:19:23.345 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-07-31.20:19:23.350 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-07-31.20:19:23.350 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-31.20:19:23.350 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-31.20:19:23.464 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-31.20:19:23.464 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 725 ms
+25-07-31.20:19:24.317 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-07-31.20:19:24.327 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-07-31.20:19:24.328 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-07-31.20:19:24.347 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3b8ec001:0/SimpleConnection@16132f21 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 56879]
+25-07-31.20:19:24.395 [main            ] INFO  Application            - Started Application in 1.939 seconds (JVM running for 2.548)
+25-07-31.20:21:00.051 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-31.20:21:00.051 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-31.20:21:00.051 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-07-31.20:21:02.462 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231234
+25-07-31.20:21:02.464 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231235
+25-07-31.20:21:02.465 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231236
+25-07-31.20:21:02.466 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231237
+25-07-31.20:21:02.467 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231238
+25-07-31.20:30:00.005 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-07-31.20:30:00.021 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-31.20:30:00.134 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-31.20:30:00.153 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-07-31.20:30:00.154 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-07-31.20:33:57.659 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-31.20:33:57.880 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-31.20:33:58.110 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-31.20:33:58.116 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-31.20:33:58.125 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
