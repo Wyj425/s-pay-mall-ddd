@@ -30,7 +30,7 @@
         .current-price::before {content:"¥";font-size:18px;}
         .original-price {color:#999;font-size:14px;text-decoration:line-through;margin-left:8px;}
 
-        /* 抢购人数样式 - 新增 */
+        /* 抢购人数样式 */
         .user-count-badge {
             position: absolute;
             top: 15px;
@@ -60,9 +60,10 @@
         .countdown {background:#fff0e8;color:#ff5000;font-size:12px;padding:4px 8px;border-radius:4px;display:inline-block;}
         .group-btn {height:34px;padding:0 15px;background:linear-gradient(90deg,#ff5000,#ff2c2c);color:white;border:none;border-radius:17px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;}
 
-        /* 底部操作栏样式 */
+        /* 底部操作栏样式（新增“我的订单”） */
         .action-bar {position:fixed;bottom:0;left:0;right:0;height:50px;background:white;display:flex;border-top:1px solid #eee;max-width:750px;margin:0 auto;z-index:100;}
-        .action-btn {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;color:#666;cursor:pointer;}
+        .action-btn {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;color:#666;cursor:pointer;gap:2px;}
+        .action-btn i {font-style:normal;font-size:16px;line-height:1;}
         .buy-btn {flex:2;background:#ffd84d;color:#333;font-weight:bold;font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
         .group-buy-btn {flex:3;background:linear-gradient(90deg,#ff5000,#ff2c2c);color:white;font-weight:bold;font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
 
@@ -76,150 +77,46 @@
         .pay-amount {color:#666;font-size:16px;margin-bottom:20px;}
 
         /* 支付选项按钮组 */
-        .pay-options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-        }
-        .pay-option-btn {
-            width: 100%;
-            height: 45px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            transition: background-color 0.2s, border-color 0.2s;
-        }
-        .wechat-pay-btn {
-            background-color: #06a020; /* WeChat green */
-            color: white;
-            border-color: #06a020;
-        }
-        .wechat-pay-btn:active {
-            background-color: #058a1b;
-        }
-        .alipay-pay-btn {
-            background-color: #1677ff; /* Alipay blue */
-            color: white;
-            border-color: #1677ff;
-        }
-        .alipay-pay-btn:active {
-            background-color: #1366e0;
-        }
-        .cancel-pay-btn {
-            background-color: #f0f0f0;
-            color: #333;
-            border-color: #ccc;
-        }
-        .cancel-pay-btn:active {
-            background-color: #e0e0e0;
-        }
+        .pay-options {display:flex;flex-direction:column;gap:15px;margin-top:25px;}
+        .pay-option-btn {width:100%;height:45px;font-size:16px;border-radius:8px;border:1px solid #eee;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:bold;transition:background-color 0.2s,border-color 0.2s;}
+        .wechat-pay-btn {background-color:#06a020;color:white;border-color:#06a020;}
+        .wechat-pay-btn:active {background-color:#058a1b;}
+        .alipay-pay-btn {background-color:#1677ff;color:white;border-color:#1677ff;}
+        .alipay-pay-btn:active {background-color:#1366e0;}
+        .cancel-pay-btn {background-color:#f0f0f0;color:#333;border-color:#ccc;}
+        .cancel-pay-btn:active {background-color:#e0e0e0;}
 
         /* 二维码显示区域 */
-        .qrcode-display {
-            display: none; /* Hidden by default */
-        }
-        .qrcode-container {
-            width: 180px; /* Slightly larger */
-            height: 180px;
-            margin: 20px auto;
-            border: 1px solid #eee; /* Lighter border */
-            border-radius: 8px; /* Slightly less rounded */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background-color: white; /* Ensure background is white */
-        }
-        .qrcode-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .qrcode-display .pay-cancel { /* Style for the "返回选择" button */
-            margin-top: 20px;
-            width: 100%;
-            height: 40px;
-            font-size: 14px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            background: #f0f0f0;
-            color: #333;
-            cursor: pointer;
-        }
-        .qrcode-display .pay-cancel:active {
-            background-color: #e0e0e0;
-        }
+        .qrcode-display {display:none;}
+        .qrcode-container {width:180px;height:180px;margin:20px auto;border:1px solid #eee;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;background-color:white;}
+        .qrcode-container img {width:100%;height:100%;object-fit:cover;}
+        .qrcode-display .pay-cancel {margin-top:20px;width:100%;height:40px;font-size:14px;border-radius:8px;border:1px solid #ccc;background:#f0f0f0;color:#333;cursor:pointer;}
+        .qrcode-display .pay-cancel:active {background-color:#e0e0e0;}
 
-        /* 新增：错误提示模态框 */
-        .error-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            padding: 30px 20px;
-            background: #fff;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-radius: 12px;
-            z-index: 1001;
-            text-align: center;
-            border-top: 5px solid #ff3c00;
-        }
-        .error-icon {
-            font-size: 48px;
-            color: #ff3c00;
-            margin-bottom: 15px;
-        }
-        .error-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .error-message {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 25px;
-            padding: 0 10px;
-        }
-        .error-close-btn {
-            width: 100%;
-            height: 45px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: none;
-            background: linear-gradient(90deg, #ff5000, #ff2c2c);
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .error-close-btn:active {
-            background: linear-gradient(90deg, #ff3c00, #ff1c00);
-            transform: translateY(2px);
-        }
+        /* 错误提示模态框 */
+        .error-modal {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;padding:30px 20px;background:#fff;box-shadow:0 8px 25px rgba(0,0,0,0.15);border-radius:12px;z-index:1001;text-align:center;border-top:5px solid #ff3c00;}
+        .error-icon {font-size:48px;color:#ff3c00;margin-bottom:15px;}
+        .error-title {font-size:22px;font-weight:bold;margin-bottom:10px;color:#333;}
+        .error-message {color:#666;font-size:16px;line-height:1.5;margin-bottom:25px;padding:0 10px;}
+        .error-close-btn {width:100%;height:45px;font-size:16px;border-radius:8px;border:none;background:linear-gradient(90deg,#ff5000,#ff2c2c);color:white;font-weight:bold;cursor:pointer;transition:all 0.2s;}
+        .error-close-btn:active {background:linear-gradient(90deg,#ff3c00,#ff1c00);transform:translateY(2px);}
     </style>
+    <!-- 在 head 或 body 中引入 -->
+    <script src="js/common.js"></script>
+
 </head>
 <body>
 <div class="container" id="productPage">
-    <!-- 抢购人数徽章 - 新增 -->
-    <div class="user-count-badge" id="userCountBadge" style="display: none;">
+    <!-- 抢购人数徽章 -->
+    <div class="user-count-badge" id="userCountBadge" style="display:none;">
         <span id="userCountNum">0</span>人正在抢
     </div>
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('images/img1.png')"></div>
-            <div class="swiper-slide" style="background-image: url('images/img2.png')"></div>
-            <div class="swiper-slide" style="background-image: url('images/img3.png')"></div>
+            <div class="swiper-slide" style="background-image:url('images/img1.png')"></div>
+            <div class="swiper-slide" style="background-image:url('images/img2.png')"></div>
+            <div class="swiper-slide" style="background-image:url('images/img3.png')"></div>
         </div>
         <div class="swiper-pagination">
             <div class="swiper-pagination-bullet"></div>
@@ -246,6 +143,8 @@
     <div class="action-bar">
         <div class="action-btn" id="collectBtn"><i>❤️</i><span>收藏</span></div>
         <div class="action-btn" id="cartBtn"><i>🛒</i><span>购物车</span></div>
+        <!-- 新增：我的订单按钮 -->
+        <div class="action-btn" id="orderBtn"><i>📦</i><span>我的订单</span></div>
         <div class="action-btn" id="serviceBtn"><i>👤</i><span>客服</span></div>
         <div class="buy-btn" id="buyAlone">单独购买 ¥0</div>
         <div class="group-buy-btn" id="startGroup">发起拼团 ¥0</div>
@@ -256,7 +155,7 @@
 <div class="payment-modal" id="paymentModal">
     <h2 class="pay-title">选择支付方式</h2>
     <p class="pay-amount">支付金额 ¥<span id="payAmount">0</span></p>
-    <p style="color:#666; font-size:14px;">订单号：<span id="orderIdText"></span></p>
+    <p style="color:#666;font-size:14px;">订单号：<span id="orderIdText"></span></p>
 
     <div class="pay-options" id="payOptions">
         <button class="pay-option-btn wechat-pay-btn" id="wechatPayBtn">微信支付</button>
@@ -268,12 +167,12 @@
         <div class="qrcode-container">
             <img src="images/img4.png" alt="微信支付二维码" />
         </div>
-        <p style="color:#666; font-size:12px; margin-top:10px;">请使用微信扫码支付</p>
+        <p style="color:#666;font-size:12px;margin-top:10px;">请使用微信扫码支付</p>
         <button class="pay-cancel" id="backToOptionsBtn">返回选择</button>
     </div>
 </div>
 
-<!-- 新增：错误提示模态框 -->
+<!-- 错误提示模态框 -->
 <div class="error-modal" id="errorModal">
     <div class="error-icon">⚠️</div>
     <h2 class="error-title">操作失败</h2>
@@ -284,7 +183,11 @@
 <div class="toast" id="toast"></div>
 
 <script>
-    // Check login status
+    // 先读取 AppConfig 里的值并保存到变量
+    const sPayMallUrl = AppConfig.sPayMallUrl;
+    const groupBuyMarketUrl = AppConfig.groupBuyMarketUrl;
+    const goodsId = AppConfig.goodsId;
+    // 登录校验
     if (!getCookie("loginToken")) {
         window.location.href = "login.html";
     }
@@ -301,67 +204,55 @@
         setTimeout(() => (toast.style.display = "none"), 2000);
     }
 
-    // 新增：显示错误提示弹窗
+    // 错误弹窗
     function showErrorModal(message) {
         document.getElementById("errorMessage").innerText = message;
         document.getElementById("errorModal").style.display = "block";
         document.getElementById("payOverlay").style.display = "block";
     }
-
-    // 新增：隐藏错误提示弹窗
     function hideErrorModal() {
         document.getElementById("errorModal").style.display = "none";
         document.getElementById("payOverlay").style.display = "none";
     }
 
-    // Global variables for payment
+    // Global
     let goods = {};
     let activityId = 0;
-    let alipayFormHtml = ''; // Stores the HTML form for Alipay redirection
+    let alipayFormHtml = '';
 
-    // Function to show the payment modal with options
     function showPaymentModal() {
         document.getElementById("payOverlay").style.display = "block";
         document.getElementById("paymentModal").style.display = "block";
-        document.getElementById("payOptions").style.display = "flex"; // Show payment options
-        document.getElementById("wechatQrcodeDisplay").style.display = "none"; // Hide QR code initially
+        document.getElementById("payOptions").style.display = "flex";
+        document.getElementById("wechatQrcodeDisplay").style.display = "none";
     }
-
-    // Function to hide the payment modal
     function hidePaymentModal() {
         document.getElementById("payOverlay").style.display = "none";
         document.getElementById("paymentModal").style.display = "none";
     }
 
-    // 倒计时更新函数
+    // 倒计时
     function startCountdown(element, seconds) {
         function update() {
-            if (seconds <= 0) {
-                element.innerText = "已结束";
-                return;
-            }
+            if (seconds <= 0) { element.innerText = "已结束"; return; }
             let h = Math.floor(seconds / 3600);
             let m = Math.floor((seconds % 3600) / 60);
             let s = seconds % 60;
             element.innerText = h > 0
-                ? `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
-                : `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+                ? `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`
+                : `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
             seconds--;
             setTimeout(update, 1000);
         }
         update();
     }
 
-
-    // Modified lockOrder function to handle payment initiation
+    // 下单锁定
     async function lockOrder(teamId = '', isAlone = false) {
         const userId = getCookie("loginToken");
-        if (!userId) {
-            window.location.href = "login.html";
-            return;
-        }
+        if (!userId) { window.location.href = "login.html"; return; }
 
-        const url = "http://api.noqiokweb.online/api/v1/alipay/create_pay_order";
+        const url = sPayMallUrl+"/api/v1/alipay/create_pay_order";
         const headers = {
             "Accept": "*/*",
             "Accept-Encoding": "gzip, deflate, br",
@@ -370,113 +261,101 @@
             "User-Agent": "PostmanRuntime-ApipostRuntime/1.1.0"
         };
 
-        let bodyData;
-        if (isAlone) {
-            bodyData = {
-                userId,
-                productId: goods.goodsId,
-                marketType: 0 // 0 for standalone purchase
-            };
-        } else {
-            bodyData = {
-                userId,
-                productId: goods.goodsId,
-                teamId,
-                activityId,
-                marketType: 1 // 1 for group purchase
-            };
-        }
+        let bodyData = isAlone
+            ? { userId, productId: goods.goodsId, marketType: 0 }
+            : { userId, productId: goods.goodsId, teamId, activityId, marketType: 1 };
 
         try {
-            const res = await fetch(url, {
-                method: "POST",
-                headers,
-                body: JSON.stringify(bodyData)
-            });
-
+            const res = await fetch(url, { method: "POST", headers, body: JSON.stringify(bodyData) });
             const result = await res.json();
-
-            // 新增：处理非0000的错误状态
-            if (result.code !== "0000") {
-                showErrorModal(result.info || "下单失败，请重试");
-                return;
-            }
+            if (result.code !== "0000") { showErrorModal(result.info || "下单失败，请重试"); return; }
 
             document.getElementById("orderIdText").innerText = result.data?.orderId || "N/A";
-            alipayFormHtml = result.data?.alipayForm || result.data; // Store the Alipay form HTML. Assuming 'data' itself is the form or it's nested in 'alipayForm'
-
+            alipayFormHtml = result.data?.alipayForm || result.data;
             const priceToDisplay = isAlone ? goods.originalPrice : goods.payPrice;
             document.getElementById("payAmount").innerText = priceToDisplay;
-
             showPaymentModal();
-        } catch (error) {
+        } catch (e) {
             showErrorModal("网络请求失败，请检查网络连接");
         }
     }
 
-    // Event listeners for buy buttons
-    document.getElementById("startGroup").addEventListener("click", () => {
-        lockOrder("", false); // Start a new group
+    // 新增：我的订单跳转（点击先请求，再跳转）
+    document.getElementById("orderBtn").addEventListener("click", async () => {
+        const userId = getCookie("loginToken");
+        if (!userId) { window.location.href = "login.html"; return; }
+
+        const url = sPayMallUrl+"/api/v1/alipay/query_user_order_list";
+        const headers = {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Connection": "keep-alive",
+            "Content-Type": "application/json",
+            "User-Agent": "PostmanRuntime-ApipostRuntime/1.1.0"
+        };
+        const body = { userId, lastId: 0, pageSize: 10 };
+
+        try {
+            const res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+            const result = await res.json();
+            // 不论是否成功，都跳转；成功则缓存数据
+            if (result && result.code === "0000") {
+                sessionStorage.setItem("orderListCache", JSON.stringify(result.data || {}));
+            } else {
+                sessionStorage.removeItem("orderListCache");
+            }
+        } catch (e) {
+            // 网络失败亦跳转，页面内会兜底再拉
+            sessionStorage.removeItem("orderListCache");
+        } finally {
+            window.location.href = "orderList.html";
+        }
     });
 
-    document.getElementById("buyAlone").addEventListener("click", () => {
-        lockOrder("", true); // Buy alone
-    });
+    // 购买按钮
+    document.getElementById("startGroup").addEventListener("click", () => lockOrder("", false));
+    document.getElementById("buyAlone").addEventListener("click", () => lockOrder("", true));
 
-    // Event listeners for payment modal buttons
+    // 支付模态
     document.getElementById("wechatPayBtn").addEventListener("click", () => {
         document.getElementById("payOptions").style.display = "none";
         document.getElementById("wechatQrcodeDisplay").style.display = "block";
     });
-
     document.getElementById("alipayPayBtn").addEventListener("click", () => {
         if (alipayFormHtml) {
-            // Create a temporary div to hold the form and submit it
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = alipayFormHtml;
             document.body.appendChild(tempDiv);
             const form = tempDiv.querySelector('form');
-            if (form) {
-                form.submit();
-            } else {
-                showToast("支付宝支付信息错误，请重试。");
-                hidePaymentModal();
-            }
-            // The page will redirect, so no need to remove tempDiv or hide modal explicitly here
+            if (form) { form.submit(); }
+            else { showToast("支付宝支付信息错误，请重试。"); hidePaymentModal(); }
         } else {
             showToast("未能获取支付宝支付信息，请重试。");
             hidePaymentModal();
         }
     });
-
-    document.getElementById("cancelPayBtn").addEventListener("click", hidePaymentModal); // Main cancel button
-
+    document.getElementById("cancelPayBtn").addEventListener("click", hidePaymentModal);
     document.getElementById("backToOptionsBtn").addEventListener("click", () => {
         document.getElementById("wechatQrcodeDisplay").style.display = "none";
         document.getElementById("payOptions").style.display = "flex";
     });
-
-    // 新增：错误提示关闭按钮事件
     document.getElementById("errorCloseBtn").addEventListener("click", hideErrorModal);
 
-    // DOMContentLoaded for initial data fetch and Swiper setup
+    // 初始化
     document.addEventListener("DOMContentLoaded", async () => {
-        // Fetch product details and group list
-        const res = await fetch("https://api.noqiokweb.site/api/v1/gbm/index/query_group_buy_market_config", {
+        // 商品与拼团信息
+        const res = await fetch(groupBuyMarketUrl+"/api/v1/gbm/index/query_group_buy_market_config", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                userId: getCookie("loginToken") || "xfg01", // Use actual user ID or a default
+                userId: getCookie("loginToken") || "xfg01",
                 source: "s01",
                 channel: "c01",
                 goodsId: "9890001"
             })
         });
-
         const result = await res.json();
-        if (result.code !== "0000") {
-            return showToast(result.info || "数据加载失败");
-        }
+        if (result.code !== "0000") { return showToast(result.info || "数据加载失败"); }
 
         goods = result.data.goods;
         activityId = result.data.activityId;
@@ -487,7 +366,6 @@
         document.getElementById("buyAlone").innerText = `单独购买 ¥${goods.originalPrice}`;
         document.getElementById("startGroup").innerText = `发起拼团 ¥${goods.payPrice}`;
 
-        // 显示抢购人数 - 新增
         if (result.data.teamStatistic && result.data.teamStatistic.allTeamUserCount) {
             const userCount = result.data.teamStatistic.allTeamUserCount;
             document.getElementById("userCountNum").innerText = userCount;
@@ -498,35 +376,33 @@
         const teamList = result.data.teamList || [];
         groupList.innerHTML = "";
         if (teamList.length === 0) {
-            groupList.innerHTML = '<p style="color:#999; text-align:center; padding:15px;">暂无人购买，快来发起拼团吧！</p>';
+            groupList.innerHTML = '<p style="color:#999;text-align:center;padding:15px;">暂无人购买，快来发起拼团吧！</p>';
         } else {
             teamList.slice(0, 3).forEach(team => {
                 const remain = team.targetCount - team.lockCount;
                 const card = document.createElement("div");
                 card.className = "group-item";
                 card.innerHTML = `
-        <div class="group-leader">
-          <div class="avatar">${team.userId.slice(-2)}</div>
-          <div class="leader-name">${team.userId}</div>
-        </div>
-        <div class="group-info">
-          <div class="group-status">还差<span class="remaining">${remain}</span>人成团</div>
-          <div class="countdown">加载中...</div>
-        </div>
-        <button class="group-btn">去拼团</button>
-    `;
+                    <div class="group-leader">
+                      <div class="avatar">${team.userId.slice(-2)}</div>
+                      <div class="leader-name">${team.userId}</div>
+                    </div>
+                    <div class="group-info">
+                      <div class="group-status">还差<span class="remaining">${remain}</span>人成团</div>
+                      <div class="countdown">加载中...</div>
+                    </div>
+                    <button class="group-btn">去拼团</button>
+                `;
                 const countdownEl = card.querySelector(".countdown");
                 const parts = team.validTimeCountdown.split(":");
                 const seconds = parseInt(parts[0], 10) * 3600 + parseInt(parts[1], 10) * 60 + parseInt(parts[2], 10);
                 startCountdown(countdownEl, seconds);
-
                 card.querySelector(".group-btn").addEventListener("click", () => lockOrder(team.teamId, false));
                 groupList.appendChild(card);
             });
-
         }
 
-        // Basic Swiper functionality
+        // 简易轮播
         let currentSlide = 0;
         const slides = document.querySelectorAll('.swiper-slide');
         const totalSlides = slides.length;
@@ -535,30 +411,10 @@
 
         function updateSwiper() {
             swiperWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-            paginationBullets.forEach((bullet, index) => {
-                if (index === currentSlide) {
-                    bullet.classList.add('swiper-pagination-bullet-active');
-                } else {
-                    bullet.classList.remove('swiper-pagination-bullet-active');
-                }
-            });
+            paginationBullets.forEach((b,i)=> b.classList.toggle('swiper-pagination-bullet-active', i===currentSlide));
         }
-
-        // Auto-slide
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSwiper();
-        }, 3000); // Change slide every 3 seconds
-
-        // Manual pagination
-        paginationBullets.forEach((bullet, index) => {
-            bullet.addEventListener('click', () => {
-                currentSlide = index;
-                updateSwiper();
-            });
-        });
-
-        // Initial update
+        setInterval(()=>{ currentSlide=(currentSlide+1)%totalSlides; updateSwiper(); },3000);
+        paginationBullets.forEach((b,i)=> b.addEventListener('click',()=>{ currentSlide=i; updateSwiper(); }));
         updateSwiper();
     });
 </script>

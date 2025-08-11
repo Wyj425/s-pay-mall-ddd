@@ -419,3 +419,166 @@ Caused by: java.net.ConnectException: Connection refused: connect
 25-08-01.22:34:03.113 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
 25-08-01.22:34:03.120 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-08-01.22:34:03.125 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-08-11.21:49:02.168 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 51900 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-08-11.21:49:02.169 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-08-11.21:49:02.811 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-08-11.21:49:02.816 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-08-11.21:49:02.816 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-08-11.21:49:02.816 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-08-11.21:49:02.931 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-08-11.21:49:02.931 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 740 ms
+25-08-11.21:49:03.788 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-08-11.21:49:03.798 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-08-11.21:49:03.799 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-08-11.21:49:03.817 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6a1d3225:0/SimpleConnection@70d77826 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 59093]
+25-08-11.21:49:03.860 [main            ] INFO  Application            - Started Application in 1.948 seconds (JVM running for 2.573)
+25-08-11.21:52:40.851 [http-nio-8080-exec-4] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-08-11.21:52:40.851 [http-nio-8080-exec-4] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-08-11.21:52:40.852 [http-nio-8080-exec-4] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-08-11.21:54:27.456 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-08-11.21:54:27.458 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-08-11.21:54:27.755 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-08-11.21:54:27.755 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-08-11.21:54:27.989 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-08-11.21:54:27.989 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-08-11.21:54:29.896 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 11976 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-08-11.21:54:29.898 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-08-11.21:54:30.548 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-08-11.21:54:30.553 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-08-11.21:54:30.554 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-08-11.21:54:30.554 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-08-11.21:54:30.669 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-08-11.21:54:30.669 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 748 ms
+25-08-11.21:54:31.535 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-08-11.21:54:31.546 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-08-11.21:54:31.547 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-08-11.21:54:31.565 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6a1d3225:0/SimpleConnection@70d77826 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 59218]
+25-08-11.21:54:31.610 [main            ] INFO  Application            - Started Application in 1.965 seconds (JVM running for 2.733)
+25-08-11.21:54:34.071 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-08-11.21:54:34.072 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-08-11.21:54:34.072 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-08-11.22:00:00.011 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-08-11.22:00:00.026 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-08-11.22:00:00.127 [scheduling-1    ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-08-11.22:00:00.147 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-08-11.22:00:00.147 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-08-11.22:00:18.329 [http-nio-8080-exec-2] INFO  AliPayController       - 查询用户订单列表开始 userId:xfg01 lastId:1 pageSize:10
+25-08-11.22:00:18.342 [http-nio-8080-exec-2] INFO  AliPayController       - 查询用户订单列表完成 userId:xfg01 返回订单数量:0 hasMore:false
+25-08-11.22:15:48.659 [http-nio-8080-exec-4] INFO  AliPayController       - 查询用户订单列表开始 userId:xfg01 lastId:1 pageSize:10
+25-08-11.22:15:48.661 [http-nio-8080-exec-4] INFO  AliPayController       - 查询用户订单列表完成 userId:xfg01 返回订单数量:0 hasMore:false
+25-08-11.22:16:18.950 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge03 lastId:1 pageSize:10
+25-08-11.22:16:18.955 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge03 返回订单数量:1 hasMore:false
+25-08-11.22:30:00.003 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-08-11.22:30:01.294 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-11 22:30:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=Ddyhk+ei1Xc1cdPn7m38t4DAP6oMqQQfJxYbl5vHx/ID3ebHq99kUKJrF7cg1EzZ/rqPP+gd+g7XGst1izbxeJQfqydtuh/n1f0FAeczjiJkveGaxGKiPZsUL6eMMUfbaXGAJlwc1QXBYWR5RH3/TjycDD9BJpJRSW+gh2DtKNj5lewyVi3eTHbPtOjs4/ljR39ersR3IcAIa7kG2mkr17klEPg0T9JIdrB3phn2OMHEqtdFZ+Hb5zp8eQqD1p6xx9uN7OWTIfrtUSq5kN+yBzSwGQzBmycgSl1sJjdqDJGseVyHVlVkObEaxmvtXevRe7SzSNgP+Gn+IoszIyjtow==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-11 22:30:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=06037901175492260029416313440&biz_content={"out_trade_no":"749730761005"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"749730761005","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"kABGqvPue365F1T51nk0Ja8ZFd3lk6I2t5wJ4p/+rIJF96Dh52oaNOUF39O0i5+zQ1061v9Fb1fAreKXMJsPSFE3Xvxz+DhZFvTBRbTZk+5zwayc2MH0eg2I2oONuttpgGx0Y0TLTUbl/Bg6KnkmjQWJ8K9O6mcY8S5f68dlCRgcoSESjdro4jwL6/VlSDg2pQ1rM4PRC7aD4cTw/zi091WjoMbzfm6HPprq6rhYd3QTGvwLupq/exCbqg+zLGv6C063hKpTaqxifCBqR3o1mcME3UmM1ulDo1BsaaIVm4QnZ5bUGImrj3XLv1GcrYxv6XnS70bTTkRAUDau9K6Img=="}^_^18ms,1242ms,22ms^_^trace_id:06037901175492260029416313440
+25-08-11.22:30:01.294 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-08-11.22:30:01.295 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-08-11.22:40:58.086 [http-nio-8080-exec-6] INFO  LoginController        - 生成微信扫码登录,ticket:gQFY8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyWFZSOE00SDJmVEkxWFZkMWhFY2gAAgT5AJpoAwQAjScA
+25-08-11.22:41:25.490 [http-nio-8080-exec-9] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge03 lastId:0 pageSize:10
+25-08-11.22:41:25.493 [http-nio-8080-exec-9] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge03 返回订单数量:1 hasMore:false
+25-08-11.22:42:51.033 [http-nio-8080-exec-1] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge03 productId:xiaofuge03
+25-08-11.22:42:51.037 [http-nio-8080-exec-1] INFO  AbstractOrderService   - 创建订单-存在，已存在未支付订单。userId:xiaofuge03 productId:9890001 orderId:749730761005
+25-08-11.22:42:51.038 [http-nio-8080-exec-1] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge03 productId:9890001 orderId:749730761005 MarketType:null
+25-08-11.22:42:58.001 [http-nio-8080-exec-3] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge03 productId:xiaofuge03
+25-08-11.22:42:58.003 [http-nio-8080-exec-3] INFO  AbstractOrderService   - 创建订单-存在，已存在未支付订单。userId:xiaofuge03 productId:9890001 orderId:749730761005
+25-08-11.22:42:58.003 [http-nio-8080-exec-3] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge03 productId:9890001 orderId:749730761005 MarketType:null
+25-08-11.22:43:02.809 [http-nio-8080-exec-4] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge03 productId:xiaofuge03
+25-08-11.22:43:02.811 [http-nio-8080-exec-4] INFO  AbstractOrderService   - 创建订单-存在，已存在未支付订单。userId:xiaofuge03 productId:9890001 orderId:749730761005
+25-08-11.22:43:02.811 [http-nio-8080-exec-4] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge03 productId:9890001 orderId:749730761005 MarketType:null
+25-08-11.22:43:12.877 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge03 lastId:0 pageSize:10
+25-08-11.22:43:12.880 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge03 返回订单数量:1 hasMore:false
+25-08-11.22:45:13.007 [http-nio-8080-exec-6] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge03 lastId:0 pageSize:10
+25-08-11.22:45:13.009 [http-nio-8080-exec-6] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge03 返回订单数量:1 hasMore:false
+25-08-11.22:48:09.733 [http-nio-8080-exec-10] INFO  AliPayController       - 用户退单开始 userId:xiaofuge03 orderId:749730761005
+25-08-11.22:48:09.740 [http-nio-8080-exec-10] INFO  OrderService           - 退单成功 userId:xiaofuge03 orderId:749730761005
+25-08-11.22:48:09.741 [http-nio-8080-exec-10] INFO  AliPayController       - 用户退单完成 userId:xiaofuge03 orderId:749730761005 success:true
+25-08-11.22:53:50.067 [http-nio-8080-exec-1] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge03 lastId:0 pageSize:10
+25-08-11.22:53:50.069 [http-nio-8080-exec-1] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge03 返回订单数量:1 hasMore:false
+25-08-11.22:54:33.094 [http-nio-8080-exec-3] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge04 productId:xiaofuge04
+25-08-11.22:54:33.098 [http-nio-8080-exec-3] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
+25-08-11.22:54:33.098 [http-nio-8080-exec-3] INFO  AbstractOrderService   - 判断进入了拼团逻辑
+25-08-11.22:54:33.098 [http-nio-8080-exec-3] INFO  ProductPort            - 进入了调用拼团接口流程
+25-08-11.22:54:33.201 [http-nio-8080-exec-3] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: xiaofuge04 orderId: 481949844594 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=GZw%2BOC7XJeAAhhAGToWBwZZ59v%2BmalvPJjMuW1Ev2sxjDb%2F2c7OdI3mf2TtM2exhTLUeGksvDMk8O3%2B3U%2BUYhGpIY7NJVmigX0vpQr6vvPnppnrEIWWNaOZyfLqEcZXRfob2r%2BTYFzAStdvif22xiOWxBesBLiDvrV1y%2BpKcIN95ZMKc998uDTVCvlWmx0Pq%2FjZqPVKsHdmWe64BGVkTatw4F41WxhQ%2BjnJt%2BihCCQ%2BfMhgZYh%2BlvIf9gR41jWW6IJTr7LxEmVwI9zr6frhwVY8f8fOE%2Fj7hazFxqWYtXOE%2BU7oD4hSY6GI3LmGRbrQ8tv2G3vRKFTJJRi8GxFW76Q%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-11+22%3A54%3A33&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;481949844594&quot;,&quot;total_amount&quot;:&quot;80.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-08-11.22:54:33.202 [http-nio-8080-exec-3] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge04 productId:9890001 orderId:481949844594 MarketType:1
+25-08-11.22:54:36.720 [http-nio-8080-exec-4] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge04 lastId:0 pageSize:10
+25-08-11.22:54:36.722 [http-nio-8080-exec-4] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge04 返回订单数量:1 hasMore:false
+25-08-11.22:54:41.650 [http-nio-8080-exec-7] INFO  AliPayController       - 用户退单开始 userId:xiaofuge04 orderId:481949844594
+25-08-11.22:54:41.657 [http-nio-8080-exec-7] INFO  OrderService           - 退单成功 userId:xiaofuge04 orderId:481949844594
+25-08-11.22:54:41.657 [http-nio-8080-exec-7] INFO  AliPayController       - 用户退单完成 userId:xiaofuge04 orderId:481949844594 success:true
+25-08-11.22:54:48.679 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge04 productId:xiaofuge04
+25-08-11.22:54:48.681 [http-nio-8080-exec-6] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
+25-08-11.22:54:48.681 [http-nio-8080-exec-6] INFO  AbstractOrderService   - 判断进入了拼团逻辑
+25-08-11.22:54:48.681 [http-nio-8080-exec-6] INFO  ProductPort            - 进入了调用拼团接口流程
+25-08-11.22:54:48.694 [http-nio-8080-exec-6] WARN  ProductPort            - 调用拼团服务业务失败，Code: E0103, Info: 当前用户参与此拼团次数达到上限
+25-08-11.22:54:48.696 [http-nio-8080-exec-6] ERROR AliPayController       - 商品下单，根据商品ID创建支付单失败 userId:xiaofuge04 productId:xiaofuge04
+online.noqiokweb.types.exception.AppException: null
+	at online.noqiokweb.infrastructure.adapter.port.ProductPort.lockMarketPayOrder(ProductPort.java:97)
+	at online.noqiokweb.domain.order.service.OrderService.lockMarketPayOrder(OrderService.java:47)
+	at online.noqiokweb.domain.order.service.AbstractOrderService.createPayOrder(AbstractOrderService.java:89)
+	at online.noqiokweb.trigger.http.AliPayController.createPayOrder(AliPayController.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-08-11.22:54:48.696 [http-nio-8080-exec-6] ERROR AliPayController       - 创建支付失败 code:E0103 info:当前用户参与此拼团次数达到上限
+25-08-11.22:55:03.768 [http-nio-8080-exec-8] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge05 productId:xiaofuge05
+25-08-11.22:55:03.770 [http-nio-8080-exec-8] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
+25-08-11.22:55:03.770 [http-nio-8080-exec-8] INFO  AbstractOrderService   - 判断进入了拼团逻辑
+25-08-11.22:55:03.770 [http-nio-8080-exec-8] INFO  ProductPort            - 进入了调用拼团接口流程
+25-08-11.22:55:03.821 [http-nio-8080-exec-8] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: xiaofuge05 orderId: 391054720520 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=dTObCCqH%2B%2BLMQYCTyg%2FZDCNIiEbWyAqEBBv8MfxgPGB%2BRU5c5FHNzPnK9TJzJqY5xkvQgBZrLNdDfD%2BAHOfP8yM1nfrrWBHNBEGrAMkylGa65suKdEMHuePzpVQCZLJTs0bzGebgLJBuleTE4AybpWd0UH38nbdkDOhDm5alNR2TZ2Y1Gg9zbMXsBiTx6SJRGG37%2FHARpQ8mVIsHW6lm9EAQRfEHnKB%2BUKip4tKipXFHJACKmMuuMhL0EnDiMKas5i%2BtCHRTTvJNAPVOZWzqdm4cmV7kMO4X5mYC8R%2FXRm89wja%2BMLZjUetjbgIipGLTmtheYXHfHo2KdZupxHnk%2FQ%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-11+22%3A55%3A03&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;391054720520&quot;,&quot;total_amount&quot;:&quot;80.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-08-11.22:55:03.822 [http-nio-8080-exec-8] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge05 productId:9890001 orderId:391054720520 MarketType:1
+25-08-11.22:55:05.100 [http-nio-8080-exec-9] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge05 lastId:0 pageSize:10
+25-08-11.22:55:05.102 [http-nio-8080-exec-9] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge05 返回订单数量:1 hasMore:false

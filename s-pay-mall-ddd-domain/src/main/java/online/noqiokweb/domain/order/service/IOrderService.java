@@ -1,5 +1,6 @@
 package online.noqiokweb.domain.order.service;
 
+import online.noqiokweb.domain.order.model.entity.OrderEntity;
 import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
 
@@ -19,4 +20,9 @@ public interface IOrderService {
     boolean changeOrderClose(String orderId);
 
     void changeOrderMarketSettlement(List<String> outTradeNoList);
+
+
+    List<OrderEntity> queryUserOrderList(String userId, Long lastId, Integer pageSize);
+
+    boolean refundOrder(String userId, String orderId);
 }

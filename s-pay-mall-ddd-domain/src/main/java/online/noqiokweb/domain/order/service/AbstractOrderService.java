@@ -12,6 +12,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author TheLastSavior noqiokweb.site @wyj
@@ -106,6 +108,12 @@ public abstract class AbstractOrderService implements IOrderService{
                 .payUrl(payOrderEntity.getPayUrl())
                 .marketType(payOrderEntity.getMarketType())
                 .build();
+    }
+
+
+    @Override
+    public List<OrderEntity> queryUserOrderList(String userId, Long lastId, Integer pageSize) {
+        return repository.queryUserOrderList(userId, lastId, pageSize);
     }
 
     protected abstract MarketPayDiscountEntity lockMarketPayOrder(String userId, String teamId, Long activityId, String productId, String orderId);

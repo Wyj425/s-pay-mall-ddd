@@ -106,6 +106,7 @@
             animation: pulse 2s infinite;
         }
     </style>
+    <script src="js/common.js"></script>
 </head>
 <body>
 <div class="login-container">
@@ -119,7 +120,11 @@
 </div>
 
 <script>
-    var sPayMallUrl = "http://127.0.0.1:8080";
+    // 先读取 AppConfig 里的值并保存到变量
+    const sPayMallUrl = AppConfig.sPayMallUrl;
+    const groupBuyMarketUrl = AppConfig.groupBuyMarketUrl;
+    const goodsId = AppConfig.goodsId;
+
 
     document.addEventListener("DOMContentLoaded", function() {
         const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')

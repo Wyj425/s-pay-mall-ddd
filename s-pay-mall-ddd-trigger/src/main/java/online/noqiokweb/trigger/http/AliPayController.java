@@ -5,9 +5,9 @@ import com.alipay.api.AlipayApiException;
 import com.alipay.api.internal.util.AlipaySignature;
 import lombok.extern.slf4j.Slf4j;
 import online.noqiokweb.api.IPayService;
-import online.noqiokweb.api.dto.CreatePayRequestDTO;
-import online.noqiokweb.api.dto.NotifyRequestDTO;
+import online.noqiokweb.api.dto.*;
 import online.noqiokweb.api.response.Response;
+import online.noqiokweb.domain.order.model.entity.OrderEntity;
 import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
 import online.noqiokweb.domain.order.model.valobj.MarketTypeVO;
@@ -26,7 +26,9 @@ import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author TheLastSavior noqiokweb.site @wyj
@@ -141,5 +143,118 @@ public class AliPayController implements IPayService {
 
         orderService.changeOrderPaySuccess(tradeNo,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(params.get("gmt_payment")));
         return "success";
+    }
+    /**
+     * http://localhost:8080/api/v1/alipay/query_user_order_list
+     * <p>
+     * {
+     * "userId": "10001",
+     * "lastId": null,
+     * "pageSize": 10
+     * }
+     */
+    @RequestMapping(value = "query_user_order_list", method = RequestMethod.POST)
+    @Override
+    public Response<QueryOrderListResponseDTO> queryUserOrderList(@RequestBody QueryOrderListRequestDTO requestDTO) {
+        try {
+            log.info("查询用户订单列表开始 userId:{} lastId:{} pageSize:{}", requestDTO.getUserId(), requestDTO.getLastId(), requestDTO.getPageSize());
+
+            String userId = requestDTO.getUserId();
+            Long lastId = requestDTO.getLastId();
+            Integer pageSize = requestDTO.getPageSize();
+
+            // 查询订单列表，多查询一条用于判断是否还有更多数据
+            List<OrderEntity> orderList = orderService.queryUserOrderList(userId, lastId, pageSize + 1);
+
+            // 判断是否还有更多数据
+            boolean hasMore = orderList.size() > pageSize;
+            if (hasMore) {
+                orderList = orderList.subList(0, pageSize);
+            }
+
+            // 转换为响应对象
+            List<QueryOrderListResponseDTO.OrderInfo> orderInfoList = orderList.stream().map(order -> {
+                QueryOrderListResponseDTO.OrderInfo orderInfo = new QueryOrderListResponseDTO.OrderInfo();
+                orderInfo.setId(order.getId());
+                orderInfo.setUserId(order.getUserId());
+                orderInfo.setProductId(order.getProductId());
+                orderInfo.setProductName(order.getProductName());
+                orderInfo.setOrderId(order.getOrderId());
+                orderInfo.setOrderTime(order.getOrderTime());
+                orderInfo.setTotalAmount(order.getTotalAmount());
+                orderInfo.setStatus(order.getOrderStatusVO() != null ? order.getOrderStatusVO().getCode() : null);
+                orderInfo.setPayUrl(order.getPayUrl());
+                orderInfo.setMarketType(order.getMarketType());
+                orderInfo.setMarketDeductionAmount(order.getMarketDeductionAmount());
+                orderInfo.setPayAmount(order.getPayAmount());
+                orderInfo.setPayTime(order.getPayTime());
+                return orderInfo;
+            }).collect(Collectors.toList());
+
+            QueryOrderListResponseDTO responseDTO = new QueryOrderListResponseDTO();
+            responseDTO.setOrderList(orderInfoList);
+            responseDTO.setHasMore(hasMore);
+            responseDTO.setLastId(!orderList.isEmpty() ? orderList.get(orderList.size() - 1).getId() : null);
+
+            log.info("查询用户订单列表完成 userId:{} 返回订单数量:{} hasMore:{}", userId, orderInfoList.size(), hasMore);
+            return Response.<QueryOrderListResponseDTO>builder()
+                    .code(Constants.ResponseCode.SUCCESS.getCode())
+                    .info(Constants.ResponseCode.SUCCESS.getInfo())
+                    .data(responseDTO)
+                    .build();
+        } catch (Exception e) {
+            log.error("查询用户订单列表失败 userId:{}", requestDTO.getUserId(), e);
+            return Response.<QueryOrderListResponseDTO>builder()
+                    .code(Constants.ResponseCode.UN_ERROR.getCode())
+                    .info(Constants.ResponseCode.UN_ERROR.getInfo())
+                    .build();
+        }
+    }
+
+    /**
+     * http://localhost:8080/api/v1/alipay/refund_order
+     * <p>
+     * {
+     * "userId": "xfg02",
+     * "orderId": "928263928388"
+     * }
+     */
+    @RequestMapping(value = "refund_order", method = RequestMethod.POST)
+    @Override
+    public Response<RefundOrderResponseDTO> refundOrder(@RequestBody RefundOrderRequestDTO requestDTO) {
+        try {
+            log.info("用户退单开始 userId:{} orderId:{}", requestDTO.getUserId(), requestDTO.getOrderId());
+
+            String userId = requestDTO.getUserId();
+            String orderId = requestDTO.getOrderId();
+
+            // 执行退单操作
+            boolean success = orderService.refundOrder(userId, orderId);
+
+            RefundOrderResponseDTO responseDTO = new RefundOrderResponseDTO();
+            responseDTO.setSuccess(success);
+            responseDTO.setOrderId(orderId);
+            responseDTO.setMessage(success ? "退单成功" : "退单失败，订单不存在、已关闭或不属于该用户");
+
+            log.info("用户退单完成 userId:{} orderId:{} success:{}", userId, orderId, success);
+            return Response.<RefundOrderResponseDTO>builder()
+                    .code(Constants.ResponseCode.SUCCESS.getCode())
+                    .info(Constants.ResponseCode.SUCCESS.getInfo())
+                    .data(responseDTO)
+                    .build();
+        } catch (Exception e) {
+            log.error("用户退单失败 userId:{} orderId:{}", requestDTO.getUserId(), requestDTO.getOrderId(), e);
+
+            RefundOrderResponseDTO responseDTO = new RefundOrderResponseDTO();
+            responseDTO.setSuccess(false);
+            responseDTO.setOrderId(requestDTO.getOrderId());
+            responseDTO.setMessage("退单失败，系统异常");
+
+            return Response.<RefundOrderResponseDTO>builder()
+                    .code(Constants.ResponseCode.UN_ERROR.getCode())
+                    .info(Constants.ResponseCode.UN_ERROR.getInfo())
+                    .data(responseDTO)
+                    .build();
+        }
     }
 }

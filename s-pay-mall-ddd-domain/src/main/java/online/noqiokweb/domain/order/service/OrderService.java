@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.websocket.server.ServerEndpoint;
 import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -122,5 +123,36 @@ public class OrderService extends AbstractOrderService{
     @Override
     public void changeOrderMarketSettlement(List<String> outTradeNoList) {
         repository.changeOrderMarketSettlement(outTradeNoList);
+    }
+
+
+
+    @Override
+    public boolean refundOrder(String userId, String orderId) {
+        // 1. 查询订单信息，验证订单是否存在且属于该用户
+        OrderEntity orderEntity = repository.queryOrderByUserIdAndOrderId(userId, orderId);
+        if (null == orderEntity) {
+            log.warn("退单失败，订单不存在或不属于该用户 userId:{} orderId:{}", userId, orderId);
+            return false;
+        }
+
+        // 2. 检查订单状态，只有create、pay_wait、pay_success、deal_done状态的订单可以退单
+        String status = orderEntity.getOrderStatusVO().getCode();
+        if (OrderStatusVO.CLOSE.getCode().equals(status)) {
+            log.warn("退单失败，订单已关闭 userId:{} orderId:{} status:{}", userId, orderId, status);
+            return false;
+        }
+
+        // 3. 对于营销类型的单子，调用拼团执行组队退单 todo xfg
+
+        // 4. 执行退单操作
+        boolean result = repository.refundOrder(userId, orderId);
+        if (result) {
+            log.info("退单成功 userId:{} orderId:{}", userId, orderId);
+        } else {
+            log.warn("退单失败 userId:{} orderId:{}", userId, orderId);
+        }
+
+        return result;
     }
 }

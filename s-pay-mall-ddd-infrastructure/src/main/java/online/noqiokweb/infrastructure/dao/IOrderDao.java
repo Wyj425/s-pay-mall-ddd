@@ -30,4 +30,10 @@ public interface IOrderDao {
     void changeOrderMarketSettlement(@Param("outTradeNoList") List<String> outTradeNoList);
 
     void changeOrderDealDone(String orderId);
+
+    List<PayOrder> queryUserOrderList(@Param("userId") String userId, @Param("lastId") Long lastId, @Param("pageSize") Integer pageSize);
+
+    PayOrder queryOrderByUserIdAndOrderId(@Param("userId") String userId, @Param("orderId") String orderId);
+
+    boolean refundOrder(@Param("userId") String userId, @Param("orderId") String orderId);
 }
