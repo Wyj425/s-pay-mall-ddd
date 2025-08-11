@@ -13,6 +13,7 @@ import online.noqiokweb.domain.order.model.valobj.MarketTypeVO;
 import online.noqiokweb.domain.order.model.valobj.OrderStatusVO;
 import online.noqiokweb.infrastructure.dao.IOrderDao;
 import online.noqiokweb.infrastructure.dao.po.PayOrder;
+import online.noqiokweb.infrastructure.event.EventPublisher;
 import online.noqiokweb.types.event.BaseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -37,6 +38,8 @@ public class OrderRepository implements IOrderRepository {
     private EventBus eventBUs;
     @Autowired
     private EventBus eventBus;
+    @Autowired
+    private EventPublisher eventPublisher;
 
     @Override
     public void doSaveOrder(CreateOrderAggregate orderAggregate) {
@@ -110,7 +113,8 @@ public class OrderRepository implements IOrderRepository {
                         .tradeNo(orderId)
                 .build());
         PaySuccessMessageEvent.PaySuccessMessage paySuccessMessage=paySuccessMessageEventMessage.getData();
-        eventBus.post(JSON.toJSONString(paySuccessMessage));
+        //eventBus.post(JSON.toJSONString(paySuccessMessage));
+        eventPublisher.publish(paySuccessMessageEvent.topic(), JSON.toJSONString(paySuccessMessage));
     }
 
     @Override
@@ -164,7 +168,8 @@ public class OrderRepository implements IOrderRepository {
                     .tradeNo(outTradeNo)
                     .build());
             PaySuccessMessageEvent.PaySuccessMessage paySuccessMessage=paySuccessMessageEventMessage.getData();
-            eventBus.post(JSON.toJSONString(paySuccessMessage));
+            //eventBus.post(JSON.toJSONString(paySuccessMessage));
+            eventPublisher.publish(paySuccessMessageEvent.topic(), JSON.toJSONString(paySuccessMessage));
         });
     }
 }

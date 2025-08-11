@@ -32,6 +32,8 @@ public class ProductPort implements IProductPort {
     private String chanel;
     @Value("${app.config.group-buy-market.notify-url}")
     private String notifyUrl;
+    @Value("${app.config.notify.way}")
+    private String notifyWay;
     private final ProductRPC productRPC;
     private final IGroupBuyMarketService groupBuyMarketService;
     public ProductPort(ProductRPC productRPC, IGroupBuyMarketService groupBuyMarketService) {
@@ -51,17 +53,35 @@ public class ProductPort implements IProductPort {
 
     @Override
     public MarketPayDiscountEntity lockMarketPayOrder(String userId, String teamId, Long activityId, String productId, String orderId) {
+
+
+
         log.info("进入了调用拼团接口流程");
-        LockMarketPayOrderRequestDTO requestDTO = LockMarketPayOrderRequestDTO.builder()
-                .userId(userId)
-                .teamId(teamId)
-                .activityId(activityId)
-                .goodsId(productId)
-                .source(source)
-                .channel(chanel)
-                .outTradeNo(orderId)
-                .notifyUrl(notifyUrl)
-                .build();
+        LockMarketPayOrderRequestDTO requestDTO=new LockMarketPayOrderRequestDTO();
+        if(notifyWay.equals("MQ")){
+             requestDTO= LockMarketPayOrderRequestDTO.builder()
+                    .userId(userId)
+                    .teamId(teamId)
+                    .activityId(activityId)
+                    .goodsId(productId)
+                    .source(source)
+                    .channel(chanel)
+                    .outTradeNo(orderId)
+                    //.notifyUrl(notifyUrl)
+                    .build();
+            requestDTO.setNotifyMQ();
+        }else{
+             requestDTO = LockMarketPayOrderRequestDTO.builder()
+                    .userId(userId)
+                    .teamId(teamId)
+                    .activityId(activityId)
+                    .goodsId(productId)
+                    .source(source)
+                    .channel(chanel)
+                    .outTradeNo(orderId)
+                    .build();
+            requestDTO.setNotifyUrl(notifyUrl);
+        }
         try {
             Call<Response<LockMarketPayOrderResponseDTO>> call = groupBuyMarketService.lockMarketPayOrder(requestDTO);
             // .execute() 会抛出 IOException，所以把它放在 try 块里
