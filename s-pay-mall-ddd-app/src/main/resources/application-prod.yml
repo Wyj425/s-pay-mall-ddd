@@ -19,6 +19,8 @@ app:
       notify-url: http://apipay.noqiokweb.site/api/v1/alipay/group_buy_notify #拼团回调小型支付
       source: s01
       chanel: c01
+    notify:
+      way: MQ #MQ或者HTTP
 # 微信公众号对接
 weixin:
   config:
@@ -58,8 +60,8 @@ spring:
   type: com.zaxxer.hikari.HikariDataSource
   # RabbitMQ
   rabbitmq:
-    addresses: localhost
-    port: 15672
+    addresses: 150.158.47.220:5672
+    port: 5672
     username: admin
     password: Xjtuwyj0524
     listener:
