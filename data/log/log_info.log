@@ -1319,3 +1319,132 @@ Thank you very much!</p>
 25-08-12.13:57:21.051 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
 25-08-12.13:57:21.058 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-08-12.13:57:21.065 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-08-12.14:33:07.621 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on DESKTOP-A10TBER with PID 31408 (E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-app\target\classes started by TheLastSavior in E:\IdeaPorjects\ddd\s-pay-mall-ddd)
+25-08-12.14:33:07.622 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-08-12.14:33:08.291 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+25-08-12.14:33:08.296 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+25-08-12.14:33:08.296 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-08-12.14:33:08.296 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-08-12.14:33:08.410 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-08-12.14:33:08.410 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 762 ms
+25-08-12.14:33:09.265 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+25-08-12.14:33:09.275 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+25-08-12.14:33:09.276 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-08-12.14:33:09.295 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#671d1157:0/SimpleConnection@214beff9 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 62364]
+25-08-12.14:33:09.350 [main            ] INFO  Application            - Started Application in 1.984 seconds (JVM running for 2.691)
+25-08-12.14:33:30.252 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-08-12.14:33:30.252 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-08-12.14:33:30.252 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-08-12.14:33:30.312 [http-nio-8080-exec-2] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:33:30.322 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-08-12.14:33:30.436 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-08-12.14:33:30.455 [http-nio-8080-exec-2] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:1 hasMore:false
+25-08-12.14:33:30.865 [http-nio-8080-exec-4] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:33:30.868 [http-nio-8080-exec-4] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:1 hasMore:false
+25-08-12.14:33:32.050 [http-nio-8080-exec-3] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:33:32.050 [http-nio-8080-exec-3] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:1 hasMore:false
+25-08-12.14:33:32.516 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:33:32.519 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:1 hasMore:false
+25-08-12.14:33:32.897 [http-nio-8080-exec-6] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:33:32.900 [http-nio-8080-exec-6] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:1 hasMore:false
+25-08-12.14:33:33.434 [http-nio-8080-exec-7] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:33:33.436 [http-nio-8080-exec-7] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:1 hasMore:false
+25-08-12.14:33:38.800 [http-nio-8080-exec-9] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge21 productId:xiaofuge21
+25-08-12.14:33:38.806 [http-nio-8080-exec-9] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
+25-08-12.14:33:38.807 [http-nio-8080-exec-9] INFO  AbstractOrderService   - 判断进入了拼团逻辑
+25-08-12.14:33:38.807 [http-nio-8080-exec-9] INFO  ProductPort            - 进入了调用拼团接口流程
+25-08-12.14:33:38.967 [http-nio-8080-exec-9] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: xiaofuge21 orderId: 844156881682 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=AIGatY78N2MQFJ3Ju%2FJBcCz7%2B6dgAeeFa8IxKkbNxGSzJA%2FcPqJv18l2mnNeriGpTFRtmdOmBsb4GXU38w7%2Flg35px28DrfUSR7XGQCUKt4MLzllbTS9P35M0ph97jUiYzCzKYA4W9Kr2%2F7ng%2F7CPKr%2B%2FSeIHEMqSPuEIW%2BTUeeGQ5%2FEeUDFKoN%2B2w8C7hzFkVYR16D5h5URSlkRHFYjDxyzq%2FObTFea2eXPSDHac4VXgF%2Bjb3jVkj07AkW1%2BvE%2B9cP1N2VP7JavrGviZWWHomY5CxzJte5nEhriDaLNo6pHobSkqyQqnLtufAyV4dFmEmkmfXrkuhiBjeWmCjA9%2BQ%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+14%3A33%3A38&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;844156881682&quot;,&quot;total_amount&quot;:&quot;80.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-08-12.14:33:38.972 [http-nio-8080-exec-9] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge21 productId:9890001 orderId:844156881682 MarketType:1
+25-08-12.14:34:13.821 [http-nio-8080-exec-10] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:34:13.823 [http-nio-8080-exec-10] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:2 hasMore:false
+25-08-12.14:34:14.298 [http-nio-8080-exec-1] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:34:14.300 [http-nio-8080-exec-1] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:2 hasMore:false
+25-08-12.14:34:16.699 [http-nio-8080-exec-4] INFO  AliPayController       - 用户退单开始 userId:xiaofuge21 orderId:844156881682
+25-08-12.14:34:16.766 [http-nio-8080-exec-4] INFO  ProductPort            - 营销退单xiaofuge21 requestDTO:{"channel":"c01","outTradeNo":"844156881682","source":"s01","userId":"xiaofuge21"} responseDTO:{"code":"0000","data":{"code":"success","info":"成功","orderId":"306643162786","teamId":"05790133","userId":"xiaofuge21"},"info":"成功"}
+25-08-12.14:34:16.768 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  RefundSuccessTopicListener - 退单回调，发起退款 {"activityId":100123,"orderId":"306643162786","teamId":"05790133","outTradeNo":"844156881682","type":"unpaid_unlock","userId":"xiaofuge21"}
+25-08-12.14:34:16.774 [http-nio-8080-exec-4] INFO  AliPayController       - 用户退单完成 userId:xiaofuge21 orderId:844156881682 success:true
+25-08-12.14:34:16.781 [http-nio-8080-exec-3] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:34:16.783 [http-nio-8080-exec-3] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:2 hasMore:false
+25-08-12.14:34:20.438 [http-nio-8080-exec-5] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge21 productId:xiaofuge21
+25-08-12.14:34:20.440 [http-nio-8080-exec-5] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
+25-08-12.14:34:20.440 [http-nio-8080-exec-5] INFO  AbstractOrderService   - 判断进入了拼团逻辑
+25-08-12.14:34:20.440 [http-nio-8080-exec-5] INFO  ProductPort            - 进入了调用拼团接口流程
+25-08-12.14:34:20.485 [http-nio-8080-exec-5] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: xiaofuge21 orderId: 915740588149 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=S%2FuvCtIdQr8yLdqSExHjUxQ21%2BCOEcSV5Ybn5hfrhu5UMlMPlG2LsNpBUCAoTJNtXAtHXET9JgBCvlUcBaD3YC6VqVp8Tp4UPFwe2pfBft14yMKbNGAb9iJrYY4TSZ2QkY0Ov52gEknpTkqNOB4PaS2GxOqvfufbqMt9nTe0EpC5K5%2Bcz5mcPt9d%2FUqrGmtcgQPBXIdzFRjv9IVVtGrcLTdpW2i0kgxfAdUWDFOgPDRTFfwbgF%2FH%2Fj%2FMQ3%2BC6oj7vEcs0uMuWgduAKDtcHCdAg49NXvvx3yPpfPM4n6BfsBpwqrRGLkKZrXKfpjmgYvHI3uaAtNj5tTTVGEjorfRyQ%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+14%3A34%3A20&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;915740588149&quot;,&quot;total_amount&quot;:&quot;80.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-08-12.14:34:20.485 [http-nio-8080-exec-5] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge21 productId:9890001 orderId:915740588149 MarketType:1
+25-08-12.14:35:16.449 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge21 productId:xiaofuge21
+25-08-12.14:35:16.452 [http-nio-8080-exec-6] INFO  AbstractOrderService   - 创建订单-存在，已存在未支付订单。userId:xiaofuge21 productId:9890001 orderId:915740588149
+25-08-12.14:35:16.452 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge21 productId:9890001 orderId:915740588149 MarketType:null
+25-08-12.14:41:23.596 [http-nio-8080-exec-8] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge21 productId:xiaofuge21
+25-08-12.14:41:23.598 [http-nio-8080-exec-8] INFO  AbstractOrderService   - 创建订单-存在，已存在未支付订单。userId:xiaofuge21 productId:9890001 orderId:915740588149
+25-08-12.14:41:23.598 [http-nio-8080-exec-8] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge21 productId:9890001 orderId:915740588149 MarketType:null
+25-08-12.14:41:46.253 [http-nio-8080-exec-9] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:41:46.256 [http-nio-8080-exec-9] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:3 hasMore:false
+25-08-12.14:41:46.633 [http-nio-8080-exec-10] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge21 lastId:0 pageSize:10
+25-08-12.14:41:46.636 [http-nio-8080-exec-10] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge21 返回订单数量:3 hasMore:false
+25-08-12.14:43:04.426 [http-nio-8080-exec-4] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge25 productId:xiaofuge25
+25-08-12.14:43:04.428 [http-nio-8080-exec-4] INFO  AbstractOrderService   - 是否走拼团营销：GROUP_BUY_MARKET
+25-08-12.14:43:04.428 [http-nio-8080-exec-4] INFO  AbstractOrderService   - 判断进入了拼团逻辑
+25-08-12.14:43:04.428 [http-nio-8080-exec-4] INFO  ProductPort            - 进入了调用拼团接口流程
+25-08-12.14:43:04.463 [http-nio-8080-exec-4] INFO  AbstractOrderService   - 创建订单-完成，生成支付单。userId: xiaofuge25 orderId: 228923524851 payUrl: <form name="punchout_form" method="post" action="https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=eMef6KFWcj8AZmh9w06bNwiR%2Bepa%2Fn8Zg7tUTIwxx0J7yJysmlt43RNiBwm7LtA%2F%2B9v2fxaL8qCqqI9YY9O4WRvwcr7J%2F1v%2FmJ7A3rTvGu3Sw1SKwCz67U0ZMvzP4gySMV1J0HrPnB6lsba7K0igSJ0%2FR8KW4Trer%2FcqA%2FPO7Fvwxn1q2sjefbB05gUvLVf7CDf1AjRqxPDwQfNk9xvNrwgbHT4CNtm29J51ATq8WSgrkZTXDK3sYBOR1p7DRvv4tVDWm5S9evPI41PyB6ZjKDO4QuC4E3jdJxlz%2FoD0Z3cnIfIU6Wb4SFejpErFu%2FOYpef4%2BZO%2Bq%2FeBBC2AZicyUQ%3D%3D&return_url=http%3A%2F%2Flocalhost%3A63342%2Fs-pay-mall-ddd%2Fdocs%2Frelease%2Fnginx%2Fhtml%2Findex.html%3F_ijt%3Dckgc3gue3gq8frsm45fc9epaaj%26_ij_reload%3DRELOAD_ON_SAVE&notify_url=http%3A%2F%2Fnoqiokweb.online%3A8080%2Fapi%2Fv1%2Falipay%2Falipay_notify_url&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+14%3A43%3A04&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json">
+<input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;228923524851&quot;,&quot;total_amount&quot;:&quot;80.00&quot;,&quot;subject&quot;:&quot;测试商品&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+<input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>document.forms[0].submit();</script>
+25-08-12.14:43:04.463 [http-nio-8080-exec-4] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge25 productId:9890001 orderId:228923524851 MarketType:1
+25-08-12.14:43:18.325 [http-nio-8080-exec-3] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge25 lastId:0 pageSize:10
+25-08-12.14:43:18.327 [http-nio-8080-exec-3] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge25 返回订单数量:1 hasMore:false
+25-08-12.14:43:18.718 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表开始 userId:xiaofuge25 lastId:0 pageSize:10
+25-08-12.14:43:18.719 [http-nio-8080-exec-5] INFO  AliPayController       - 查询用户订单列表完成 userId:xiaofuge25 返回订单数量:1 hasMore:false
+25-08-12.14:43:24.804 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:xiaofuge25 productId:xiaofuge25
+25-08-12.14:43:24.806 [http-nio-8080-exec-6] INFO  AbstractOrderService   - 创建订单-存在，已存在未支付订单。userId:xiaofuge25 productId:9890001 orderId:228923524851
+25-08-12.14:43:24.806 [http-nio-8080-exec-6] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:xiaofuge25 productId:9890001 orderId:228923524851 MarketType:null
+25-08-12.15:00:00.001 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-08-12.15:00:01.247 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 15:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=YFD6+GHOtmQD5ghQOPb4THEBbaSqQfIM/iJpMa9L6mNAzijbHyls8+U0ECV5DUwGPQ8p3vjw79X6GeK10kyB5T5n6rl8MCPsnRrC2SSbVzNWYLQidnkEOs7sjxXPLtJVZupvmuTl43tMvzn0PFQdvMWeZdrRixQgO3yHYFozsgLFiHmIm3Y28VpIAOwADyc2BsT26MyBkGFT/ibfo1HC7HjTGLuaHnXeCtuK9eNTBHo8exENuZ0To7EbINUU0tXatQHW+4HxTgiGlmqDEqSWWUTyrNwEszkHRnaMdBPXWcAFxZh163NhOo1gyiO0ebB6RXOtk2j29Q90dm9NdXjMIA==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 15:00:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=06037901175498200079112943440&biz_content={"out_trade_no":"557005144921"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"557005144921","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"o3F/jtVRieIIAXAQeVwiBNOmxp2qI8/jWICTn4SE9UKRNHm6J3b3Hp2dMSFicTN7QLX95b+hf+lnQ5dq9fIVfwUqHSe2exOG1JGzy+gUx/+ody94ilVyH1yUeCc4SgauruHft2opH/8i1TB+MW25KgekWAmsasMXe5o+UIyCDWeWuCJoJ+qJ0zJcQ0TSN1SUI2WExnIR96C/w8nfAFoeQz3p+eS5Svno9VuCRn835m82pj6HsnyK64x8LHtq4a7IfsDrGyv6F5v+V5oqyjm7yqfzZa4a94adJnRyPSPLUxi+GiV8ghpeX2q2znjXbA6e6vBvkpBURY74DfVic0PbYQ=="}^_^8ms,1156ms,77ms^_^trace_id:06037901175498200079112943440
+25-08-12.15:00:01.817 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 15:00:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=RdOZf6cFZ4KzHosP4/oUfwBU2gUDhdrDD/GEZdz7h5AM2t0/+mhryNzjnDdYCBGlzo6W6ZHV2RqauyD8T+EqDn1+vYe3eeTIUhrCWYvO2IEYLQrjDxQMIMDH+iuxYLh2UibhHzieRU6q1Zw90A8hZouGBFFLBtc0VpkoOeVvavyS/hZ6B0xRNbbMaoFmTeN8/SbwNpoqcUPRLViJ7HRJrQ01m4h3+Ics/IBuG4LVMbja4MRUv59zJ7TXzO+IZ0VJMId/hr/ZXMiGSAnHChDmKwgGeuNGMBIurI3BYpvA2OuH8JIa2PpT9T66kmEPrTppU8f7/0LjYo4AQnkavrHP+w==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 15:00:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=060389ba175498200156426708656&biz_content={"out_trade_no":"374972622382"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"374972622382","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"nDKLKBvPJJvgCTeGHzydCPc1IV1SoQLdvZhanS1LZbZnV5etg+l8m7Bo0HwaGX6VO+aBxDrIKY9rHqrMsNIwNYbUlHKEHxIiID8VfAHhfM+IwP9jPIMIfR4DIerIULFbkcX0t3dWzKUE7DUXXiPyvnmv0hRG7tcPDIxxbQqZETMxmb6ZwKWlFwdb3lEtneJgnpNp9yxtmUkH7jrgFZQCH0/JFVghqUHmHasUN2NzgmFrhEV4a5wU8xmvBHX/8L4LsdhDtzBxukFnPOQgROCXkMgtbh0li0ktPW6D6uLDsGdOd+mRbDsIAalMA0yQHUs+fsq7zfYLiOjP1goVFAS/dg=="}^_^6ms,555ms,8ms^_^trace_id:060389ba175498200156426708656
+25-08-12.15:00:02.292 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 15:00:02^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=RKEis324KG3Ap9X/vHxyI8Hy+dxRYblgqKnF4XA264X6KHiCsrdCNUTM3dJlkSlI6cVW454SOBaGARutb8Yv8bePUItfAdR5KAONBCFsTurrAawirzGlnUyBKGRyjj0Nz6zIBqiXh64Qw6CkYG1EwRL0MPsyIfAO3hMUTx20MVWJLkazbmIYaI9692MaB1HBZrFoMwSe1NvsCN6K5sy1FtEgPKCgf23VTNUSTnckBTBLu9YFxEjCVbjYNlIxDCf5PwG+ma+GKut9aL8MNE9r63Frf6qg3aU6Z+UJk9sW1Z8sSp4O8oL/VEhx2Q0WtS9AN033oKmUkCZbP5FydWrsfg==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 15:00:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175498200215672264924&biz_content={"out_trade_no":"915740588149"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"915740588149","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"GFBOM912RuNeBec+Cl11v3zJ+RGVv2jvcEhZyLiS38Vumgn8dRnBiaJ7XHoqzLCxDh0QLtRRpWnsdWsrBIKk2MDqTS08zn1mDkRA3lS//HMp2Phf8VqmJnHVLw5+QyJ0e6VKxW/mwDfNgL6WsFXJzYCUHfHILD13WP8ciykhdqxC1KFzyCZ28V2mdSjt0P+k6V1p3LrAv5r9z2x3tqbCqt6vSna0G+3yWwrdmpyv60A1zdnBKw09EzcE9TOEbsMZZsoJK53gBro7Tk3pha0sJIBX9nEXudg60g3itU+01ahuabP+Cj5KJ5g5Bo3r5TOkU9EYnhOLQfoYfwWvNfKIGA=="}^_^7ms,460ms,8ms^_^trace_id:0601ac3e175498200215672264924
+25-08-12.15:00:02.807 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 15:00:02^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=E0bZH53Z0Q415yO28P2svdFN7ashTiiyDXxhUEftS/EJ3vHC5xko01bD8XHBTDFLJaBmZgRJa0LUFV2J06uwtsjlP+pa4/kga3DgmPCLyLh7sibmUTBojYT9+qPpNpMF05T4/NT9NquWUD1U+3UU1GQ4UeLaK3TOYtvufvQb70i3U4EtPBeCKQMgg0OOSVzOGiW5blNlNveMuM0oTbmPZ33nB0J5AANwjfdY0KNDvmNJnkNkjx58mk4bEwmgqFN3PUIzw97Of33dxdQ2N2ox31FZwABf/YjtbVP9+f4BsqR2dyfGie4rlhlGh3HScLcoRs5dIVMchCDEr3W3EpGSTQ==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 15:00:02^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=06030329175498200261663658212&biz_content={"out_trade_no":"228923524851"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"228923524851","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"goFS51jkMP1qNoAgKDpZFZU0n4jss8to947nVAbsrIMd/kRDP5YhNAfqV6y5IyYjRJZDNaBCDkOZWpXNPbtQj7ueE49aJji1DmxDljCZN7dbhPV1E5H21v9xP1lhHePMad68GsBUUSjKwPAQFnUj1i2qEPW/+INhCZxH++OWZtshYaz7j9wfIJ0gpeEPNc4MMnuCoiHni1rCXq2S8577VJ11JpEEA9OXDFfEoAcSW17OXTQ3lLeYXwkmD5EQNBx5Y1rdFb1TlAC4/lUsYngRMTeh23As6ZjT/NvcgXzN/DSDgGQRB/6oNrN5GNWJyGH9GvcWKEMrn0xz9/b65ecUQg=="}^_^7ms,501ms,7ms^_^trace_id:06030329175498200261663658212
+25-08-12.15:00:02.807 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-08-12.15:00:02.824 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：557005144921 关闭状态：true
+25-08-12.15:00:02.832 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：374972622382 关闭状态：true
+25-08-12.15:09:49.963 [http-nio-8080-exec-1] INFO  Http11Processor        - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x030x010xa50x010x000x010xa10x030x030x93|0xb330xb10x8c>0xb40x03k0xffZ0xb30xb0F0xba0xfd0x8e0xa2G0xcb0x1610x17C0x120xb6I30x1e0xcb* ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-08-12.15:30:00.014 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-08-12.15:30:00.031 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：915740588149 关闭状态：true
+25-08-12.15:30:00.040 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 订单：228923524851 关闭状态：true
+25-08-12.15:30:00.040 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-08-12.16:00:00.015 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-08-12.16:00:00.017 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-08-12.16:00:00.017 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-08-12.16:30:00.014 [scheduling-1    ] INFO  NoPayNotifyOrderJob    - 任务；检测未接收到或未正确处理的支付回调通知
+25-08-12.16:30:00.016 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 任务：超时30分钟订单关闭
+25-08-12.16:30:00.016 [scheduling-1    ] INFO  TimeoutCloseOrderJob   - 无超时订单
+25-08-12.16:31:12.415 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-08-12.16:31:12.416 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-08-12.16:31:12.417 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-08-12.16:31:13.341 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-08-12.16:31:13.341 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-08-12.16:31:13.341 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-08-12.16:31:13.561 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-08-12.16:31:13.561 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-08-12.16:31:13.561 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-08-12.16:31:13.568 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-08-12.16:31:13.573 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

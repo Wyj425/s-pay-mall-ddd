@@ -27,10 +27,10 @@ services:
     container_name: s-pay-mall-ddd
     restart: on-failure
     ports:
-      - "8080:8080"
+      - "9091:9091"
     environment:
       - TZ=PRC
-      - SERVER_PORT=8080
+      - SERVER_PORT=9091
     volumes:
       - ./log:/data/log
     logging:
