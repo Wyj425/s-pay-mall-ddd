@@ -1,161 +1,202 @@
-25-08-01.22:21:31.418 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aliPayController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService' defined in file [E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-domain\target\classes\online\noqiokweb\domain\order\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderRepository': Unsatisfied dependency expressed through field 'eventPublisher'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventPublisher': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.config.producer.exchange' in value "${spring.rabbitmq.config.producer.exchange}"
-25-08-01.22:21:31.449 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aliPayController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService' defined in file [E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-domain\target\classes\online\noqiokweb\domain\order\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderRepository': Unsatisfied dependency expressed through field 'eventPublisher'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventPublisher': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.config.producer.exchange' in value "${spring.rabbitmq.config.producer.exchange}"
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at online.noqiokweb.Application.main(Application.java:14)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService' defined in file [E:\IdeaPorjects\ddd\s-pay-mall-ddd\s-pay-mall-ddd-domain\target\classes\online\noqiokweb\domain\order\service\OrderService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderRepository': Unsatisfied dependency expressed through field 'eventPublisher'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventPublisher': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.config.producer.exchange' in value "${spring.rabbitmq.config.producer.exchange}"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 17 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderRepository': Unsatisfied dependency expressed through field 'eventPublisher'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventPublisher': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.config.producer.exchange' in value "${spring.rabbitmq.config.producer.exchange}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 33 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventPublisher': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.config.producer.exchange' in value "${spring.rabbitmq.config.producer.exchange}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
-	... 48 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.config.producer.exchange' in value "${spring.rabbitmq.config.producer.exchange}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	... 59 common frames omitted
-25-08-01.22:25:10.799 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
-org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
-	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
-	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
-	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
-	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
-	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
-	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
-	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
-	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
-	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+25-08-12.00:00:05.442 [scheduling-1    ] ERROR err                    - 2025-08-12 00:00:05^_^alipay.trade.query^_^null^_^10.180.21.186^_^Windows 11^_^alipay-sdk-java-4.38.157.ALL^_^https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.query&sign=MJ9rbF11HhNAGM7Nwcsmy29OIp49LKkMFtxbpP%2B1bdq%2FSGfahHsm0M7tA%2BYZ11SMAmt8F7iPaNj5wQeySnUmW8LyL0uTqwu8vQPpvmI4W39vyPkLy366A8IJLi%2BLIPqoWvPnNzW2CpSnlwDpnaBic6mQHuQpUj5nB3ib39KzhHUV90d74cZrRVm8Jct2sj%2BwE691W%2BaQO22aS92iNMH1mkTD%2FImvnkvXSaqbqaxeO1kV54lPiDk%2B1GsMAaWvQ3K5YJi4rcHDTyrOwpftQB3o69cfOdiSDz31b9Wn1dNl11rqUoKJ6%2ByLDtOcmJf7u%2BIV%2F6R34cEj2LABbgkjLBp6Eg%3D%3D&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+00%3A00%3A00&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^^_^<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> <html> <head><title>504 Gateway Time-out</title></head> <body bgcolor="white"> <h1>504 Gateway Time-out</h1> <p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/> Please report this message and include the following information to us.<br/> Thank you very much!</p> <table> <tr> <td>URL:</td> <td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.query&amp;sign=MJ9rbF11HhNAGM7Nwcsmy29OIp49LKkMFtxbpP%2B1bdq%2FSGfahHsm0M7tA%2BYZ11SMAmt8F7iPaNj5wQeySnUmW8LyL0uTqwu8vQPpvmI4W39vyPkLy366A8IJLi%2BLIPqoWvPnNzW2CpSnlwDpnaBic6mQHuQpUj5nB3ib39KzhHUV90d74cZrRVm8Jct2sj%2BwE691W%2BaQO22aS92iNMH1mkTD%2FImvnkvXSaqbqaxeO1kV54lPiDk%2B1GsMAaWvQ3K5YJi4rcHDTyrOwpftQB3o69cfOdiSDz31b9Wn1dNl11rqUoKJ6%2ByLDtOcmJf7u%2BIV%2F6R34cEj2LABbgkjLBp6Eg%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+00%3A00%3A00&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td> </tr> <tr> <td>Server:</td> <td>openapi-14.rz21a.sandbox.alipay.net</td> </tr> <tr> <td>Date:</td> <td>2025/08/12 00:00:05</td> </tr> </table> <hr/>Powered by Tengine </body> </html> 
+25-08-12.00:00:05.443 [scheduling-1    ] ERROR NoPayNotifyOrderJob    - 检测未接收到或未正确处理的支付回调通知失败
+com.alipay.api.AlipayApiException: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.query&amp;sign=MJ9rbF11HhNAGM7Nwcsmy29OIp49LKkMFtxbpP%2B1bdq%2FSGfahHsm0M7tA%2BYZ11SMAmt8F7iPaNj5wQeySnUmW8LyL0uTqwu8vQPpvmI4W39vyPkLy366A8IJLi%2BLIPqoWvPnNzW2CpSnlwDpnaBic6mQHuQpUj5nB3ib39KzhHUV90d74cZrRVm8Jct2sj%2BwE691W%2BaQO22aS92iNMH1mkTD%2FImvnkvXSaqbqaxeO1kV54lPiDk%2B1GsMAaWvQ3K5YJi4rcHDTyrOwpftQB3o69cfOdiSDz31b9Wn1dNl11rqUoKJ6%2ByLDtOcmJf7u%2BIV%2F6R34cEj2LABbgkjLBp6Eg%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+00%3A00%3A00&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 00:00:05</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1015)
+	at com.alipay.api.AbstractAlipayClient._execute(AbstractAlipayClient.java:921)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:395)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:377)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:372)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:366)
+	at online.noqiokweb.trigger.job.NoPayNotifyOrderJob.exec(NoPayNotifyOrderJob.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:750)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
-	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
-	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223)
-	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
-	... 12 common frames omitted
-25-08-01.22:25:20.035 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
-25-08-01.22:25:23.000 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
-org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
-	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
-	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
-	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
-	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
-	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
-	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
-	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
-	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
-	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+Caused by: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.query&amp;sign=MJ9rbF11HhNAGM7Nwcsmy29OIp49LKkMFtxbpP%2B1bdq%2FSGfahHsm0M7tA%2BYZ11SMAmt8F7iPaNj5wQeySnUmW8LyL0uTqwu8vQPpvmI4W39vyPkLy366A8IJLi%2BLIPqoWvPnNzW2CpSnlwDpnaBic6mQHuQpUj5nB3ib39KzhHUV90d74cZrRVm8Jct2sj%2BwE691W%2BaQO22aS92iNMH1mkTD%2FImvnkvXSaqbqaxeO1kV54lPiDk%2B1GsMAaWvQ3K5YJi4rcHDTyrOwpftQB3o69cfOdiSDz31b9Wn1dNl11rqUoKJ6%2ByLDtOcmJf7u%2BIV%2F6R34cEj2LABbgkjLBp6Eg%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+00%3A00%3A00&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 00:00:05</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:520)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:181)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:142)
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1003)
+	... 21 common frames omitted
+25-08-12.00:02:28.815 [http-nio-8080-exec-5] ERROR ProductPort            - 营销退单失败xiaofuge09
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "outTradeNo" (class online.noqiokweb.infrastructure.gateway.dto.RefundMarketPayOrderResponseDTO), not marked as ignorable (5 known properties: "teamId", "orderId", "code", "userId", "info"])
+ at [Source: (okhttp3.ResponseBody$BomAwareReader); line: 1, column: 146] (through reference chain: online.noqiokweb.infrastructure.gateway.response.Response["data"]->online.noqiokweb.infrastructure.gateway.dto.RefundMarketPayOrderResponseDTO["outTradeNo"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2036)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2051)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1459)
+	at retrofit2.converter.jackson.JacksonResponseBodyConverter.convert(JacksonResponseBodyConverter.java:33)
+	at retrofit2.converter.jackson.JacksonResponseBodyConverter.convert(JacksonResponseBodyConverter.java:23)
+	at retrofit2.OkHttpCall.parseResponse(OkHttpCall.java:243)
+	at retrofit2.OkHttpCall.execute(OkHttpCall.java:204)
+	at online.noqiokweb.infrastructure.adapter.port.ProductPort.refundMarketPayOrder(ProductPort.java:156)
+	at online.noqiokweb.domain.order.service.OrderService.refundMarketOrder(OrderService.java:179)
+	at online.noqiokweb.trigger.http.AliPayController.refundOrder(AliPayController.java:232)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
-	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
-	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223)
-	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
-	... 12 common frames omitted
-25-08-01.22:25:27.054 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
-25-08-11.22:30:01.294 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-11 22:30:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=Ddyhk+ei1Xc1cdPn7m38t4DAP6oMqQQfJxYbl5vHx/ID3ebHq99kUKJrF7cg1EzZ/rqPP+gd+g7XGst1izbxeJQfqydtuh/n1f0FAeczjiJkveGaxGKiPZsUL6eMMUfbaXGAJlwc1QXBYWR5RH3/TjycDD9BJpJRSW+gh2DtKNj5lewyVi3eTHbPtOjs4/ljR39ersR3IcAIa7kG2mkr17klEPg0T9JIdrB3phn2OMHEqtdFZ+Hb5zp8eQqD1p6xx9uN7OWTIfrtUSq5kN+yBzSwGQzBmycgSl1sJjdqDJGseVyHVlVkObEaxmvtXevRe7SzSNgP+Gn+IoszIyjtow==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-11 22:30:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=06037901175492260029416313440&biz_content={"out_trade_no":"749730761005"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"749730761005","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"kABGqvPue365F1T51nk0Ja8ZFd3lk6I2t5wJ4p/+rIJF96Dh52oaNOUF39O0i5+zQ1061v9Fb1fAreKXMJsPSFE3Xvxz+DhZFvTBRbTZk+5zwayc2MH0eg2I2oONuttpgGx0Y0TLTUbl/Bg6KnkmjQWJ8K9O6mcY8S5f68dlCRgcoSESjdro4jwL6/VlSDg2pQ1rM4PRC7aD4cTw/zi091WjoMbzfm6HPprq6rhYd3QTGvwLupq/exCbqg+zLGv6C063hKpTaqxifCBqR3o1mcME3UmM1ulDo1BsaaIVm4QnZ5bUGImrj3XLv1GcrYxv6XnS70bTTkRAUDau9K6Img=="}^_^18ms,1242ms,22ms^_^trace_id:06037901175492260029416313440
-25-08-11.22:54:48.694 [http-nio-8080-exec-6] WARN  ProductPort            - 调用拼团服务业务失败，Code: E0103, Info: 当前用户参与此拼团次数达到上限
-25-08-11.22:54:48.696 [http-nio-8080-exec-6] ERROR AliPayController       - 商品下单，根据商品ID创建支付单失败 userId:xiaofuge04 productId:xiaofuge04
+25-08-12.00:19:39.098 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m22s992ms264µs500ns).
+25-08-12.00:19:40.447 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] WARN  OrderService           - 退款失败，订单不存在或不属于该用户 userId:xiaofuge09 orderId:305285234015
+25-08-12.00:19:40.466 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ERROR BlockingQueueConsumer  - Error acking.
+java.net.SocketException: Software caused connection abort: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at com.rabbitmq.client.impl.SocketFrameHandler.flush(SocketFrameHandler.java:197)
+	at com.rabbitmq.client.impl.AMQConnection.flush(AMQConnection.java:636)
+	at com.rabbitmq.client.impl.AMQCommand.transmit(AMQCommand.java:134)
+	at com.rabbitmq.client.impl.AMQChannel.quiescingTransmit(AMQChannel.java:455)
+	at com.rabbitmq.client.impl.AMQChannel.transmit(AMQChannel.java:428)
+	at com.rabbitmq.client.impl.AMQChannel.transmit(AMQChannel.java:421)
+	at com.rabbitmq.client.impl.ChannelN.basicAck(ChannelN.java:1185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1162)
+	at com.sun.proxy.$Proxy107.basicAck(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.commitIfNecessary(BlockingQueueConsumer.java:876)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1056)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232)
+	at java.lang.Thread.run(Thread.java:750)
+25-08-12.00:19:42.150 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] WARN  OrderService           - 退款失败，订单不存在或不属于该用户 userId:xiaofuge09 orderId:305285234015
+25-08-12.00:23:56.725 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] WARN  OrderService           - 退款失败，订单不存在或不属于该用户 userId:xiaofuge12 orderId:985695399597
+25-08-12.00:27:32.689 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m53s512ms92µs700ns).
+25-08-12.00:27:32.692 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] WARN  OrderService           - 退款失败，订单不存在或不属于该用户 userId:xiaofuge13 orderId:561206738581
+25-08-12.00:30:00.919 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 00:30:00^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=JVqU70sQN1vHWTkFQtfa26YzcNN/PbHLMsldthtG1tWpOOceOoY2DC4Opche+VtzJq2KNJH0P1V8mOb0nNr9QZ6FU278eFBk84VvyowA2kaFCHFlDYGppLXXNYn8vVIo6dvIta/XIHrNQK4AClCDDA47JzNhA6/mZYRH9G9v337IIdAyB79tS48BMQXCdqKeJDHDntwnri0h6n8uxZAJDe8GoSgTmVeAoU6W+/k6K2Pk9GXzu1E7fyiYo4xrGg7JdSnOGS1muLGGILV+Qz7Tr/EurPvlmMAp/13Li6SOV4dQCiI7I9l8HB8bxsKz6Cnl3zhL0pg/S6B9h2eIKcK6KQ==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 00:30:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601d58b175492980011184516326&biz_content={"out_trade_no":"561045467911"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"561045467911","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"Lr9MZfRl9IeiWsgGKGLGOdeP6yxj2jchv5qveA5fAQ2A3bO5VlC6Wvy0YPX7Mng+Yi1OZn70rWjOH8/ovvXiLS1WX4T6wJXp+gvOY1LXAXGVWCvLBR0Y7ePgRtwCBal/bmEphGb4ygaM7VgSTnBs1moxdECfM3REPp894f6jEgkHQo1vkBqkfz03SSZRjaqDEj/F23W862Bk+wQtxql0EdcUyi5lVpKIcCRbgT8Vs1iy53VsKyCHkdiN2C6i8+/P3m3aiN5aR3W+aIlFot1ifJ83WltqdKNC/Qgz7Rvk9UO+7/HVkeDuUIwaLOjTAnmZURm57/Jy7rxcalWVakwRgA=="}^_^12ms,865ms,28ms^_^trace_id:0601d58b175492980011184516326
+25-08-12.00:30:01.396 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 00:30:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=C647xRkbhCYyA3dw8SeAPmnRlsDUsZS9P0K9u0MCt470VgEd+Tv4Xq7PFc1D24PnEPdNUBhpgPxVYm2gC+Wg5VZW+k0Hh57l174azeefL8fe9sqjWTKxA1dccGQ585RqXJ0NWHkqouGS3BjKomuS0qQJXK5oDQeFetaPBpIlLH4bPEkUERqFVwmnS1w2QNpckjvWKQaq4/eI7TtekTYbTzvX0tk9VkfzP5tTQ5Xf4K61jS+tHuazl2NmFZdQhZE75OaYILvPBipjVMjUHMle55gNb3w+qGQW1y/O+ot47WbFfrBZhte2Z2CsZ/bjop/bUbIBgEoSx403Q+DKcfgvGA==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 00:30:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601ac3e175492980068466054924&biz_content={"out_trade_no":"086579659475"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"086579659475","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"h3Bmu/ZlaqoAqvzaW1V3iRgxg8N4UvCh77n5OoY581gzTXXC5FHW6zLI6NU0yhro3MuY7ouAiJNuan667HJFFrTo2j66jROG2+3YB+Tzm5U8P0oa2IwqDk9BmHw0P74QttRQzAERDfC+/TYt3JLcw3oNEU34v3HfgcGPc6d0Ivgt3kgp5Gwy7fX0iMCK8Ui7ibmPDtsaAuCE8ZQXaohBg3S4kbkSH/U3CfOCNqPgIv/WaGyMyHjLWN47FmDGRqLQVQlXh1JoSagpbB3ODtBM0Wwsn9VCe20AhNk4bV5XMPgy/V7fCiR82H0r2CEBaCJn+/uWHl+WZVmsN1V9vPEYNw=="}^_^7ms,462ms,8ms^_^trace_id:0601ac3e175492980068466054924
+25-08-12.00:30:01.675 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 00:30:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=JtmhWb9mrfByeqDgoIP+sCae6M624XluVmBtUrK8hiKjUNBEkcyMD08EG70KRWICqWbPzPBM3sfZkNQ8vhSpoCHBVcS4HXuYPRMzBPhXMTXU6iCRcGL/UoSan0+s2bHcbNrb1+OqVzWBdUTRDlqbIfyEu6uhYtPBLl3IiBhhYcSC8kypJV9Uij2HnLd/S9pqcuYPnvqgzJnj9fVz54D+BNvuMqo0mYxfqoHQPF77GtUQknGxtdqZVE1yYiolDjWv/xOVoIZfcCs6eHRodfPImsRj45fI72suvsXlcAboBkaiGDN3BPFPUXi85hj6UiEhZ0bsbQnK5ufo+0kAsaW4mg==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 00:30:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601d58b175492980113984636326&biz_content={"out_trade_no":"685221667518"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"685221667518","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"ZOQ+h06cMGdRPUOrKpph7PM06fRJQmkLoFrFuYT76773ejwsVi+hfIyd2s66HiLDf84JtgPQE9Ij8wiKc3v8BUdlxAwEv5tsvijoezW8jJ+OHZWWu4lLB2E96ImBYDNQvZZbmMuIScVCCnSk+XL+MvgP6d49APA3Atr+H2+mFg4HZYMbkfoQvUtwQAxG5sNGAs1uUr96YenG7yUbqjQiPaVdOx/4yFs6cMtJoRO9nL8uM1aoD2OEQlWebwctgv+g6pPorHfykQlm9ywPwKLwvzJz9QOuD6Q0MymvK/IpBPPW8isuHzSr7+Ste5woUjz+fMkxU1AyrSN8e2pk/aUBOQ=="}^_^7ms,264ms,8ms^_^trace_id:0601d58b175492980113984636326
+25-08-12.13:30:00.922 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 13:30:00^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=TqNBMm2QvNpr6F7oPIi5Kab56AHlfLjQVVt0OwFd2UJ/9rGk+YAX+FieUJ0LAXZjyawEja0DJUjxFbKlV/Tt1Xc8lhuNJbNHo5SgiKea2PhEpl/fQ9lL6Fykz+e72NoC/LmKQdkeR74ns+6mEp3fQcakFI0b6ETN86cZ+9HNWtWoJhqU4bRLZsXQ9RJJn5b+92TdMc6QliAcrWi3PylbPl3X0NMTMpDaZYK8R0xMQ/D8AbIDND6VJtjT6Ea2km3JflP23n79yvZHMUf4qwKf+u8as4+CfDm1MC7GPk1oA+SuPOSIBTALxrsCXWypVPBLeG6meJBXmq047Kqy2+AueQ==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 13:30:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=06037901175497660070722713440&biz_content={"out_trade_no":"561045467911"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"561045467911","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"Lr9MZfRl9IeiWsgGKGLGOdeP6yxj2jchv5qveA5fAQ2A3bO5VlC6Wvy0YPX7Mng+Yi1OZn70rWjOH8/ovvXiLS1WX4T6wJXp+gvOY1LXAXGVWCvLBR0Y7ePgRtwCBal/bmEphGb4ygaM7VgSTnBs1moxdECfM3REPp894f6jEgkHQo1vkBqkfz03SSZRjaqDEj/F23W862Bk+wQtxql0EdcUyi5lVpKIcCRbgT8Vs1iy53VsKyCHkdiN2C6i8+/P3m3aiN5aR3W+aIlFot1ifJ83WltqdKNC/Qgz7Rvk9UO+7/HVkeDuUIwaLOjTAnmZURm57/Jy7rxcalWVakwRgA=="}^_^7ms,882ms,17ms^_^trace_id:06037901175497660070722713440
+25-08-12.13:30:01.499 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 13:30:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=FjaZZ2yenCPcUHF+Sys7wnRiuHB3pO1BHj4IK4uItl8l+Itxhc0rCcsehmRpWLdiC7dQ4r6xX0hGb61Prj3yTJzRr+IMPk7d69pSC8jzoLs7DMtBJ0BpGB8OIORWRvhKmYxCX2Tb1ZbIqFOwafNLTlqvOXtwu97fxLXQjioOdoyQVv4q/gRnmoFqMv4i9bkR/rg0rirzA6Rs3CwXjNUsse/EDova3pFY4Svr/Q20uJpL+4TpGkun9ylJjAmNBna5tt2/8Gszi5864+PqA+IOpgyW7tFPKsCzjcqXacwXyILPKrD3fAWEFcMZcftNEuU9xbX1azaQysbsUs4bHAWM4A==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 13:30:00^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=060389ba175497660136738028656&biz_content={"out_trade_no":"086579659475"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"086579659475","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"h3Bmu/ZlaqoAqvzaW1V3iRgxg8N4UvCh77n5OoY581gzTXXC5FHW6zLI6NU0yhro3MuY7ouAiJNuan667HJFFrTo2j66jROG2+3YB+Tzm5U8P0oa2IwqDk9BmHw0P74QttRQzAERDfC+/TYt3JLcw3oNEU34v3HfgcGPc6d0Ivgt3kgp5Gwy7fX0iMCK8Ui7ibmPDtsaAuCE8ZQXaohBg3S4kbkSH/U3CfOCNqPgIv/WaGyMyHjLWN47FmDGRqLQVQlXh1JoSagpbB3ODtBM0Wwsn9VCe20AhNk4bV5XMPgy/V7fCiR82H0r2CEBaCJn+/uWHl+WZVmsN1V9vPEYNw=="}^_^11ms,558ms,8ms^_^trace_id:060389ba175497660136738028656
+25-08-12.13:30:01.934 [scheduling-1    ] ERROR err                    - ErrorScene^_^40004^_^ACQ.TRADE_NOT_EXIST^_^null^_^Windows 11^_^2025-08-12 13:30:01^_^ProtocalMustParams:charset=utf-8&method=alipay.trade.query&sign=Gy4S7NA1FJ71PrgusLQD1VONkPTQFgqOKIT9nhT0LVTFP2yTXvbDaJPXY5YqCrcSVqEGy9OmFtdnuSnKwD1FkEUbpmshWrEa7NTZBwPjX5+CXFvQe/gSt87T/SQ9HqWddcut3/6+AZrGTjfNfxuOtZbq+qAzrjpHt99hPaEGUiAc5MYaJFuxtt2dKZ4oIeK8MC2/aDThtVvkrceZDwKfrxGwk9+jLDF814FoJzpWnUwr2oP84RuHzB3xFtQsy5dDCwRvZrgM/B80xQzdDCdL9LB8jgLDbBZZUpk+zCzwHKwgrwvaH0j8A4bTBHCoy8w/pmBQPXNO600rrYz4d426JA==&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12 13:30:01^_^ProtocalOptParams:alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^ApplicationParams:traceId=0601d58b175497660193122996326&biz_content={"out_trade_no":"685221667518"}^_^Body:{"alipay_trade_query_response":{"msg":"Business Failed","code":"40004","out_trade_no":"685221667518","sub_msg":"交易不存在","sub_code":"ACQ.TRADE_NOT_EXIST","receipt_amount":"0.00","point_amount":"0.00","buyer_pay_amount":"0.00","invoice_amount":"0.00"},"sign":"ZOQ+h06cMGdRPUOrKpph7PM06fRJQmkLoFrFuYT76773ejwsVi+hfIyd2s66HiLDf84JtgPQE9Ij8wiKc3v8BUdlxAwEv5tsvijoezW8jJ+OHZWWu4lLB2E96ImBYDNQvZZbmMuIScVCCnSk+XL+MvgP6d49APA3Atr+H2+mFg4HZYMbkfoQvUtwQAxG5sNGAs1uUr96YenG7yUbqjQiPaVdOx/4yFs6cMtJoRO9nL8uM1aoD2OEQlWebwctgv+g6pPorHfykQlm9ywPwKLwvzJz9QOuD6Q0MymvK/IpBPPW8isuHzSr7+Ste5woUjz+fMkxU1AyrSN8e2pk/aUBOQ=="}^_^8ms,419ms,8ms^_^trace_id:0601d58b175497660193122996326
+25-08-12.13:34:01.067 [http-nio-8080-exec-10] WARN  ProductPort            - 调用拼团服务业务失败，Code: E0103, Info: 当前用户参与此拼团次数达到上限
+25-08-12.13:34:01.067 [http-nio-8080-exec-10] ERROR AliPayController       - 商品下单，根据商品ID创建支付单失败 userId:xiaofuge16 productId:xiaofuge16
 online.noqiokweb.types.exception.AppException: null
-	at online.noqiokweb.infrastructure.adapter.port.ProductPort.lockMarketPayOrder(ProductPort.java:97)
-	at online.noqiokweb.domain.order.service.OrderService.lockMarketPayOrder(OrderService.java:47)
+	at online.noqiokweb.infrastructure.adapter.port.ProductPort.lockMarketPayOrder(ProductPort.java:98)
+	at online.noqiokweb.domain.order.service.OrderService.lockMarketPayOrder(OrderService.java:50)
 	at online.noqiokweb.domain.order.service.AbstractOrderService.createPayOrder(AbstractOrderService.java:89)
 	at online.noqiokweb.trigger.http.AliPayController.createPayOrder(AliPayController.java:56)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -208,4 +249,375 @@ online.noqiokweb.types.exception.AppException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-25-08-11.22:54:48.696 [http-nio-8080-exec-6] ERROR AliPayController       - 创建支付失败 code:E0103 info:当前用户参与此拼团次数达到上限
+25-08-12.13:34:01.068 [http-nio-8080-exec-10] ERROR AliPayController       - 创建支付失败 code:E0103 info:当前用户参与此拼团次数达到上限
+25-08-12.13:42:02.811 [http-nio-8080-exec-5] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is online.noqiokweb.x.api.types.exception.XApiException{code='0001', info='未知失败'}] with root cause
+online.noqiokweb.types.exception.AppException: null
+	at online.noqiokweb.infrastructure.adapter.port.ProductPort.settlementMarketPayOrder(ProductPort.java:138)
+	at online.noqiokweb.domain.order.service.OrderService.changeOrderPaySuccess(OrderService.java:101)
+	at online.noqiokweb.trigger.http.AliPayController.payNotify(AliPayController.java:144)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+25-08-12.13:50:28.257 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ERROR err                    - 2025-08-12 13:50:28^_^alipay.trade.refund^_^null^_^10.180.21.186^_^Windows 11^_^alipay-sdk-java-4.38.157.ALL^_^https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.refund&sign=Rgy%2B0qGbuyUXmMnR7lHyisQNhMWbd3JcknTlRnQ5eFFxYjk3DxsrkaX%2BX660PRlCA00iWcGjZKQjFw7AaztQF%2BZycpRYL2ZCQvwUf0trkeZ9nP2e5J81urzlFSF6AKJK%2B%2BLxMhbV7DoV37M5Z0Wk41N7Rmqs2pjcYEh5bgUp%2FTkVTzfvdkaNE32hUfRot1fNZzAblwH4jHmsN8Uy2MirrE7j%2FZLtmNMul8PD9iCfbP0DxS0PGyOHinP%2BIOLUA49DPf4qPooxbCSLPwM3BLL2SKG1em8NX7ZmUvlzPQU%2B76WBylJljqKy5juo3YEou%2F0DsHWjR2C3ExWBgeDnuMKqtQ%3D%3D&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+13%3A50%3A22&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^^_^<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> <html> <head><title>504 Gateway Time-out</title></head> <body bgcolor="white"> <h1>504 Gateway Time-out</h1> <p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/> Please report this message and include the following information to us.<br/> Thank you very much!</p> <table> <tr> <td>URL:</td> <td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=Rgy%2B0qGbuyUXmMnR7lHyisQNhMWbd3JcknTlRnQ5eFFxYjk3DxsrkaX%2BX660PRlCA00iWcGjZKQjFw7AaztQF%2BZycpRYL2ZCQvwUf0trkeZ9nP2e5J81urzlFSF6AKJK%2B%2BLxMhbV7DoV37M5Z0Wk41N7Rmqs2pjcYEh5bgUp%2FTkVTzfvdkaNE32hUfRot1fNZzAblwH4jHmsN8Uy2MirrE7j%2FZLtmNMul8PD9iCfbP0DxS0PGyOHinP%2BIOLUA49DPf4qPooxbCSLPwM3BLL2SKG1em8NX7ZmUvlzPQU%2B76WBylJljqKy5juo3YEou%2F0DsHWjR2C3ExWBgeDnuMKqtQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A22&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td> </tr> <tr> <td>Server:</td> <td>openapi-14.rz21a.sandbox.alipay.net</td> </tr> <tr> <td>Date:</td> <td>2025/08/12 13:50:28</td> </tr> </table> <hr/>Powered by Tengine </body> </html> 
+25-08-12.13:50:28.257 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] WARN  ConditionalRejectingErrorHandler - Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(java.lang.String)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:272)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:209)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.RuntimeException: com.alipay.api.AlipayApiException: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=Rgy%2B0qGbuyUXmMnR7lHyisQNhMWbd3JcknTlRnQ5eFFxYjk3DxsrkaX%2BX660PRlCA00iWcGjZKQjFw7AaztQF%2BZycpRYL2ZCQvwUf0trkeZ9nP2e5J81urzlFSF6AKJK%2B%2BLxMhbV7DoV37M5Z0Wk41N7Rmqs2pjcYEh5bgUp%2FTkVTzfvdkaNE32hUfRot1fNZzAblwH4jHmsN8Uy2MirrE7j%2FZLtmNMul8PD9iCfbP0DxS0PGyOHinP%2BIOLUA49DPf4qPooxbCSLPwM3BLL2SKG1em8NX7ZmUvlzPQU%2B76WBylJljqKy5juo3YEou%2F0DsHWjR2C3ExWBgeDnuMKqtQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A22&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 13:50:28</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(RefundSuccessTopicListener.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:77)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:263)
+	... 13 common frames omitted
+Caused by: com.alipay.api.AlipayApiException: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=Rgy%2B0qGbuyUXmMnR7lHyisQNhMWbd3JcknTlRnQ5eFFxYjk3DxsrkaX%2BX660PRlCA00iWcGjZKQjFw7AaztQF%2BZycpRYL2ZCQvwUf0trkeZ9nP2e5J81urzlFSF6AKJK%2B%2BLxMhbV7DoV37M5Z0Wk41N7Rmqs2pjcYEh5bgUp%2FTkVTzfvdkaNE32hUfRot1fNZzAblwH4jHmsN8Uy2MirrE7j%2FZLtmNMul8PD9iCfbP0DxS0PGyOHinP%2BIOLUA49DPf4qPooxbCSLPwM3BLL2SKG1em8NX7ZmUvlzPQU%2B76WBylJljqKy5juo3YEou%2F0DsHWjR2C3ExWBgeDnuMKqtQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A22&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 13:50:28</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1015)
+	at com.alipay.api.AbstractAlipayClient._execute(AbstractAlipayClient.java:921)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:395)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:377)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:372)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:366)
+	at online.noqiokweb.domain.order.service.OrderService.refundPayOrder(OrderService.java:213)
+	at online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(RefundSuccessTopicListener.java:46)
+	... 21 common frames omitted
+Caused by: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=Rgy%2B0qGbuyUXmMnR7lHyisQNhMWbd3JcknTlRnQ5eFFxYjk3DxsrkaX%2BX660PRlCA00iWcGjZKQjFw7AaztQF%2BZycpRYL2ZCQvwUf0trkeZ9nP2e5J81urzlFSF6AKJK%2B%2BLxMhbV7DoV37M5Z0Wk41N7Rmqs2pjcYEh5bgUp%2FTkVTzfvdkaNE32hUfRot1fNZzAblwH4jHmsN8Uy2MirrE7j%2FZLtmNMul8PD9iCfbP0DxS0PGyOHinP%2BIOLUA49DPf4qPooxbCSLPwM3BLL2SKG1em8NX7ZmUvlzPQU%2B76WBylJljqKy5juo3YEou%2F0DsHWjR2C3ExWBgeDnuMKqtQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A22&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 13:50:28</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:520)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:181)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:142)
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1003)
+	... 28 common frames omitted
+25-08-12.13:50:43.273 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ERROR err                    - 2025-08-12 13:50:43^_^alipay.trade.refund^_^null^_^10.180.21.186^_^Windows 11^_^alipay-sdk-java-4.38.157.ALL^_^https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.refund&sign=aGMJ7KumDC6km943KtXDeS2r2A4nPfmT24RGro47j4VFmRVH1%2FBK9l%2FRW5JwndSazZTj4bjCk5Wx5PWbtV4Vhuhqzw6vOcMJA724nCeGxFS%2FU7GvJByoYgUMwXPuxnpmBG50MFYETJOxWrCKt7pXU3qWVMq5edojPfYMzmhP%2Ffpyiy%2F0yUi3vNGGiz2FJ0%2F0Zc2%2Bsmsu%2B%2BeF5rXgIrknG%2FVifaK4g4H%2B7iUgHLmlPtWUy3q%2FKpDVc26CIo%2BY00yMBiyARJ7SNqA9P21qCUcGQD9LqD7r1K5SeessiVDlriQjRjE2tvn%2FmGk3wensDbzBMOzYbIBjQuSRIu4h3CamMQ%3D%3D&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+13%3A50%3A28&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^^_^Read timed out
+25-08-12.13:50:43.273 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] WARN  ConditionalRejectingErrorHandler - Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(java.lang.String)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:272)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:209)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.RuntimeException: com.alipay.api.AlipayApiException: java.net.SocketTimeoutException: Read timed out
+	at online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(RefundSuccessTopicListener.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:77)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:263)
+	... 13 common frames omitted
+Caused by: com.alipay.api.AlipayApiException: java.net.SocketTimeoutException: Read timed out
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1015)
+	at com.alipay.api.AbstractAlipayClient._execute(AbstractAlipayClient.java:921)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:395)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:377)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:372)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:366)
+	at online.noqiokweb.domain.order.service.OrderService.refundPayOrder(OrderService.java:213)
+	at online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(RefundSuccessTopicListener.java:46)
+	... 21 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1964)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1959)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1958)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1528)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268)
+	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:514)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:181)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:142)
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1003)
+	... 28 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1271)
+	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:76)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:948)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:779)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:714)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1607)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1512)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:3095)
+	at java.net.URLConnection.getContentType(URLConnection.java:511)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:420)
+	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:506)
+	... 31 common frames omitted
+25-08-12.13:50:48.686 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ERROR err                    - 2025-08-12 13:50:48^_^alipay.trade.refund^_^null^_^10.180.21.186^_^Windows 11^_^alipay-sdk-java-4.38.157.ALL^_^https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.refund&sign=FuMgZ3BeBKklTltVkJRtkSsvxRrGRfOZ2qXh4po7mhv%2B9a9qyEQu0RpKh9g2TgYGghy1ehF%2BApUlIBc3bXTIMSWN3T594VJ8KNLLCiijTjL7tFqAnCuMlUBYvcB0MZ%2BN%2BrUkGdyGeN0UdaUtybIkwUrOxZHZR%2FEXH0Uhlfawu8RKKxsEvGRIk05sQ8YyG2qmR7JSFwhoUl09bs%2F%2BmQbsxW3EICNxmXCuHMpeYP1IubiJozOX2sXLHklfGOSR2TAbjapD1b3FwqK4Sa0wivg4RR8kFU4g8KQWspAt6U3w%2BJK87JJQJZf7o7SH9fQWQ9Z0eyckaI3Ns0MkoiLcTxddaQ%3D%3D&version=1.0&app_id=9021000149697872&sign_type=RSA2&timestamp=2025-08-12+13%3A50%3A43&alipay_sdk=alipay-sdk-java-4.38.157.ALL&format=json^_^^_^<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"> <html> <head><title>504 Gateway Time-out</title></head> <body bgcolor="white"> <h1>504 Gateway Time-out</h1> <p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/> Please report this message and include the following information to us.<br/> Thank you very much!</p> <table> <tr> <td>URL:</td> <td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=FuMgZ3BeBKklTltVkJRtkSsvxRrGRfOZ2qXh4po7mhv%2B9a9qyEQu0RpKh9g2TgYGghy1ehF%2BApUlIBc3bXTIMSWN3T594VJ8KNLLCiijTjL7tFqAnCuMlUBYvcB0MZ%2BN%2BrUkGdyGeN0UdaUtybIkwUrOxZHZR%2FEXH0Uhlfawu8RKKxsEvGRIk05sQ8YyG2qmR7JSFwhoUl09bs%2F%2BmQbsxW3EICNxmXCuHMpeYP1IubiJozOX2sXLHklfGOSR2TAbjapD1b3FwqK4Sa0wivg4RR8kFU4g8KQWspAt6U3w%2BJK87JJQJZf7o7SH9fQWQ9Z0eyckaI3Ns0MkoiLcTxddaQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A43&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td> </tr> <tr> <td>Server:</td> <td>openapi-14.rz21a.sandbox.alipay.net</td> </tr> <tr> <td>Date:</td> <td>2025/08/12 13:50:48</td> </tr> </table> <hr/>Powered by Tengine </body> </html> 
+25-08-12.13:50:48.686 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] WARN  ConditionalRejectingErrorHandler - Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(java.lang.String)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:272)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:209)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1674)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1593)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1581)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1572)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1516)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1001)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:948)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:86)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1326)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1232)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.RuntimeException: com.alipay.api.AlipayApiException: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=FuMgZ3BeBKklTltVkJRtkSsvxRrGRfOZ2qXh4po7mhv%2B9a9qyEQu0RpKh9g2TgYGghy1ehF%2BApUlIBc3bXTIMSWN3T594VJ8KNLLCiijTjL7tFqAnCuMlUBYvcB0MZ%2BN%2BrUkGdyGeN0UdaUtybIkwUrOxZHZR%2FEXH0Uhlfawu8RKKxsEvGRIk05sQ8YyG2qmR7JSFwhoUl09bs%2F%2BmQbsxW3EICNxmXCuHMpeYP1IubiJozOX2sXLHklfGOSR2TAbjapD1b3FwqK4Sa0wivg4RR8kFU4g8KQWspAt6U3w%2BJK87JJQJZf7o7SH9fQWQ9Z0eyckaI3Ns0MkoiLcTxddaQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A43&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 13:50:48</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(RefundSuccessTopicListener.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:77)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:263)
+	... 13 common frames omitted
+Caused by: com.alipay.api.AlipayApiException: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=FuMgZ3BeBKklTltVkJRtkSsvxRrGRfOZ2qXh4po7mhv%2B9a9qyEQu0RpKh9g2TgYGghy1ehF%2BApUlIBc3bXTIMSWN3T594VJ8KNLLCiijTjL7tFqAnCuMlUBYvcB0MZ%2BN%2BrUkGdyGeN0UdaUtybIkwUrOxZHZR%2FEXH0Uhlfawu8RKKxsEvGRIk05sQ8YyG2qmR7JSFwhoUl09bs%2F%2BmQbsxW3EICNxmXCuHMpeYP1IubiJozOX2sXLHklfGOSR2TAbjapD1b3FwqK4Sa0wivg4RR8kFU4g8KQWspAt6U3w%2BJK87JJQJZf7o7SH9fQWQ9Z0eyckaI3Ns0MkoiLcTxddaQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A43&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 13:50:48</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1015)
+	at com.alipay.api.AbstractAlipayClient._execute(AbstractAlipayClient.java:921)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:395)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:377)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:372)
+	at com.alipay.api.AbstractAlipayClient.execute(AbstractAlipayClient.java:366)
+	at online.noqiokweb.domain.order.service.OrderService.refundPayOrder(OrderService.java:213)
+	at online.noqiokweb.trigger.listener.RefundSuccessTopicListener.listener(RefundSuccessTopicListener.java:46)
+	... 21 common frames omitted
+Caused by: java.io.IOException: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<h1>504 Gateway Time-out</h1>
+<p>The gateway did not receive a timely response from the upstream server or application. Sorry for the inconvenience.<br/>
+Please report this message and include the following information to us.<br/>
+Thank you very much!</p>
+<table>
+<tr>
+<td>URL:</td>
+<td>http://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&amp;method=alipay.trade.refund&amp;sign=FuMgZ3BeBKklTltVkJRtkSsvxRrGRfOZ2qXh4po7mhv%2B9a9qyEQu0RpKh9g2TgYGghy1ehF%2BApUlIBc3bXTIMSWN3T594VJ8KNLLCiijTjL7tFqAnCuMlUBYvcB0MZ%2BN%2BrUkGdyGeN0UdaUtybIkwUrOxZHZR%2FEXH0Uhlfawu8RKKxsEvGRIk05sQ8YyG2qmR7JSFwhoUl09bs%2F%2BmQbsxW3EICNxmXCuHMpeYP1IubiJozOX2sXLHklfGOSR2TAbjapD1b3FwqK4Sa0wivg4RR8kFU4g8KQWspAt6U3w%2BJK87JJQJZf7o7SH9fQWQ9Z0eyckaI3Ns0MkoiLcTxddaQ%3D%3D&amp;version=1.0&amp;app_id=9021000149697872&amp;sign_type=RSA2&amp;timestamp=2025-08-12+13%3A50%3A43&amp;alipay_sdk=alipay-sdk-java-4.38.157.ALL&amp;format=json</td>
+</tr>
+<tr>
+<td>Server:</td>
+<td>openapi-14.rz21a.sandbox.alipay.net</td>
+</tr>
+<tr>
+<td>Date:</td>
+<td>2025/08/12 13:50:48</td>
+</tr>
+</table>
+<hr/>Powered by Tengine
+</body>
+</html>
+
+	at com.alipay.api.internal.util.WebUtils.getResponseAsString(WebUtils.java:520)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:181)
+	at com.alipay.api.internal.util.WebUtils.doPost(WebUtils.java:142)
+	at com.alipay.api.AbstractAlipayClient.doPost(AbstractAlipayClient.java:1003)
+	... 28 common frames omitted

@@ -60,23 +60,22 @@
         .countdown {background:#fff0e8;color:#ff5000;font-size:12px;padding:4px 8px;border-radius:4px;display:inline-block;}
         .group-btn {height:34px;padding:0 15px;background:linear-gradient(90deg,#ff5000,#ff2c2c);color:white;border:none;border-radius:17px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;}
 
-        /* 底部操作栏样式（新增“我的订单”） */
+        /* 底部操作栏样式（含“我的订单”） */
         .action-bar {position:fixed;bottom:0;left:0;right:0;height:50px;background:white;display:flex;border-top:1px solid #eee;max-width:750px;margin:0 auto;z-index:100;}
         .action-btn {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;color:#666;cursor:pointer;gap:2px;}
         .action-btn i {font-style:normal;font-size:16px;line-height:1;}
         .buy-btn {flex:2;background:#ffd84d;color:#333;font-weight:bold;font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
         .group-buy-btn {flex:3;background:linear-gradient(90deg,#ff5000,#ff2c2c);color:white;font-weight:bold;font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
 
-        /* 弹窗和Toast样式 */
+        /* 弹窗与 Toast */
         .overlay {display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:999;}
         .toast {position:fixed;top:20px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);color:white;padding:10px 20px;border-radius:4px;font-size:14px;z-index:1001;display:none;}
 
-        /* 支付模态框样式 */
+        /* 支付模态框 */
         .payment-modal {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;padding:30px 20px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.1);border-radius:12px;z-index:1001;text-align:center;}
         .pay-title {font-size:20px;font-weight:bold;margin-bottom:10px;}
         .pay-amount {color:#666;font-size:16px;margin-bottom:20px;}
 
-        /* 支付选项按钮组 */
         .pay-options {display:flex;flex-direction:column;gap:15px;margin-top:25px;}
         .pay-option-btn {width:100%;height:45px;font-size:16px;border-radius:8px;border:1px solid #eee;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:bold;transition:background-color 0.2s,border-color 0.2s;}
         .wechat-pay-btn {background-color:#06a020;color:white;border-color:#06a020;}
@@ -101,9 +100,7 @@
         .error-close-btn {width:100%;height:45px;font-size:16px;border-radius:8px;border:none;background:linear-gradient(90deg,#ff5000,#ff2c2c);color:white;font-weight:bold;cursor:pointer;transition:all 0.2s;}
         .error-close-btn:active {background:linear-gradient(90deg,#ff3c00,#ff1c00);transform:translateY(2px);}
     </style>
-    <!-- 在 head 或 body 中引入 -->
     <script src="js/common.js"></script>
-
 </head>
 <body>
 <div class="container" id="productPage">
@@ -143,7 +140,6 @@
     <div class="action-bar">
         <div class="action-btn" id="collectBtn"><i>❤️</i><span>收藏</span></div>
         <div class="action-btn" id="cartBtn"><i>🛒</i><span>购物车</span></div>
-        <!-- 新增：我的订单按钮 -->
         <div class="action-btn" id="orderBtn"><i>📦</i><span>我的订单</span></div>
         <div class="action-btn" id="serviceBtn"><i>👤</i><span>客服</span></div>
         <div class="buy-btn" id="buyAlone">单独购买 ¥0</div>
@@ -183,10 +179,11 @@
 <div class="toast" id="toast"></div>
 
 <script>
-    // 先读取 AppConfig 里的值并保存到变量
+    // 读取 AppConfig
     const sPayMallUrl = AppConfig.sPayMallUrl;
     const groupBuyMarketUrl = AppConfig.groupBuyMarketUrl;
     const goodsId = AppConfig.goodsId;
+
     // 登录校验
     if (!getCookie("loginToken")) {
         window.location.href = "login.html";
@@ -204,7 +201,6 @@
         setTimeout(() => (toast.style.display = "none"), 2000);
     }
 
-    // 错误弹窗
     function showErrorModal(message) {
         document.getElementById("errorMessage").innerText = message;
         document.getElementById("errorModal").style.display = "block";
@@ -215,7 +211,6 @@
         document.getElementById("payOverlay").style.display = "none";
     }
 
-    // Global
     let goods = {};
     let activityId = 0;
     let alipayFormHtml = '';
@@ -231,7 +226,6 @@
         document.getElementById("paymentModal").style.display = "none";
     }
 
-    // 倒计时
     function startCountdown(element, seconds) {
         function update() {
             if (seconds <= 0) { element.innerText = "已结束"; return; }
@@ -247,7 +241,6 @@
         update();
     }
 
-    // 下单锁定
     async function lockOrder(teamId = '', isAlone = false) {
         const userId = getCookie("loginToken");
         if (!userId) { window.location.href = "login.html"; return; }
@@ -280,7 +273,7 @@
         }
     }
 
-    // 新增：我的订单跳转（点击先请求，再跳转）
+    // 我的订单：点击先请求并缓存，再跳转
     document.getElementById("orderBtn").addEventListener("click", async () => {
         const userId = getCookie("loginToken");
         if (!userId) { window.location.href = "login.html"; return; }
@@ -298,14 +291,12 @@
         try {
             const res = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
             const result = await res.json();
-            // 不论是否成功，都跳转；成功则缓存数据
             if (result && result.code === "0000") {
                 sessionStorage.setItem("orderListCache", JSON.stringify(result.data || {}));
             } else {
                 sessionStorage.removeItem("orderListCache");
             }
         } catch (e) {
-            // 网络失败亦跳转，页面内会兜底再拉
             sessionStorage.removeItem("orderListCache");
         } finally {
             window.location.href = "orderList.html";
@@ -343,7 +334,6 @@
 
     // 初始化
     document.addEventListener("DOMContentLoaded", async () => {
-        // 商品与拼团信息
         const res = await fetch(groupBuyMarketUrl+"/api/v1/gbm/index/query_group_buy_market_config", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -351,7 +341,7 @@
                 userId: getCookie("loginToken") || "xfg01",
                 source: "s01",
                 channel: "c01",
-                goodsId: "9890001"
+                goodsId: goodsId
             })
         });
         const result = await res.json();
@@ -402,7 +392,7 @@
             });
         }
 
-        // 简易轮播
+        // 轮播
         let currentSlide = 0;
         const slides = document.querySelectorAll('.swiper-slide');
         const totalSlides = slides.length;

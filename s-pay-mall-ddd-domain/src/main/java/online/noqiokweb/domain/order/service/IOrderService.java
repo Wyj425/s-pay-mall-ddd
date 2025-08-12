@@ -1,5 +1,6 @@
 package online.noqiokweb.domain.order.service;
 
+import com.alipay.api.AlipayApiException;
 import online.noqiokweb.domain.order.model.entity.OrderEntity;
 import online.noqiokweb.domain.order.model.entity.PayOrderEntity;
 import online.noqiokweb.domain.order.model.entity.ShopCartEntity;
@@ -25,4 +26,10 @@ public interface IOrderService {
     List<OrderEntity> queryUserOrderList(String userId, Long lastId, Integer pageSize);
 
     boolean refundOrder(String userId, String orderId);
+    boolean refundMarketOrder(String userId, String orderId);
+    /**
+     * 接收拼团退单消息
+     */
+    boolean refundPayOrder(String userId, String orderId) throws AlipayApiException;
+
 }
