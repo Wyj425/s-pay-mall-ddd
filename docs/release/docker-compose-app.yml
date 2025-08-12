@@ -3,24 +3,6 @@ version: '3.8'
 # docker-compose -f docker-compose-app.yml up -d
 # 你需要修改system为你自身系统的仓库名
 services:
-  # 部署前端项目 & API转发
-  nginx:
-    image: nginx:1.25.1
-    container_name: nginx
-    restart: always
-    ports:
-      - '443:443'
-      - '80:80'
-    volumes:
-      - ./nginx/logs:/var/log/nginx
-      - ./nginx/html:/usr/share/nginx/html
-      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf/conf.d:/etc/nginx/conf.d
-      - ./nginx/ssl:/etc/nginx/ssl/
-    privileged: true
-    networks:
-      - my-network
-
   # 部署后端项目
   s-pay-mall:
     image: wyj/s-pay-mall-ddd-app:1.0
